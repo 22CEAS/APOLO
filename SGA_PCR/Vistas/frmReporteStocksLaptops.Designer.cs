@@ -81,7 +81,7 @@
             this.dgvLaptops.Location = new System.Drawing.Point(11, 234);
             this.dgvLaptops.MainView = this.vista;
             this.dgvLaptops.Name = "dgvLaptops";
-            this.dgvLaptops.Size = new System.Drawing.Size(1145, 304);
+            this.dgvLaptops.Size = new System.Drawing.Size(1074, 294);
             this.dgvLaptops.TabIndex = 132;
             this.dgvLaptops.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.vista});
@@ -340,7 +340,7 @@
             this.btnExportar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportar.Image = ((System.Drawing.Image)(resources.GetObject("btnExportar.Image")));
             this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExportar.Location = new System.Drawing.Point(1006, 68);
+            this.btnExportar.Location = new System.Drawing.Point(935, 68);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(75, 63);
             this.btnExportar.TabIndex = 139;
@@ -379,7 +379,7 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(1087, 74);
+            this.button1.Location = new System.Drawing.Point(1016, 74);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(69, 57);
             this.button1.TabIndex = 149;
@@ -392,7 +392,7 @@
             // 
             this.txtCantidadFiltrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidadFiltrada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCantidadFiltrada.Location = new System.Drawing.Point(1065, 156);
+            this.txtCantidadFiltrada.Location = new System.Drawing.Point(999, 156);
             this.txtCantidadFiltrada.Name = "txtCantidadFiltrada";
             this.txtCantidadFiltrada.Size = new System.Drawing.Size(86, 22);
             this.txtCantidadFiltrada.TabIndex = 171;
@@ -402,7 +402,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(911, 157);
+            this.label2.Location = new System.Drawing.Point(845, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 16);
             this.label2.TabIndex = 170;
@@ -556,7 +556,7 @@
             // 
             this.verResumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.verResumen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.verResumen.Location = new System.Drawing.Point(1166, 528);
+            this.verResumen.Location = new System.Drawing.Point(1181, 528);
             this.verResumen.Name = "verResumen";
             this.verResumen.Size = new System.Drawing.Size(10, 10);
             this.verResumen.TabIndex = 185;
@@ -567,7 +567,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1188, 550);
+            this.ClientSize = new System.Drawing.Size(1117, 540);
             this.Controls.Add(this.verResumen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTotalLaptops);
