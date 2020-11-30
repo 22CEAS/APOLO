@@ -102,24 +102,29 @@
             this.lblLaptopsDisponibles = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panelDashboard = new System.Windows.Forms.Panel();
-            this.dgvLaptops = new DevExpress.XtraGrid.GridControl();
-            this.vista = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CodigoLC = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Marca = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Modelo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Procesador = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Video = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CapacidadVideo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Disco1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CapacidadDisco1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Disco2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CapacidadDisco2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.MemoriaRam = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Estado = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Cliente = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Ubicacion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SerieFabrica = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.IdSalida = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblFechaPronosticador = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Direccion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Codigo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GuiaSalida = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Pantalla = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Generacion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Capacidad = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.fecIniContrato = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.fecFinContrato = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -148,29 +153,24 @@
             this.CostoDolares = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VersionOffice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.KAM = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Direccion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Codigo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GuiaSalida = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Pantalla = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Generacion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Capacidad = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.fecIniContrato = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.fecFinContrato = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblFechaPronosticador = new System.Windows.Forms.Label();
+            this.dgvLaptops = new DevExpress.XtraGrid.GridControl();
+            this.vista = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.CodigoLC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Marca = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Modelo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Procesador = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Video = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CapacidadVideo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Disco1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CapacidadDisco1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Disco2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CapacidadDisco2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MemoriaRam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Estado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Cliente = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ubicacion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SerieFabrica = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.IdSalida = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MenuVertical.SuspendLayout();
             this.panelConfiguracion.SuspendLayout();
             this.REPORTES.SuspendLayout();
@@ -185,14 +185,14 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelDashboard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLaptops)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vista)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLaptops)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vista)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -1357,246 +1357,306 @@
             this.panelDashboard.TabIndex = 14;
             this.panelDashboard.Visible = false;
             // 
-            // dgvLaptops
+            // panel3
             // 
-            this.dgvLaptops.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.panel3.Controls.Add(this.lblFechaPronosticador);
+            this.panel3.Controls.Add(this.pictureBox6);
+            this.panel3.Controls.Add(this.lblTotal);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Location = new System.Drawing.Point(20, 179);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(537, 130);
+            this.panel3.TabIndex = 10;
+            // 
+            // lblFechaPronosticador
+            // 
+            this.lblFechaPronosticador.AutoSize = true;
+            this.lblFechaPronosticador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaPronosticador.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblFechaPronosticador.Location = new System.Drawing.Point(6, 37);
+            this.lblFechaPronosticador.Name = "lblFechaPronosticador";
+            this.lblFechaPronosticador.Size = new System.Drawing.Size(86, 24);
+            this.lblFechaPronosticador.TabIndex = 3;
+            this.lblFechaPronosticador.Text = "FECHA:";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(394, 37);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(111, 76);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 2;
+            this.pictureBox6.TabStop = false;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(155, 63);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(108, 55);
+            this.lblTotal.TabIndex = 1;
+            this.lblTotal.Text = "120";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(3, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(444, 24);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "PRONOSTICADOR TOTAL DE LAPTOPS A LA";
+            // 
+            // gridControl2
+            // 
+            this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvLaptops.Location = new System.Drawing.Point(273, 15);
-            this.dgvLaptops.MainView = this.vista;
-            this.dgvLaptops.Name = "dgvLaptops";
-            this.dgvLaptops.Size = new System.Drawing.Size(10, 130);
-            this.dgvLaptops.TabIndex = 134;
-            this.dgvLaptops.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.vista});
-            this.dgvLaptops.Visible = false;
+            this.gridControl2.Location = new System.Drawing.Point(579, 15);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(10, 105);
+            this.gridControl2.TabIndex = 136;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
             // 
-            // vista
+            // gridView2
             // 
-            this.vista.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vista.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
-            this.vista.Appearance.HeaderPanel.Options.UseFont = true;
-            this.vista.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.vista.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.vista.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.vista.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.vista.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vista.Appearance.Row.ForeColor = System.Drawing.Color.Black;
-            this.vista.Appearance.Row.Options.UseFont = true;
-            this.vista.Appearance.Row.Options.UseForeColor = true;
-            this.vista.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.CodigoLC,
-            this.Marca,
-            this.Modelo,
-            this.Procesador,
-            this.Video,
-            this.CapacidadVideo,
-            this.Disco1,
-            this.CapacidadDisco1,
-            this.Disco2,
-            this.CapacidadDisco2,
-            this.MemoriaRam,
-            this.Estado,
-            this.Cliente,
-            this.Ubicacion,
-            this.SerieFabrica,
-            this.IdSalida});
-            this.vista.GridControl = this.dgvLaptops;
-            this.vista.Name = "vista";
-            this.vista.OptionsBehavior.Editable = false;
-            this.vista.OptionsView.ColumnAutoWidth = false;
-            this.vista.OptionsView.ShowAutoFilterRow = true;
+            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
+            this.gridView2.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView2.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.Row.ForeColor = System.Drawing.Color.Black;
+            this.gridView2.Appearance.Row.Options.UseFont = true;
+            this.gridView2.Appearance.Row.Options.UseForeColor = true;
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.Direccion,
+            this.Codigo,
+            this.GuiaSalida,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.Pantalla,
+            this.gridColumn7,
+            this.Generacion,
+            this.gridColumn8,
+            this.Capacidad,
+            this.gridColumn9,
+            this.fecIniContrato,
+            this.fecFinContrato});
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsView.ColumnAutoWidth = false;
+            this.gridView2.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView2.OptionsView.ShowAutoFilterRow = true;
             // 
-            // CodigoLC
+            // gridColumn2
             // 
-            this.CodigoLC.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.CodigoLC.AppearanceHeader.Options.UseBackColor = true;
-            this.CodigoLC.Caption = "Código";
-            this.CodigoLC.FieldName = "Codigo";
-            this.CodigoLC.MinWidth = 40;
-            this.CodigoLC.Name = "CodigoLC";
-            this.CodigoLC.Visible = true;
-            this.CodigoLC.VisibleIndex = 0;
-            this.CodigoLC.Width = 130;
+            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn2.Caption = "Cliente";
+            this.gridColumn2.FieldName = "Cliente";
+            this.gridColumn2.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            this.gridColumn2.MinWidth = 40;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
+            this.gridColumn2.Width = 250;
             // 
-            // Marca
+            // gridColumn3
             // 
-            this.Marca.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Marca.AppearanceHeader.Options.UseBackColor = true;
-            this.Marca.Caption = "Marca";
-            this.Marca.FieldName = "MarcaLC";
-            this.Marca.MinWidth = 40;
-            this.Marca.Name = "Marca";
-            this.Marca.Visible = true;
-            this.Marca.VisibleIndex = 1;
-            this.Marca.Width = 100;
+            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn3.Caption = "Ruc";
+            this.gridColumn3.FieldName = "Ruc";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
             // 
-            // Modelo
+            // gridColumn4
             // 
-            this.Modelo.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Modelo.AppearanceHeader.Options.UseBackColor = true;
-            this.Modelo.Caption = "Modelo";
-            this.Modelo.FieldName = "NombreModeloLC";
-            this.Modelo.MinWidth = 40;
-            this.Modelo.Name = "Modelo";
-            this.Modelo.Visible = true;
-            this.Modelo.VisibleIndex = 2;
-            this.Modelo.Width = 200;
+            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn4.Caption = "Contacto";
+            this.gridColumn4.FieldName = "Contacto";
+            this.gridColumn4.MinWidth = 40;
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn4.Width = 100;
             // 
-            // Procesador
+            // Direccion
             // 
-            this.Procesador.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Procesador.AppearanceHeader.Options.UseBackColor = true;
-            this.Procesador.Caption = "Procesador";
-            this.Procesador.FieldName = "TipoProcesador";
-            this.Procesador.MinWidth = 40;
-            this.Procesador.Name = "Procesador";
-            this.Procesador.Visible = true;
-            this.Procesador.VisibleIndex = 3;
-            this.Procesador.Width = 100;
+            this.Direccion.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Direccion.AppearanceHeader.Options.UseBackColor = true;
+            this.Direccion.Caption = "Direccion";
+            this.Direccion.FieldName = "DireccionCliente";
+            this.Direccion.MinWidth = 40;
+            this.Direccion.Name = "Direccion";
+            this.Direccion.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.Direccion.Width = 100;
             // 
-            // Video
+            // Codigo
             // 
-            this.Video.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Video.AppearanceHeader.Options.UseBackColor = true;
-            this.Video.Caption = "Video";
-            this.Video.FieldName = "NombreModeloVideo";
-            this.Video.MinWidth = 40;
-            this.Video.Name = "Video";
-            this.Video.Width = 170;
+            this.Codigo.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Codigo.AppearanceHeader.Options.UseBackColor = true;
+            this.Codigo.Caption = "Código";
+            this.Codigo.FieldName = "Codigo";
+            this.Codigo.MinWidth = 40;
+            this.Codigo.Name = "Codigo";
+            this.Codigo.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.Codigo.Visible = true;
+            this.Codigo.VisibleIndex = 2;
+            this.Codigo.Width = 150;
             // 
-            // CapacidadVideo
+            // GuiaSalida
             // 
-            this.CapacidadVideo.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.CapacidadVideo.AppearanceHeader.Options.UseBackColor = true;
-            this.CapacidadVideo.Caption = "Capacidad Video";
-            this.CapacidadVideo.FieldName = "CapacidadVideo";
-            this.CapacidadVideo.MinWidth = 40;
-            this.CapacidadVideo.Name = "CapacidadVideo";
-            this.CapacidadVideo.Visible = true;
-            this.CapacidadVideo.VisibleIndex = 4;
-            this.CapacidadVideo.Width = 130;
+            this.GuiaSalida.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.GuiaSalida.AppearanceHeader.Options.UseBackColor = true;
+            this.GuiaSalida.Caption = "Guía Salida";
+            this.GuiaSalida.FieldName = "GuiaSalida";
+            this.GuiaSalida.MinWidth = 40;
+            this.GuiaSalida.Name = "GuiaSalida";
+            this.GuiaSalida.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.GuiaSalida.Visible = true;
+            this.GuiaSalida.VisibleIndex = 3;
+            this.GuiaSalida.Width = 140;
             // 
-            // Disco1
+            // gridColumn5
             // 
-            this.Disco1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Disco1.AppearanceHeader.Options.UseBackColor = true;
-            this.Disco1.Caption = "Disco1";
-            this.Disco1.FieldName = "Disco1";
-            this.Disco1.MinWidth = 40;
-            this.Disco1.Name = "Disco1";
-            this.Disco1.Visible = true;
-            this.Disco1.VisibleIndex = 5;
-            this.Disco1.Width = 70;
+            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn5.Caption = "Marca";
+            this.gridColumn5.FieldName = "MarcaLC";
+            this.gridColumn5.MinWidth = 40;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 100;
             // 
-            // CapacidadDisco1
+            // gridColumn6
             // 
-            this.CapacidadDisco1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.CapacidadDisco1.AppearanceHeader.Options.UseBackColor = true;
-            this.CapacidadDisco1.Caption = "Capacidad Disco1";
-            this.CapacidadDisco1.FieldName = "CapacidadDisco1";
-            this.CapacidadDisco1.MinWidth = 40;
-            this.CapacidadDisco1.Name = "CapacidadDisco1";
-            this.CapacidadDisco1.Visible = true;
-            this.CapacidadDisco1.VisibleIndex = 6;
-            this.CapacidadDisco1.Width = 130;
+            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn6.Caption = "Modelo";
+            this.gridColumn6.FieldName = "NombreModeloLC";
+            this.gridColumn6.MinWidth = 40;
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.Width = 100;
             // 
-            // Disco2
+            // Pantalla
             // 
-            this.Disco2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Disco2.AppearanceHeader.Options.UseBackColor = true;
-            this.Disco2.Caption = "Disco2";
-            this.Disco2.FieldName = "Disco2";
-            this.Disco2.MinWidth = 40;
-            this.Disco2.Name = "Disco2";
-            this.Disco2.Visible = true;
-            this.Disco2.VisibleIndex = 7;
-            this.Disco2.Width = 70;
+            this.Pantalla.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Pantalla.AppearanceHeader.Options.UseBackColor = true;
+            this.Pantalla.Caption = "Pantalla";
+            this.Pantalla.FieldName = "TamanoPantalla";
+            this.Pantalla.MinWidth = 40;
+            this.Pantalla.Name = "Pantalla";
+            this.Pantalla.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.Pantalla.Visible = true;
+            this.Pantalla.VisibleIndex = 6;
+            this.Pantalla.Width = 70;
             // 
-            // CapacidadDisco2
+            // gridColumn7
             // 
-            this.CapacidadDisco2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.CapacidadDisco2.AppearanceHeader.Options.UseBackColor = true;
-            this.CapacidadDisco2.Caption = "Capacidad Disco2";
-            this.CapacidadDisco2.FieldName = "CapacidadDisco2";
-            this.CapacidadDisco2.MinWidth = 40;
-            this.CapacidadDisco2.Name = "CapacidadDisco2";
-            this.CapacidadDisco2.Visible = true;
-            this.CapacidadDisco2.VisibleIndex = 8;
-            this.CapacidadDisco2.Width = 130;
+            this.gridColumn7.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn7.Caption = "Procesador";
+            this.gridColumn7.FieldName = "TipoProcesador";
+            this.gridColumn7.MinWidth = 40;
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.Width = 100;
             // 
-            // MemoriaRam
+            // Generacion
             // 
-            this.MemoriaRam.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.MemoriaRam.AppearanceHeader.Options.UseBackColor = true;
-            this.MemoriaRam.Caption = "Memoria Ram";
-            this.MemoriaRam.FieldName = "CapacidadMemoria";
-            this.MemoriaRam.MinWidth = 40;
-            this.MemoriaRam.Name = "MemoriaRam";
-            this.MemoriaRam.Visible = true;
-            this.MemoriaRam.VisibleIndex = 9;
-            this.MemoriaRam.Width = 100;
+            this.Generacion.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Generacion.AppearanceHeader.Options.UseBackColor = true;
+            this.Generacion.Caption = "Generación";
+            this.Generacion.FieldName = "GeneracionProcesador";
+            this.Generacion.MinWidth = 40;
+            this.Generacion.Name = "Generacion";
+            this.Generacion.Visible = true;
+            this.Generacion.VisibleIndex = 8;
+            this.Generacion.Width = 100;
             // 
-            // Estado
+            // gridColumn8
             // 
-            this.Estado.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Estado.AppearanceHeader.Options.UseBackColor = true;
-            this.Estado.Caption = "Estado";
-            this.Estado.FieldName = "EstadoNombre";
-            this.Estado.MinWidth = 40;
-            this.Estado.Name = "Estado";
-            this.Estado.Visible = true;
-            this.Estado.VisibleIndex = 10;
-            this.Estado.Width = 130;
+            this.gridColumn8.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn8.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn8.Caption = "Video";
+            this.gridColumn8.FieldName = "NombreModeloVideo";
+            this.gridColumn8.MinWidth = 40;
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Width = 100;
             // 
-            // Cliente
+            // Capacidad
             // 
-            this.Cliente.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Cliente.AppearanceHeader.Options.UseBackColor = true;
-            this.Cliente.Caption = "Cliente";
-            this.Cliente.FieldName = "Cliente";
-            this.Cliente.MinWidth = 40;
-            this.Cliente.Name = "Cliente";
-            this.Cliente.Visible = true;
-            this.Cliente.VisibleIndex = 11;
-            this.Cliente.Width = 150;
+            this.Capacidad.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Capacidad.AppearanceHeader.Options.UseBackColor = true;
+            this.Capacidad.Caption = "Capacidad Video";
+            this.Capacidad.FieldName = "CapacidadVideo";
+            this.Capacidad.MinWidth = 40;
+            this.Capacidad.Name = "Capacidad";
+            this.Capacidad.Visible = true;
+            this.Capacidad.VisibleIndex = 9;
+            this.Capacidad.Width = 100;
             // 
-            // Ubicacion
+            // gridColumn9
             // 
-            this.Ubicacion.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Ubicacion.AppearanceHeader.Options.UseBackColor = true;
-            this.Ubicacion.Caption = "Ubicación";
-            this.Ubicacion.FieldName = "Ubicacion";
-            this.Ubicacion.MinWidth = 40;
-            this.Ubicacion.Name = "Ubicacion";
-            this.Ubicacion.Visible = true;
-            this.Ubicacion.VisibleIndex = 12;
-            this.Ubicacion.Width = 150;
+            this.gridColumn9.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn9.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn9.Caption = "Código Antiguo";
+            this.gridColumn9.FieldName = "CodigoAntiguo";
+            this.gridColumn9.MinWidth = 40;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 10;
+            this.gridColumn9.Width = 140;
             // 
-            // SerieFabrica
+            // fecIniContrato
             // 
-            this.SerieFabrica.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.SerieFabrica.AppearanceHeader.Options.UseBackColor = true;
-            this.SerieFabrica.Caption = "Serie Fabrica";
-            this.SerieFabrica.FieldName = "SerieFabrica";
-            this.SerieFabrica.MinWidth = 40;
-            this.SerieFabrica.Name = "SerieFabrica";
-            this.SerieFabrica.Visible = true;
-            this.SerieFabrica.VisibleIndex = 13;
-            this.SerieFabrica.Width = 150;
+            this.fecIniContrato.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.fecIniContrato.AppearanceHeader.Options.UseBackColor = true;
+            this.fecIniContrato.Caption = "Inicio Plazo Alquiler";
+            this.fecIniContrato.FieldName = "fecIniContrato";
+            this.fecIniContrato.MinWidth = 40;
+            this.fecIniContrato.Name = "fecIniContrato";
+            this.fecIniContrato.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+            this.fecIniContrato.Visible = true;
+            this.fecIniContrato.VisibleIndex = 11;
+            this.fecIniContrato.Width = 100;
             // 
-            // IdSalida
+            // fecFinContrato
             // 
-            this.IdSalida.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.IdSalida.AppearanceHeader.Options.UseBackColor = true;
-            this.IdSalida.Caption = "Id Salida";
-            this.IdSalida.FieldName = "IdSalida";
-            this.IdSalida.MinWidth = 40;
-            this.IdSalida.Name = "IdSalida";
-            this.IdSalida.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.IdSalida.Visible = true;
-            this.IdSalida.VisibleIndex = 14;
-            this.IdSalida.Width = 80;
+            this.fecFinContrato.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.fecFinContrato.AppearanceHeader.Options.UseBackColor = true;
+            this.fecFinContrato.Caption = "Fin Plazo Alquiler";
+            this.fecFinContrato.FieldName = "fecFinContrato";
+            this.fecFinContrato.MinWidth = 40;
+            this.fecFinContrato.Name = "fecFinContrato";
+            this.fecFinContrato.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+            this.fecFinContrato.Visible = true;
+            this.fecFinContrato.VisibleIndex = 12;
+            this.fecFinContrato.Width = 100;
             // 
             // gridControl1
             // 
@@ -1990,306 +2050,246 @@
             this.KAM.VisibleIndex = 23;
             this.KAM.Width = 200;
             // 
-            // gridControl2
+            // dgvLaptops
             // 
-            this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvLaptops.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl2.Location = new System.Drawing.Point(583, 15);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(10, 107);
-            this.gridControl2.TabIndex = 136;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.dgvLaptops.Location = new System.Drawing.Point(273, 15);
+            this.dgvLaptops.MainView = this.vista;
+            this.dgvLaptops.Name = "dgvLaptops";
+            this.dgvLaptops.Size = new System.Drawing.Size(10, 130);
+            this.dgvLaptops.TabIndex = 134;
+            this.dgvLaptops.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.vista});
+            this.dgvLaptops.Visible = false;
             // 
-            // gridView2
+            // vista
             // 
-            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
-            this.gridView2.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView2.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView2.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView2.Appearance.Row.ForeColor = System.Drawing.Color.Black;
-            this.gridView2.Appearance.Row.Options.UseFont = true;
-            this.gridView2.Appearance.Row.Options.UseForeColor = true;
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.Direccion,
-            this.Codigo,
-            this.GuiaSalida,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.Pantalla,
-            this.gridColumn7,
-            this.Generacion,
-            this.gridColumn8,
-            this.Capacidad,
-            this.gridColumn9,
-            this.fecIniContrato,
-            this.fecFinContrato});
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsBehavior.Editable = false;
-            this.gridView2.OptionsView.ColumnAutoWidth = false;
-            this.gridView2.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView2.OptionsView.ShowAutoFilterRow = true;
+            this.vista.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vista.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
+            this.vista.Appearance.HeaderPanel.Options.UseFont = true;
+            this.vista.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.vista.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.vista.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.vista.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.vista.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vista.Appearance.Row.ForeColor = System.Drawing.Color.Black;
+            this.vista.Appearance.Row.Options.UseFont = true;
+            this.vista.Appearance.Row.Options.UseForeColor = true;
+            this.vista.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.CodigoLC,
+            this.Marca,
+            this.Modelo,
+            this.Procesador,
+            this.Video,
+            this.CapacidadVideo,
+            this.Disco1,
+            this.CapacidadDisco1,
+            this.Disco2,
+            this.CapacidadDisco2,
+            this.MemoriaRam,
+            this.Estado,
+            this.Cliente,
+            this.Ubicacion,
+            this.SerieFabrica,
+            this.IdSalida});
+            this.vista.GridControl = this.dgvLaptops;
+            this.vista.Name = "vista";
+            this.vista.OptionsBehavior.Editable = false;
+            this.vista.OptionsView.ColumnAutoWidth = false;
+            this.vista.OptionsView.ShowAutoFilterRow = true;
             // 
-            // gridColumn2
+            // CodigoLC
             // 
-            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn2.Caption = "Cliente";
-            this.gridColumn2.FieldName = "Cliente";
-            this.gridColumn2.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-            this.gridColumn2.MinWidth = 40;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 250;
+            this.CodigoLC.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.CodigoLC.AppearanceHeader.Options.UseBackColor = true;
+            this.CodigoLC.Caption = "Código";
+            this.CodigoLC.FieldName = "Codigo";
+            this.CodigoLC.MinWidth = 40;
+            this.CodigoLC.Name = "CodigoLC";
+            this.CodigoLC.Visible = true;
+            this.CodigoLC.VisibleIndex = 0;
+            this.CodigoLC.Width = 130;
             // 
-            // gridColumn3
+            // Marca
             // 
-            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn3.Caption = "Ruc";
-            this.gridColumn3.FieldName = "Ruc";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 1;
+            this.Marca.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Marca.AppearanceHeader.Options.UseBackColor = true;
+            this.Marca.Caption = "Marca";
+            this.Marca.FieldName = "MarcaLC";
+            this.Marca.MinWidth = 40;
+            this.Marca.Name = "Marca";
+            this.Marca.Visible = true;
+            this.Marca.VisibleIndex = 1;
+            this.Marca.Width = 100;
             // 
-            // gridColumn4
+            // Modelo
             // 
-            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn4.Caption = "Contacto";
-            this.gridColumn4.FieldName = "Contacto";
-            this.gridColumn4.MinWidth = 40;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn4.Width = 100;
+            this.Modelo.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Modelo.AppearanceHeader.Options.UseBackColor = true;
+            this.Modelo.Caption = "Modelo";
+            this.Modelo.FieldName = "NombreModeloLC";
+            this.Modelo.MinWidth = 40;
+            this.Modelo.Name = "Modelo";
+            this.Modelo.Visible = true;
+            this.Modelo.VisibleIndex = 2;
+            this.Modelo.Width = 200;
             // 
-            // Direccion
+            // Procesador
             // 
-            this.Direccion.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Direccion.AppearanceHeader.Options.UseBackColor = true;
-            this.Direccion.Caption = "Direccion";
-            this.Direccion.FieldName = "DireccionCliente";
-            this.Direccion.MinWidth = 40;
-            this.Direccion.Name = "Direccion";
-            this.Direccion.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.Direccion.Width = 100;
+            this.Procesador.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Procesador.AppearanceHeader.Options.UseBackColor = true;
+            this.Procesador.Caption = "Procesador";
+            this.Procesador.FieldName = "TipoProcesador";
+            this.Procesador.MinWidth = 40;
+            this.Procesador.Name = "Procesador";
+            this.Procesador.Visible = true;
+            this.Procesador.VisibleIndex = 3;
+            this.Procesador.Width = 100;
             // 
-            // Codigo
+            // Video
             // 
-            this.Codigo.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Codigo.AppearanceHeader.Options.UseBackColor = true;
-            this.Codigo.Caption = "Código";
-            this.Codigo.FieldName = "Codigo";
-            this.Codigo.MinWidth = 40;
-            this.Codigo.Name = "Codigo";
-            this.Codigo.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.Codigo.Visible = true;
-            this.Codigo.VisibleIndex = 2;
-            this.Codigo.Width = 150;
+            this.Video.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Video.AppearanceHeader.Options.UseBackColor = true;
+            this.Video.Caption = "Video";
+            this.Video.FieldName = "NombreModeloVideo";
+            this.Video.MinWidth = 40;
+            this.Video.Name = "Video";
+            this.Video.Width = 170;
             // 
-            // GuiaSalida
+            // CapacidadVideo
             // 
-            this.GuiaSalida.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.GuiaSalida.AppearanceHeader.Options.UseBackColor = true;
-            this.GuiaSalida.Caption = "Guía Salida";
-            this.GuiaSalida.FieldName = "GuiaSalida";
-            this.GuiaSalida.MinWidth = 40;
-            this.GuiaSalida.Name = "GuiaSalida";
-            this.GuiaSalida.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.GuiaSalida.Visible = true;
-            this.GuiaSalida.VisibleIndex = 3;
-            this.GuiaSalida.Width = 140;
+            this.CapacidadVideo.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.CapacidadVideo.AppearanceHeader.Options.UseBackColor = true;
+            this.CapacidadVideo.Caption = "Capacidad Video";
+            this.CapacidadVideo.FieldName = "CapacidadVideo";
+            this.CapacidadVideo.MinWidth = 40;
+            this.CapacidadVideo.Name = "CapacidadVideo";
+            this.CapacidadVideo.Visible = true;
+            this.CapacidadVideo.VisibleIndex = 4;
+            this.CapacidadVideo.Width = 130;
             // 
-            // gridColumn5
+            // Disco1
             // 
-            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn5.Caption = "Marca";
-            this.gridColumn5.FieldName = "MarcaLC";
-            this.gridColumn5.MinWidth = 40;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 100;
+            this.Disco1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Disco1.AppearanceHeader.Options.UseBackColor = true;
+            this.Disco1.Caption = "Disco1";
+            this.Disco1.FieldName = "Disco1";
+            this.Disco1.MinWidth = 40;
+            this.Disco1.Name = "Disco1";
+            this.Disco1.Visible = true;
+            this.Disco1.VisibleIndex = 5;
+            this.Disco1.Width = 70;
             // 
-            // gridColumn6
+            // CapacidadDisco1
             // 
-            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn6.Caption = "Modelo";
-            this.gridColumn6.FieldName = "NombreModeloLC";
-            this.gridColumn6.MinWidth = 40;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 100;
+            this.CapacidadDisco1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.CapacidadDisco1.AppearanceHeader.Options.UseBackColor = true;
+            this.CapacidadDisco1.Caption = "Capacidad Disco1";
+            this.CapacidadDisco1.FieldName = "CapacidadDisco1";
+            this.CapacidadDisco1.MinWidth = 40;
+            this.CapacidadDisco1.Name = "CapacidadDisco1";
+            this.CapacidadDisco1.Visible = true;
+            this.CapacidadDisco1.VisibleIndex = 6;
+            this.CapacidadDisco1.Width = 130;
             // 
-            // Pantalla
+            // Disco2
             // 
-            this.Pantalla.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Pantalla.AppearanceHeader.Options.UseBackColor = true;
-            this.Pantalla.Caption = "Pantalla";
-            this.Pantalla.FieldName = "TamanoPantalla";
-            this.Pantalla.MinWidth = 40;
-            this.Pantalla.Name = "Pantalla";
-            this.Pantalla.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.Pantalla.Visible = true;
-            this.Pantalla.VisibleIndex = 6;
-            this.Pantalla.Width = 70;
+            this.Disco2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Disco2.AppearanceHeader.Options.UseBackColor = true;
+            this.Disco2.Caption = "Disco2";
+            this.Disco2.FieldName = "Disco2";
+            this.Disco2.MinWidth = 40;
+            this.Disco2.Name = "Disco2";
+            this.Disco2.Visible = true;
+            this.Disco2.VisibleIndex = 7;
+            this.Disco2.Width = 70;
             // 
-            // gridColumn7
+            // CapacidadDisco2
             // 
-            this.gridColumn7.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn7.Caption = "Procesador";
-            this.gridColumn7.FieldName = "TipoProcesador";
-            this.gridColumn7.MinWidth = 40;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 7;
-            this.gridColumn7.Width = 100;
+            this.CapacidadDisco2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.CapacidadDisco2.AppearanceHeader.Options.UseBackColor = true;
+            this.CapacidadDisco2.Caption = "Capacidad Disco2";
+            this.CapacidadDisco2.FieldName = "CapacidadDisco2";
+            this.CapacidadDisco2.MinWidth = 40;
+            this.CapacidadDisco2.Name = "CapacidadDisco2";
+            this.CapacidadDisco2.Visible = true;
+            this.CapacidadDisco2.VisibleIndex = 8;
+            this.CapacidadDisco2.Width = 130;
             // 
-            // Generacion
+            // MemoriaRam
             // 
-            this.Generacion.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Generacion.AppearanceHeader.Options.UseBackColor = true;
-            this.Generacion.Caption = "Generación";
-            this.Generacion.FieldName = "GeneracionProcesador";
-            this.Generacion.MinWidth = 40;
-            this.Generacion.Name = "Generacion";
-            this.Generacion.Visible = true;
-            this.Generacion.VisibleIndex = 8;
-            this.Generacion.Width = 100;
+            this.MemoriaRam.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.MemoriaRam.AppearanceHeader.Options.UseBackColor = true;
+            this.MemoriaRam.Caption = "Memoria Ram";
+            this.MemoriaRam.FieldName = "CapacidadMemoria";
+            this.MemoriaRam.MinWidth = 40;
+            this.MemoriaRam.Name = "MemoriaRam";
+            this.MemoriaRam.Visible = true;
+            this.MemoriaRam.VisibleIndex = 9;
+            this.MemoriaRam.Width = 100;
             // 
-            // gridColumn8
+            // Estado
             // 
-            this.gridColumn8.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn8.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn8.Caption = "Video";
-            this.gridColumn8.FieldName = "NombreModeloVideo";
-            this.gridColumn8.MinWidth = 40;
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Width = 100;
+            this.Estado.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Estado.AppearanceHeader.Options.UseBackColor = true;
+            this.Estado.Caption = "Estado";
+            this.Estado.FieldName = "EstadoNombre";
+            this.Estado.MinWidth = 40;
+            this.Estado.Name = "Estado";
+            this.Estado.Visible = true;
+            this.Estado.VisibleIndex = 10;
+            this.Estado.Width = 130;
             // 
-            // Capacidad
+            // Cliente
             // 
-            this.Capacidad.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Capacidad.AppearanceHeader.Options.UseBackColor = true;
-            this.Capacidad.Caption = "Capacidad Video";
-            this.Capacidad.FieldName = "CapacidadVideo";
-            this.Capacidad.MinWidth = 40;
-            this.Capacidad.Name = "Capacidad";
-            this.Capacidad.Visible = true;
-            this.Capacidad.VisibleIndex = 9;
-            this.Capacidad.Width = 100;
+            this.Cliente.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Cliente.AppearanceHeader.Options.UseBackColor = true;
+            this.Cliente.Caption = "Cliente";
+            this.Cliente.FieldName = "Cliente";
+            this.Cliente.MinWidth = 40;
+            this.Cliente.Name = "Cliente";
+            this.Cliente.Visible = true;
+            this.Cliente.VisibleIndex = 11;
+            this.Cliente.Width = 150;
             // 
-            // gridColumn9
+            // Ubicacion
             // 
-            this.gridColumn9.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn9.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn9.Caption = "Código Antiguo";
-            this.gridColumn9.FieldName = "CodigoAntiguo";
-            this.gridColumn9.MinWidth = 40;
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 10;
-            this.gridColumn9.Width = 140;
+            this.Ubicacion.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Ubicacion.AppearanceHeader.Options.UseBackColor = true;
+            this.Ubicacion.Caption = "Ubicación";
+            this.Ubicacion.FieldName = "Ubicacion";
+            this.Ubicacion.MinWidth = 40;
+            this.Ubicacion.Name = "Ubicacion";
+            this.Ubicacion.Visible = true;
+            this.Ubicacion.VisibleIndex = 12;
+            this.Ubicacion.Width = 150;
             // 
-            // fecIniContrato
+            // SerieFabrica
             // 
-            this.fecIniContrato.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.fecIniContrato.AppearanceHeader.Options.UseBackColor = true;
-            this.fecIniContrato.Caption = "Inicio Plazo Alquiler";
-            this.fecIniContrato.FieldName = "fecIniContrato";
-            this.fecIniContrato.MinWidth = 40;
-            this.fecIniContrato.Name = "fecIniContrato";
-            this.fecIniContrato.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
-            this.fecIniContrato.Visible = true;
-            this.fecIniContrato.VisibleIndex = 11;
-            this.fecIniContrato.Width = 100;
+            this.SerieFabrica.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SerieFabrica.AppearanceHeader.Options.UseBackColor = true;
+            this.SerieFabrica.Caption = "Serie Fabrica";
+            this.SerieFabrica.FieldName = "SerieFabrica";
+            this.SerieFabrica.MinWidth = 40;
+            this.SerieFabrica.Name = "SerieFabrica";
+            this.SerieFabrica.Visible = true;
+            this.SerieFabrica.VisibleIndex = 13;
+            this.SerieFabrica.Width = 150;
             // 
-            // fecFinContrato
+            // IdSalida
             // 
-            this.fecFinContrato.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.fecFinContrato.AppearanceHeader.Options.UseBackColor = true;
-            this.fecFinContrato.Caption = "Fin Plazo Alquiler";
-            this.fecFinContrato.FieldName = "fecFinContrato";
-            this.fecFinContrato.MinWidth = 40;
-            this.fecFinContrato.Name = "fecFinContrato";
-            this.fecFinContrato.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
-            this.fecFinContrato.Visible = true;
-            this.fecFinContrato.VisibleIndex = 12;
-            this.fecFinContrato.Width = 100;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.panel3.Controls.Add(this.lblFechaPronosticador);
-            this.panel3.Controls.Add(this.pictureBox6);
-            this.panel3.Controls.Add(this.lblTotal);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(20, 179);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(537, 130);
-            this.panel3.TabIndex = 10;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(394, 37);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(111, 76);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 2;
-            this.pictureBox6.TabStop = false;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(155, 63);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(108, 55);
-            this.lblTotal.TabIndex = 1;
-            this.lblTotal.Text = "120";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(3, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(444, 24);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "PRONOSTICADOR TOTAL DE LAPTOPS A LA";
-            // 
-            // lblFechaPronosticador
-            // 
-            this.lblFechaPronosticador.AutoSize = true;
-            this.lblFechaPronosticador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaPronosticador.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFechaPronosticador.Location = new System.Drawing.Point(6, 37);
-            this.lblFechaPronosticador.Name = "lblFechaPronosticador";
-            this.lblFechaPronosticador.Size = new System.Drawing.Size(86, 24);
-            this.lblFechaPronosticador.TabIndex = 3;
-            this.lblFechaPronosticador.Text = "FECHA:";
+            this.IdSalida.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.IdSalida.AppearanceHeader.Options.UseBackColor = true;
+            this.IdSalida.Caption = "Id Salida";
+            this.IdSalida.FieldName = "IdSalida";
+            this.IdSalida.MinWidth = 40;
+            this.IdSalida.Name = "IdSalida";
+            this.IdSalida.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.IdSalida.Visible = true;
+            this.IdSalida.VisibleIndex = 14;
+            this.IdSalida.Width = 80;
             // 
             // TEST_MENU_PRINCIPAL
             // 
@@ -2325,15 +2325,15 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelDashboard.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLaptops)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vista)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLaptops)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vista)).EndInit();
             this.ResumeLayout(false);
 
         }

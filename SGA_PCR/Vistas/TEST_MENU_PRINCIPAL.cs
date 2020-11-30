@@ -1370,8 +1370,7 @@ namespace Apolo
             gridControl2.DataSource = tablaLaptops;
             gridView2.OptionsBehavior.AutoPopulateColumns = false;
             gridView2.OptionsSelection.MultiSelect = true;
-            //gridView2.ActiveFilterString = $"[fecFinContrato] == '02-12-2020'";
-            MessageBox.Show(gridView2.RowCount.ToString());
+            gridView2.ActiveFilterString = $"[fecFinContrato] <= #{FechaPronosticador.SelectionRange.Start.ToString("yyyy-MM-dd")}#";
 
             canDisponibles = gridView1.RowCount+ gridView2.RowCount;
             lblCantidadPronosticador.Text = canDisponibles.ToString();
