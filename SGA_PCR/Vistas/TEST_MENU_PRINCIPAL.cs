@@ -10,11 +10,45 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Modelo;
 using AccesoDatos;
+using DevComponents.DotNetBar.SuperGrid;
+using DevExpress.Export;
+using DevExpress.Printing.ExportHelpers;
+using DevExpress.XtraPrinting;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Apolo
 {
     public partial class TEST_MENU_PRINCIPAL : Form
     {
+        int canDisponibles = 0;
+
+        DataTable tablaLaptops;
+        ReporteDA reporteDA;
+        private int idUsuario;
+        private string nombreUsuario = "CEAS";
+        DataTable tablaDisco;
+        DataTable tablaMemoria;
+        DataTable tablaLicencia;
+
+        private string licenciaCategoriaSO = "S.O";
+        private string licenciaCategoriaOffice = "OFFICE";
+        private string licenciaCategoriaAntivirus = "ANTIVIRUS";
+
+        DataTable tablaProcesadoresModelos;
+        DataTable tablaProcesadoresGeneracion;
+
+        private BindingList<LC> laptops;
+
+        private int estadoDisponible = 2;
+        private int idMarcaAppleLC = 1;
+        private int idMarcaApplePC = 8;
+        private int idCategoriaProcesador = 9;
+        private string codTablaProcesadorGeneracion = "PROCESADOR_GENERACION";
+        private int cantGeneraciones;
+        private int cantModeloProcesador;
+        private int[][] arregloLCGeneral;
+        private int[][] arregloLCApple;
+
         Accesos_usuarios accesos_usuarios;
         AccesosUsuarioDA accesos_usuarioDA;
 
@@ -55,10 +89,144 @@ namespace Apolo
             verificandoPermisosProcesos();
             verificandoPermisosReportes();
             verificandoPermisosConfiguracion();
-            
+
         }
 
+        public void CargarDataLaptopsDisponibles()
+        {
 
+            try
+            {
+                reporteDA = new ReporteDA();
+                tablaLaptops = reporteDA.ListarLaptopsInventario();
+                tablaProcesadoresModelos = reporteDA.tablaProcesadoresModelos(idCategoriaProcesador);
+                tablaProcesadoresGeneracion = reporteDA.tablaProcesadoresGeneracion(codTablaProcesadorGeneracion);
+
+                laptops = new BindingList<LC>();
+                tablaDisco = reporteDA.ListarLaptopDisco();
+                tablaMemoria = reporteDA.ListarLaptopMemoria();
+                tablaLicencia = reporteDA.ListarLaptopLicencia();
+                DataView viewDisco = new DataView(tablaDisco);
+                DataView viewMemoria = new DataView(tablaMemoria);
+                DataView viewLicencia = new DataView(tablaLicencia);
+                int rec = 0;
+                while (rec < tablaLaptops.Rows.Count)
+                {
+                    LC laptop = new LC();
+                    laptop.IdLC = Convert.ToInt32(tablaLaptops.Rows[rec]["idLC"].ToString());
+                    laptop.Codigo = tablaLaptops.Rows[rec]["codigo"].ToString();
+                    laptop.IdMarca = int.Parse(tablaLaptops.Rows[rec]["idMarca"].ToString());
+                    laptop.MarcaLC = tablaLaptops.Rows[rec]["marcaLC"].ToString();
+                    laptop.NombreModeloLC = tablaLaptops.Rows[rec]["nombreModeloLC"].ToString();
+                    laptop.TipoProcesador = tablaLaptops.Rows[rec]["tipoProcesador"].ToString();
+                    laptop.IdGeneracionProcesador = int.Parse(tablaLaptops.Rows[rec]["idGeneracionProcesador"].ToString());
+                    laptop.GeneracionProcesador = int.Parse(tablaLaptops.Rows[rec]["generacionProcesador"].ToString());
+                    laptop.IdTipoProcesador = int.Parse(tablaLaptops.Rows[rec]["idTipoProcesador"].ToString());
+                    laptop.NombreModeloVideo = tablaLaptops.Rows[rec]["nombreModeloVideo"].ToString().Length > 0 ? tablaLaptops.Rows[rec]["nombreModeloVideo"].ToString() : "";
+                    laptop.CapacidadVideo = Convert.ToInt32(tablaLaptops.Rows[rec]["capacidadVideo"].ToString());
+                    laptop.EstadoNombre = tablaLaptops.Rows[rec]["estado"].ToString();
+                    laptop.Estado = int.Parse(tablaLaptops.Rows[rec]["idEstado"].ToString());
+                    laptop.Cliente = tablaLaptops.Rows[rec]["cliente"].ToString();
+                    laptop.Ubicacion = tablaLaptops.Rows[rec]["ubicacion"].ToString();
+                    laptop.SerieFabrica = tablaLaptops.Rows[rec]["serieFabrica"].ToString();
+
+                    viewDisco.RowFilter = "idLC = " + laptop.IdLC.ToString();
+                    viewMemoria.RowFilter = "idLC = " + laptop.IdLC.ToString();
+                    viewLicencia.RowFilter = "idLC = " + laptop.IdLC.ToString();
+                    laptop.SetDisco(viewDisco);
+                    laptop.SetMemoria(viewMemoria);
+                    laptop.SetLicencia(viewLicencia);
+
+                    if (laptop.Discos.Count > 0)
+                    {
+                        if (laptop.Discos.Count == 1)
+                        {
+                            laptop.Disco1 = laptop.Discos[0].TipoDisco;
+                            laptop.CapacidadDisco1 = (laptop.Discos[0].Cantidad * laptop.Discos[0].Capacidad).ToString() + " GB";
+                            laptop.Disco2 = "";
+                            laptop.CapacidadDisco2 = "";
+                        }
+                        else if (laptop.Discos.Count >= 2)
+                        {
+                            laptop.Disco1 = laptop.Discos[0].TipoDisco;
+                            laptop.CapacidadDisco1 = (laptop.Discos[0].Cantidad * laptop.Discos[0].Capacidad).ToString() + " GB";
+
+                            laptop.Disco2 = laptop.Discos[1].TipoDisco;
+                            laptop.CapacidadDisco2 = (laptop.Discos[1].Cantidad * laptop.Discos[1].Capacidad).ToString() + " GB";
+                        }
+                    }
+                    else if (laptop.Discos.Count == 0)
+                    {
+                        laptop.Disco1 = "";
+                        laptop.CapacidadDisco1 = "";
+                        laptop.Disco2 = "";
+                        laptop.CapacidadDisco2 = "";
+                    }
+
+                    int capacidadMem = 0;
+                    foreach (Memoria mem in laptop.Memorias)
+                    {
+                        capacidadMem += mem.Capacidad * mem.Cantidad;
+                    }
+                    laptop.CapacidadMemoria = capacidadMem.ToString() + " GB";
+
+                    Licencia windows = null; Licencia office = null; Licencia antivirus = null;
+
+                    if (laptop.Licencias.Count > 0)
+                    {
+                        windows = laptop.Licencias.SingleOrDefault(p => p.Categoria == this.licenciaCategoriaSO);
+                        office = laptop.Licencias.SingleOrDefault(p => p.Categoria == this.licenciaCategoriaOffice);
+                        antivirus = laptop.Licencias.SingleOrDefault(p => p.Categoria == this.licenciaCategoriaAntivirus);
+
+                    }
+
+                    laptop.LicenciaWindows = (windows != null) ? windows.Version : "";
+                    laptop.LicenciaOffice = (office != null) ? office.Version : "";
+                    laptop.LicenciaAntivirus = (antivirus != null) ? antivirus.Version : "";
+
+                    laptop.Licencias = null;
+                    laptop.Discos = null;
+                    laptop.Memorias = null;
+
+                    laptop.IdSalida = tablaLaptops.Rows[rec]["idSalida"].ToString();
+
+                    laptops.Add(laptop);
+                    rec++;
+                }
+
+                this.cantGeneraciones = tablaProcesadoresGeneracion.Rows.Count;
+                this.cantModeloProcesador = tablaProcesadoresModelos.Rows.Count;
+
+                this.arregloLCGeneral = new int[cantGeneraciones][];
+                this.arregloLCApple = new int[cantGeneraciones][];
+
+                for (int i = 0; i < this.cantGeneraciones; i++)
+                {
+                    this.arregloLCGeneral[i] = new int[this.cantModeloProcesador];
+                    this.arregloLCApple[i] = new int[this.cantModeloProcesador];
+
+                    for (int j = 0; j < this.cantModeloProcesador; j++)
+                    {
+                        int idGen = int.Parse(tablaProcesadoresGeneracion.Rows[i]["idAuxiliar"].ToString());
+                        int idModPro = int.Parse(tablaProcesadoresModelos.Rows[j]["idModelo"].ToString());
+                        var cantidad = new BindingList<LC>(laptops.Where(p => p.IdMarca != this.idMarcaAppleLC && p.IdGeneracionProcesador == idGen && p.IdTipoProcesador == idModPro && p.IdMarca != this.idMarcaApplePC && p.Estado == this.estadoDisponible).ToList());
+                        this.arregloLCGeneral[i][j] = cantidad.Count;
+                        cantidad = new BindingList<LC>(laptops.Where(p => p.IdMarca == this.idMarcaAppleLC && p.IdGeneracionProcesador == idGen && p.IdTipoProcesador == idModPro && p.IdMarca != this.idMarcaApplePC && p.Estado == this.estadoDisponible).ToList());
+                        this.arregloLCApple[i][j] = cantidad.Count;
+                    }
+                }
+
+
+                dgvLaptops.DataSource = laptops;
+                vista.OptionsBehavior.AutoPopulateColumns = false;
+                vista.OptionsSelection.MultiSelect = true;
+
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show(e.Message); OMITIMOS EL MENSAJE
+            }
+        }
 
         private void verificandoPermisosMaestro()
         {
@@ -1138,10 +1306,78 @@ namespace Apolo
         private void button35_Click_2(object sender, EventArgs e)
         {
             if (panelDashboard.Visible == false)
+            {
+                CargarDataLaptopsDisponibles();
+                vista.ActiveFilterString = "[EstadoNombre] like '%DISPONIBLE%'";
+                canDisponibles = vista.RowCount;
+                lblLaptopsDisponibles.Text = canDisponibles.ToString();
                 panelDashboard.Visible = true;
+            }
             else
                 panelDashboard.Visible = false;
 
+
+        }
+
+        private void btnVerDetalleDispo_Click(object sender, EventArgs e)
+        {
+            /*
+            if (dgvLaptops.Visible == false)
+            {
+                dgvLaptops.Visible = true;
+            }
+            else
+                dgvLaptops.Visible = false;
+            */
+            btnVerDashboard.PerformClick();
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "frmReporteStocksLaptops")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmReporteStocksLaptops f2 = new frmReporteStocksLaptops(this.idUser, this.nameUser);
+                f2.MdiParent = this;
+                f2.Show();
+            }
+
+        }
+
+
+        private void VerDetallePronos_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(FechaPronosticador.SelectionRange.Start.ToShortDateString());
+
+            int canDisponibles = 0;
+            
+            
+            //PENDIENTE POR RECOGER
+            reporteDA = new ReporteDA();
+            tablaLaptops = reporteDA.ListarLaptopsPorRecoger();
+
+            gridControl1.DataSource = tablaLaptops;
+            gridView1.OptionsBehavior.AutoPopulateColumns = false;
+            gridView1.OptionsSelection.MultiSelect = true;
+
+            //LAPTOPS POR VENCER
+            tablaLaptops = reporteDA.ListarLaptopsPorVencer();
+
+            gridControl2.DataSource = tablaLaptops;
+            gridView2.OptionsBehavior.AutoPopulateColumns = false;
+            gridView2.OptionsSelection.MultiSelect = true;
+
+            canDisponibles = gridView1.RowCount+ gridView2.RowCount;
+            lblCantidadPronosticador.Text = canDisponibles.ToString();
+
+            //!---------------------------------------------------------------------
+            lblFechaPronosticador.Text = $"FECHA: {FechaPronosticador.SelectionRange.Start.ToShortDateString()}";
+            lblTotal.Text = (int.Parse(lblLaptopsDisponibles.Text)+int.Parse(lblCantidadPronosticador.Text)).ToString();
 
         }
     }

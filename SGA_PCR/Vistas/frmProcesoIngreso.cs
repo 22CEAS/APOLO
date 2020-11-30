@@ -41,7 +41,7 @@ namespace Apolo
             Inicializado();
             estadoComponentes(TipoVista.Inicial);
         }
-        
+
         public frmProcesoIngreso(int idUsuario, string nombreUsuario)
         {
             InitializeComponent();
@@ -50,7 +50,6 @@ namespace Apolo
             Inicializado();
             estadoComponentes(TipoVista.Inicial);
         }
-
         public void Inicializado()
         {
 
@@ -127,7 +126,7 @@ namespace Apolo
             ingreso.Guia = txtGuia.Text;
             string aux = txtMontoCambio.Text;
             aux = aux.Trim();
-            ingreso.MontoCambio = (aux.Length==0)?0:Double.Parse(aux);
+            ingreso.MontoCambio = (aux.Length == 0) ? 0 : Double.Parse(aux);
 
             //Aqui se va a hacer la suma de todo el Total
             ingreso.Total = 0;
@@ -148,7 +147,7 @@ namespace Apolo
                 ingreso.Total += d.Precio * d.Cantidad;
             }
 
-            
+
 
         }
 
@@ -169,7 +168,7 @@ namespace Apolo
                 return true;
             }
 
-            if (ingreso.Factura.Length==0)
+            if (ingreso.Factura.Length == 0)
             {
                 MessageBox.Show("No se puede grabar un Ingreso si\nel número de factura está vacia.", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
@@ -206,7 +205,7 @@ namespace Apolo
                                 MessageBoxIcon.Error);
                     return true;
                 }
-                if (ingreso.Licencias[i].Clave.Length==0)
+                if (ingreso.Licencias[i].Clave.Length == 0)
                 {
                     MessageBox.Show("No se puede grabar un Ingreso si una de las claves de las Licencias está vacía.", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -452,7 +451,7 @@ namespace Apolo
             dgvLicencia.PrimaryGrid.DataSource = null;
             dgvLaptopsSeleccionados.PrimaryGrid.DataSource = null;
         }
-        
+
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
@@ -498,7 +497,7 @@ namespace Apolo
         private void cmbProveedor_SelectedIndexChanged(object sender, EventArgs e)
         {
             int i = cmbProveedor.SelectedIndex;
-            if (i >= 0) 
+            if (i >= 0)
             {
                 ingreso.Ruc = tablaProveedor.Rows[i]["ruc"].ToString();
                 txtRUC.Text = tablaProveedor.Rows[i]["ruc"].ToString();
@@ -674,7 +673,7 @@ namespace Apolo
             {
 
             }
-            
+
         }
 
         private void dgvLicencia_DoubleClick(object sender, EventArgs e)
@@ -713,7 +712,7 @@ namespace Apolo
             {
                 MessageBox.Show("Entro al try cath1");
             }
-            
+
         }
 
 
@@ -740,7 +739,7 @@ namespace Apolo
             txtFactura.Text = ingreso.Factura;
             txtGuia.Text = ingreso.Guia;
             txtNroIngreso.Text = ingreso.IdIngreso.ToString();
-            txtMontoCambio.Text = (ingreso.MontoCambio==0)?"": ingreso.MontoCambio.ToString();
+            txtMontoCambio.Text = (ingreso.MontoCambio == 0) ? "" : ingreso.MontoCambio.ToString();
 
         }
 
@@ -809,7 +808,7 @@ namespace Apolo
                     }
 
                     ingreso.Detalles.RemoveAt(indiceLC);
-                    for(int i = 0; i < ingreso.Detalles.Count; i++)
+                    for (int i = 0; i < ingreso.Detalles.Count; i++)
                     {
                         ingreso.Detalles[i].IdIngresoDetalle = i + 1;
                     }
@@ -839,7 +838,7 @@ namespace Apolo
                 if (MessageBox.Show("Estas seguro que desea Anular este ingreso", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     ingreso.Estado = 0;
-                    int error=ingresoDA.AnularIngreso(ingreso, this.nombreUsuario);
+                    int error = ingresoDA.AnularIngreso(ingreso, this.nombreUsuario);
                     if (error == 0)
                     {
                         MessageBox.Show("Se anulo el Ingreso N° :" + ingreso.IdIngreso, "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -998,14 +997,14 @@ namespace Apolo
                 hoja_trabajo.Cells[i + filaDetalle, 2] = det.LaptopNombreModeloLC;
                 hoja_trabajo.Cells[i + filaDetalle, 3] = det.Laptop.PartNumber;
                 hoja_trabajo.Cells[i + filaDetalle, 4] = det.LaptopTamanoPantalla.ToString();
-                hoja_trabajo.Cells[i + filaDetalle, 5] = (det.Laptop.Garantia==1)?"Si":"No";
+                hoja_trabajo.Cells[i + filaDetalle, 5] = (det.Laptop.Garantia == 1) ? "Si" : "No";
                 hoja_trabajo.Cells[i + filaDetalle, 6] = det.Precio.ToString();
                 hoja_trabajo.Cells[i + filaDetalle, 7] = det.Cantidad.ToString();
                 string aux = "";
                 aux = det.Laptop.Procesador.Modelo.NombreModelo + "/GEN" + det.Laptop.Procesador.Generacion.ToString();
                 hoja_trabajo.Cells[i + filaDetalle, 8] = aux;
                 hoja_trabajo.Cells[i + filaDetalle, 9] = det.Laptop.Video.Capacidad.ToString() + " GB";
-                
+
                 string tipoDisco1 = ""; int capDisco1 = 0; string tipoDisco2 = ""; int capDisco2 = 0;
                 if (det.Laptop.Discos.Count > 0)
                 {
@@ -1236,7 +1235,7 @@ namespace Apolo
                     //Centramos los textos
                     rango = hoja.Rows[fila2];
                     rango.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-                    
+
                     for (int j = 0; j < 5; j++)
                     {
                         rango = hoja.Columns[j + 1];
@@ -1348,7 +1347,7 @@ namespace Apolo
             {
                 MessageBox.Show("No se puede grabar un Ingreso si no\nespecifica el tipo de ingreso.", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
-                return ;
+                return;
             }
 
             if (cmbMonedaTipo.SelectedIndex == -1)
@@ -1369,59 +1368,46 @@ namespace Apolo
             //VALIDAR SI ES COMPRA (0)  O ARRENDAMIENTO (1)
             //! 0 -> COMPRA
             //! 1 -> SUBARRIENDO
-            string tipo = cmbTipoIngreso.SelectedIndex.ToString();
 
-            if (tipo == "0") //! -> COMPRA
+
+            if (numIngreso.Length == 0)
             {
-
-                if (numIngreso.Length == 0)
+                if (MessageBox.Show("Estas seguro que deseas Guardar este proceso de Ingreso", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    if (MessageBox.Show("Estas seguro que deseas Guardar este proceso de Ingreso", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+
+                    int idIngreso = ingresoDA.InsertarIngreso(ingreso, this.nombreUsuario);
+
+                    if (idIngreso == -1)
                     {
-
-                        int idIngreso = ingresoDA.InsertarIngreso(ingreso, this.nombreUsuario);
-
-                        if (idIngreso == -1)
-                        {
-                            MessageBox.Show("Hubo error en Registrar el Ingreso, comunicarse con tu soporte", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                            return;
-                        }
-                        for (int i = 0; i < ingreso.Detalles.Count; i++)
-                        {
-                            ingreso.Detalles[i].IdIngresoDetalle = i + 1;
-                        }
-                        dgvLaptopsSeleccionados.PrimaryGrid.DataSource = ingreso.Detalles;
-
-                        MessageBox.Show("Se guardó el Ingreso", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                        ingreso.IdIngreso = idIngreso;
-                        txtNroIngreso.Text = idIngreso.ToString();
-                        estadoComponentes(TipoVista.Guardar);
+                        MessageBox.Show("Hubo error en Registrar el Ingreso, comunicarse con tu soporte", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                        return;
                     }
-                }
-                else
-                {
-                    if (MessageBox.Show("Estas seguro que desea Guardar los cambios", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    for (int i = 0; i < ingreso.Detalles.Count; i++)
                     {
-                        ingresoDA.ModificarIngreso(ingreso, this.nombreUsuario);
-                        for (int i = 0; i < ingreso.Detalles.Count; i++)
-                        {
-                            ingreso.Detalles[i].IdIngresoDetalle = i + 1;
-                        }
-                        dgvLaptopsSeleccionados.PrimaryGrid.DataSource = ingreso.Detalles;
-                        MessageBox.Show("Se Modifico el Ingreso N° :" + txtNroIngreso.Text + " con exito", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        estadoComponentes(TipoVista.Guardar);
+                        ingreso.Detalles[i].IdIngresoDetalle = i + 1;
                     }
+                    dgvLaptopsSeleccionados.PrimaryGrid.DataSource = ingreso.Detalles;
+
+                    MessageBox.Show("Se guardó el Ingreso", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                    ingreso.IdIngreso = idIngreso;
+                    txtNroIngreso.Text = idIngreso.ToString();
+                    estadoComponentes(TipoVista.Guardar);
                 }
             }
             else
             {
-                //SUBARRIENDO
-                MessageBox.Show("PROCESO DE SUBARRIENDO");
-               
-
+                if (MessageBox.Show("Estas seguro que desea Guardar los cambios", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    ingresoDA.ModificarIngreso(ingreso, this.nombreUsuario);
+                    for (int i = 0; i < ingreso.Detalles.Count; i++)
+                    {
+                        ingreso.Detalles[i].IdIngresoDetalle = i + 1;
+                    }
+                    dgvLaptopsSeleccionados.PrimaryGrid.DataSource = ingreso.Detalles;
+                    MessageBox.Show("Se Modifico el Ingreso N° :" + txtNroIngreso.Text + " con exito", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    estadoComponentes(TipoVista.Guardar);
+                }
             }
-
-
         }
 
         private void dgvMemorias_CellValueChanged(object sender, GridCellValueChangedEventArgs e)
@@ -1444,7 +1430,7 @@ namespace Apolo
                     if (aux < 0) myStr = "1";
                 }
                 else myStr = "1";
-                cantidadMemoria= myStr.Length > 0 ? int.Parse(myStr) : 1;
+                cantidadMemoria = myStr.Length > 0 ? int.Parse(myStr) : 1;
                 ((GridCell)(((GridRow)dgvMemorias.PrimaryGrid.ActiveRow)[2])).Value = cantidadMemoria;
 
                 myStr = ((GridCell)(((GridRow)dgvMemorias.PrimaryGrid.ActiveRow)[5])).Value.ToString();
@@ -1601,7 +1587,7 @@ namespace Apolo
             IngresoDetalle det = new IngresoDetalle();
             int indiceLC = 0;
 
-            if (dgvLaptopsSeleccionados.PrimaryGrid.Rows.Count== 0) return;
+            if (dgvLaptopsSeleccionados.PrimaryGrid.Rows.Count == 0) return;
             if (dgvLaptopsSeleccionados.PrimaryGrid.Rows.Count > 0)
             {
                 detTempId = int.Parse(((GridCell)(((GridRow)dgvLaptopsSeleccionados.PrimaryGrid.ActiveRow)[6])).Value.ToString());
@@ -1694,7 +1680,7 @@ namespace Apolo
 
         private void frmProcesoIngreso_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dgvLaptopsSeleccionados_Click(object sender, EventArgs e)

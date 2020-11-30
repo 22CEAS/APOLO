@@ -14,6 +14,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Columns;
 
 namespace Apolo
 {
@@ -46,6 +48,7 @@ namespace Apolo
         private int cantModeloProcesador;
         private int[][] arregloLCGeneral;
         private int[][] arregloLCApple;
+
 
         public frmReporteStocksLaptops()
         {
@@ -93,7 +96,7 @@ namespace Apolo
         {
             if (MessageBox.Show("Estas seguro que desea Exportar el reporte", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
-                Cursor.Current = Cursors.WaitCursor;    
+                Cursor.Current = Cursors.WaitCursor;
                 try
                 {
                     DevExpress.Export.ExportSettings.DefaultExportType = ExportType.DataAware;
@@ -165,25 +168,29 @@ namespace Apolo
         {
             Excel.Range rango;
 
-            int cantColumnas = tablaProcesadoresGeneracion.Rows.Count + 3;
+            int cantColumnas = tablaProcesadoresGeneracion.Rows.Count + 3; //
             int filas = vista.RowCount;
 
             int k = cantColumnas - 1 + 64;
             char columF = (char)k;
-            int fila2 = 3;
+            int fila2 = 12; //! ORIGINAL 3
             string filaBorde = fila2.ToString();
             char columI = 'A';
             //Ponemos borde a las celdas
+
+
             rango = hoja_trabajo.Range[columI + fila2.ToString(), columF + fila2.ToString()];
             rango.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
             rango.Style.Font.Bold = false;
 
 
+
             for (int i = 1; i <= this.cantModeloProcesador * 2 + 4; i++)
             {
-                rango = hoja_trabajo.Range[columI + i.ToString(), columF + i.ToString()];
+                rango = hoja_trabajo.Range[columI + (i + 9).ToString(), columF + (i + 9).ToString()];
                 rango.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
             }
+
 
             for (int i = 0; i < this.cantGeneraciones; i++)
             {
@@ -225,7 +232,7 @@ namespace Apolo
             hoja_trabajo.Cells[fila2, cantGeneraciones + 2] = cantidadLCGeneral.Count;
             hoja_trabajo.Cells[fila2 + cantModeloProcesador + 1, cantGeneraciones + 2] = cantidadLCApple.Count;
 
-            montaCabeceras(1, ref hoja_trabajo, nombreCabecera);
+            montaCabeceras(10, ref hoja_trabajo, nombreCabecera); //ORIGINAL:1
         }
 
         private void montaCabeceras(int fila, ref Excel.Worksheet hoja, string nombreCabecera)
@@ -238,11 +245,11 @@ namespace Apolo
                 //** Montamos el título en la línea 1 **
                 hoja.Cells[fila, 1] = nombreCabecera;
                 hoja.Range[hoja.Cells[fila, 1], hoja.Cells[fila, cantColumnas]].Merge();
-                hoja.Range[hoja.Cells[fila, 1], hoja.Cells[fila, cantColumnas]].Interior.Color = Color.FromArgb(196, 89, 19);//FromArgb(255, 132, 0)
+                hoja.Range[hoja.Cells[fila, 1], hoja.Cells[fila, cantColumnas]].Interior.Color = Color.FromArgb(218, 152, 36);//FromArgb(255, 132, 0)
                 hoja.Range[hoja.Cells[fila, 1], hoja.Cells[fila, cantColumnas]].Style.Font.Bold = true;
 
-                hoja.Range[hoja.Cells[fila + 1, 1], hoja.Cells[fila + 1, cantColumnas - 1]].Interior.Color = Color.FromArgb(196, 89, 19);
-                hoja.Range[hoja.Cells[fila + 1, cantColumnas], hoja.Cells[fila + 1, cantColumnas]].Interior.Color = Color.FromArgb(130, 61, 10);
+                hoja.Range[hoja.Cells[fila + 1, 1], hoja.Cells[fila + 1, cantColumnas - 1]].Interior.Color = Color.FromArgb(218, 152, 36);
+                hoja.Range[hoja.Cells[fila + 1, cantColumnas], hoja.Cells[fila + 1, cantColumnas]].Interior.Color = Color.FromArgb(218, 152, 36);
 
                 hoja.Range[hoja.Cells[fila + 2, 1], hoja.Cells[fila + 2, cantColumnas]].Interior.Color = Color.FromArgb(252, 228, 215);
                 hoja.Range[hoja.Cells[fila + 3 + cantModeloProcesador, 1], hoja.Cells[fila + 3 + cantModeloProcesador, cantColumnas]].Interior.Color = Color.FromArgb(252, 228, 215);
@@ -260,6 +267,35 @@ namespace Apolo
                 hoja.Cells[fila + 1, cantGeneraciones + 2] = "Total en Almacen";
                 hoja.Cells[fila + 1, 1] = "Generación";
                 hoja.Cells[fila + 2, 1] = "LAPTOP";
+
+
+                //REPORTE SEGUN ESTADO
+
+                hoja.Cells[1, 1] = "DISPONIBLES";
+                hoja.Cells[1, 1].Interior.Color = Color.FromArgb(231, 177, 80);//FromArgb(255, 132, 0)
+                hoja.Cells[1, 2] = txtDisponibles.Text;
+
+                hoja.Cells[2, 1] = "ALQUILADOS";
+                hoja.Cells[2, 1].Interior.Color = Color.FromArgb(231, 177, 80);//FromArgb(255, 132, 0)
+                hoja.Cells[2, 2] = txtAlquilados.Text;
+
+                hoja.Cells[3, 1] = "INUTILIZABLES";
+                hoja.Cells[3, 1].Interior.Color = Color.FromArgb(231, 177, 80);//FromArgb(255, 132, 0)
+                hoja.Cells[3, 2] = txtInutilizables.Text;
+
+                hoja.Cells[4, 1] = "PERSONAL PCR";
+                hoja.Cells[4, 1].Interior.Color = Color.FromArgb(231, 177, 80);//FromArgb(255, 132, 0)
+                hoja.Cells[4, 2] = txtPersonales.Text;
+
+                hoja.Cells[5, 1] = "DAÑADO";
+                hoja.Cells[5, 1].Interior.Color = Color.FromArgb(231, 177, 80);//FromArgb(255, 132, 0)
+                hoja.Cells[5, 2] = txtDanados.Text;
+
+                hoja.Cells[6, 1] = "TOTAL";
+                hoja.Cells[6, 1].Interior.Color = Color.FromArgb(218, 152, 36);//FromArgb(255, 132, 0)
+                hoja.Cells[6, 2] = txtTotalLaptops.Text;
+
+
 
                 for (int k = 0; k < cantModeloProcesador; k++)
                 {
@@ -321,12 +357,65 @@ namespace Apolo
 
         private void verResumen_Click(object sender, EventArgs e)
         {
-            label1.Text = $"CANTIDAD REGISTRO: {vista.RowCount.ToString()}";
+
+            //label1.Text = $"CANTIDAD FILTRADA: {vista.RowCount.ToString()}";
+            txtCantidadFiltrada.Text = vista.RowCount.ToString();
+
         }
+
+        public void verReporte()
+        {
+            int contador = 0;
+
+            //DISPONIBLE
+            vista.ActiveFilterString = "[EstadoNombre] like '%DISPONIBLE%'";
+            int canDisponibles = vista.RowCount;
+            contador = contador + canDisponibles;
+            //lblDisponible.Text = $"DISPONIBLES: {cantidadReporte.ToString()}";
+            txtDisponibles.Text = canDisponibles.ToString();
+
+            //ALQUILADO/PRE ALQUILADO
+            vista.ActiveFilterString = "[EstadoNombre] like '%ALQUILADO%'";
+            int cantidadAlquilado = vista.RowCount;
+            int cantidadPreAlquilado;
+            vista.ActiveFilterString = "[EstadoNombre] like '%PRE-ALQUILER%'";
+            cantidadPreAlquilado = vista.RowCount;
+            contador = contador + cantidadAlquilado + cantidadPreAlquilado;
+            //lblAlquilados.Text = $"ALQUILADOS: {(cantidadReporte + aux).ToString()}";
+            txtAlquilados.Text = (cantidadAlquilado + cantidadPreAlquilado).ToString();
+
+            //INUTILIZABLES
+            vista.ActiveFilterString = "[EstadoNombre] like '%INUTILIZABLE%'";
+            int canInutilizable = vista.RowCount;
+            contador = contador + canInutilizable;
+            //lblInutilizables.Text = $"INUTILIZABLES: {cantidadReporte.ToString()}";
+            txtInutilizables.Text = canInutilizable.ToString();
+
+            //PERSONAL
+            vista.ActiveFilterString = "[EstadoNombre] like '%PERSONALPCR%'";
+            int canPersonalPCR = vista.RowCount;
+            contador = contador + canPersonalPCR;
+            //lblPersonal.Text = $"PERSONAL PCR: {cantidadReporte.ToString()}";
+            txtPersonales.Text = canPersonalPCR.ToString();
+
+            //DAÑADO
+            vista.ActiveFilterString = "[EstadoNombre] like '%DAÑADO%'";
+            int canDanado = vista.RowCount;
+            contador = contador + canDanado;
+            //lblDanado.Text = $"DAÑADO: {cantidadReporte.ToString()}";
+            txtDanados.Text = canDanado.ToString();
+
+
+            //TOTAL
+            //lblTotalLaptops.Text = $"TOTAL LAPTOPS: {(contador-cantidadReporte).ToString()}";
+            txtTotalLaptops.Text = (canDisponibles + cantidadAlquilado + cantidadPreAlquilado + canInutilizable + canPersonalPCR + canDanado).ToString();
+            vista.ActiveFilterString = "[EstadoNombre] null";
+        }
+
 
         private async void cargarData_Click(object sender, EventArgs e)
         {
-            label1.Text = $"CANTIDAD REGISTRO: 0";
+            label1.Text = $"CANTIDAD FILTRADA: ";
             Task<bool> task = new Task<bool>(cargarDataTabla);
             task.Start();
             giftCarga.Image = Image.FromFile(@".\progress.gif");
@@ -335,8 +424,10 @@ namespace Apolo
             giftCarga.Enabled = false;
             giftCarga.Visible = false;
             cargarData.Text = "DATA CARGADA";
-            label1.Text = $"CANTIDAD REGISTRO: {vista.RowCount.ToString()}";
+            //label1.Text = $"CANTIDAD FILTRADA: {vista.RowCount.ToString()}";
+            txtCantidadFiltrada.Text = vista.RowCount.ToString();
             cargarData.Visible = false;
+            verReporte();
         }
 
         public bool cargarDataTabla()
@@ -383,7 +474,7 @@ namespace Apolo
                     laptop.SetDisco(viewDisco);
                     laptop.SetMemoria(viewMemoria);
                     laptop.SetLicencia(viewLicencia);
-                    
+
                     if (laptop.Discos.Count > 0)
                     {
                         if (laptop.Discos.Count == 1)
@@ -480,17 +571,61 @@ namespace Apolo
 
         private void frmReporteStocksLaptops_Load(object sender, EventArgs e)
         {
+
             cargarData.PerformClick();
+
         }
 
         private void dgvLaptops_MouseHover(object sender, EventArgs e)
         {
-            label1.Text = $"CANTIDAD REGISTRO: {vista.RowCount.ToString()}";
+            //label1.Text = $"CANTIDAD FILTRADA:";
+            txtCantidadFiltrada.Text = vista.RowCount.ToString();
         }
 
         private void dgvLaptops_MouseLeave(object sender, EventArgs e)
         {
-            label1.Text = $"CANTIDAD REGISTRO: {vista.RowCount.ToString()}";
+            //label1.Text = $"CANTIDAD FILTRADA:";
+            txtCantidadFiltrada.Text = vista.RowCount.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAlquilados_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtInutilizables_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPersonales_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtActivos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDanados_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDesactivos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtVendido_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

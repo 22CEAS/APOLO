@@ -44,16 +44,30 @@
             this.MemoriaRam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Estado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Cliente = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RucCliente = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Ubicacion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SerieFabrica = new DevExpress.XtraGrid.Columns.GridColumn();
             this.IdSalida = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnExportar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.verResumen = new System.Windows.Forms.Button();
             this.giftCarga = new System.Windows.Forms.PictureBox();
             this.cargarData = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.RucCliente = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtCantidadFiltrada = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTotalLaptops = new System.Windows.Forms.TextBox();
+            this.txtDanados = new System.Windows.Forms.TextBox();
+            this.txtPersonales = new System.Windows.Forms.TextBox();
+            this.txtInutilizables = new System.Windows.Forms.TextBox();
+            this.txtAlquilados = new System.Windows.Forms.TextBox();
+            this.txtDisponibles = new System.Windows.Forms.TextBox();
+            this.lblTotalLaptops = new System.Windows.Forms.Label();
+            this.lblDanado = new System.Windows.Forms.Label();
+            this.lblPersonal = new System.Windows.Forms.Label();
+            this.lblInutilizables = new System.Windows.Forms.Label();
+            this.lblAlquilados = new System.Windows.Forms.Label();
+            this.lblDisponible = new System.Windows.Forms.Label();
+            this.verResumen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLaptops)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giftCarga)).BeginInit();
@@ -64,10 +78,10 @@
             this.dgvLaptops.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvLaptops.Location = new System.Drawing.Point(11, 147);
+            this.dgvLaptops.Location = new System.Drawing.Point(11, 234);
             this.dgvLaptops.MainView = this.vista;
             this.dgvLaptops.Name = "dgvLaptops";
-            this.dgvLaptops.Size = new System.Drawing.Size(1145, 381);
+            this.dgvLaptops.Size = new System.Drawing.Size(1145, 304);
             this.dgvLaptops.TabIndex = 132;
             this.dgvLaptops.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.vista});
@@ -265,6 +279,19 @@
             this.Cliente.VisibleIndex = 11;
             this.Cliente.Width = 150;
             // 
+            // RucCliente
+            // 
+            this.RucCliente.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.RucCliente.AppearanceHeader.Options.UseBackColor = true;
+            this.RucCliente.Caption = "RUC";
+            this.RucCliente.FieldName = "RucCliente";
+            this.RucCliente.MinWidth = 40;
+            this.RucCliente.Name = "RucCliente";
+            this.RucCliente.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.RucCliente.Visible = true;
+            this.RucCliente.VisibleIndex = 12;
+            this.RucCliente.Width = 140;
+            // 
             // Ubicacion
             // 
             this.Ubicacion.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -313,7 +340,7 @@
             this.btnExportar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportar.Image = ((System.Drawing.Image)(resources.GetObject("btnExportar.Image")));
             this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExportar.Location = new System.Drawing.Point(1081, 5);
+            this.btnExportar.Location = new System.Drawing.Point(1006, 68);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(75, 63);
             this.btnExportar.TabIndex = 139;
@@ -322,40 +349,18 @@
             this.btnExportar.UseVisualStyleBackColor = false;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 16);
-            this.label1.TabIndex = 148;
-            this.label1.Text = "CANTIDAD REGISTROS:";
-            // 
-            // verResumen
-            // 
-            this.verResumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.verResumen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.verResumen.Location = new System.Drawing.Point(18, 30);
-            this.verResumen.Name = "verResumen";
-            this.verResumen.Size = new System.Drawing.Size(115, 19);
-            this.verResumen.TabIndex = 147;
-            this.verResumen.Text = "VER RESUMEN";
-            this.verResumen.UseVisualStyleBackColor = false;
-            this.verResumen.Click += new System.EventHandler(this.verResumen_Click);
-            // 
             // giftCarga
             // 
             this.giftCarga.Location = new System.Drawing.Point(526, 12);
             this.giftCarga.Name = "giftCarga";
-            this.giftCarga.Size = new System.Drawing.Size(123, 82);
+            this.giftCarga.Size = new System.Drawing.Size(203, 138);
             this.giftCarga.TabIndex = 146;
             this.giftCarga.TabStop = false;
             // 
             // cargarData
             // 
             this.cargarData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cargarData.Location = new System.Drawing.Point(526, 100);
+            this.cargarData.Location = new System.Drawing.Point(573, 156);
             this.cargarData.Name = "cargarData";
             this.cargarData.Size = new System.Drawing.Size(113, 19);
             this.cargarData.TabIndex = 145;
@@ -383,27 +388,203 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnExportar2_Click);
             // 
-            // RucCliente
+            // txtCantidadFiltrada
             // 
-            this.RucCliente.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.RucCliente.AppearanceHeader.Options.UseBackColor = true;
-            this.RucCliente.Caption = "RUC";
-            this.RucCliente.FieldName = "RucCliente";
-            this.RucCliente.MinWidth = 40;
-            this.RucCliente.Name = "RucCliente";
-            this.RucCliente.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.RucCliente.Visible = true;
-            this.RucCliente.VisibleIndex = 12;
-            this.RucCliente.Width = 140;
+            this.txtCantidadFiltrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadFiltrada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCantidadFiltrada.Location = new System.Drawing.Point(1065, 156);
+            this.txtCantidadFiltrada.Name = "txtCantidadFiltrada";
+            this.txtCantidadFiltrada.Size = new System.Drawing.Size(86, 22);
+            this.txtCantidadFiltrada.TabIndex = 171;
+            this.txtCantidadFiltrada.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(911, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 16);
+            this.label2.TabIndex = 170;
+            this.label2.Text = "CANTIDAD FILTRADA:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(155, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 20);
+            this.label1.TabIndex = 184;
+            this.label1.Text = "RESUMEN";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtTotalLaptops
+            // 
+            this.txtTotalLaptops.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalLaptops.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtTotalLaptops.Location = new System.Drawing.Point(183, 180);
+            this.txtTotalLaptops.Name = "txtTotalLaptops";
+            this.txtTotalLaptops.ReadOnly = true;
+            this.txtTotalLaptops.Size = new System.Drawing.Size(57, 24);
+            this.txtTotalLaptops.TabIndex = 183;
+            this.txtTotalLaptops.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtDanados
+            // 
+            this.txtDanados.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDanados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDanados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtDanados.Location = new System.Drawing.Point(131, 143);
+            this.txtDanados.Name = "txtDanados";
+            this.txtDanados.ReadOnly = true;
+            this.txtDanados.Size = new System.Drawing.Size(160, 22);
+            this.txtDanados.TabIndex = 182;
+            this.txtDanados.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtPersonales
+            // 
+            this.txtPersonales.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPersonales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPersonales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtPersonales.Location = new System.Drawing.Point(131, 115);
+            this.txtPersonales.Name = "txtPersonales";
+            this.txtPersonales.ReadOnly = true;
+            this.txtPersonales.Size = new System.Drawing.Size(160, 22);
+            this.txtPersonales.TabIndex = 181;
+            this.txtPersonales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtInutilizables
+            // 
+            this.txtInutilizables.BackColor = System.Drawing.SystemColors.Control;
+            this.txtInutilizables.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInutilizables.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtInutilizables.Location = new System.Drawing.Point(131, 87);
+            this.txtInutilizables.Name = "txtInutilizables";
+            this.txtInutilizables.ReadOnly = true;
+            this.txtInutilizables.Size = new System.Drawing.Size(160, 22);
+            this.txtInutilizables.TabIndex = 180;
+            this.txtInutilizables.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtAlquilados
+            // 
+            this.txtAlquilados.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAlquilados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAlquilados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtAlquilados.Location = new System.Drawing.Point(131, 60);
+            this.txtAlquilados.Name = "txtAlquilados";
+            this.txtAlquilados.ReadOnly = true;
+            this.txtAlquilados.Size = new System.Drawing.Size(160, 22);
+            this.txtAlquilados.TabIndex = 179;
+            this.txtAlquilados.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtDisponibles
+            // 
+            this.txtDisponibles.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisponibles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtDisponibles.Location = new System.Drawing.Point(131, 33);
+            this.txtDisponibles.Name = "txtDisponibles";
+            this.txtDisponibles.ReadOnly = true;
+            this.txtDisponibles.Size = new System.Drawing.Size(160, 22);
+            this.txtDisponibles.TabIndex = 178;
+            this.txtDisponibles.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblTotalLaptops
+            // 
+            this.lblTotalLaptops.AutoSize = true;
+            this.lblTotalLaptops.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalLaptops.Location = new System.Drawing.Point(21, 180);
+            this.lblTotalLaptops.Name = "lblTotalLaptops";
+            this.lblTotalLaptops.Size = new System.Drawing.Size(139, 32);
+            this.lblTotalLaptops.TabIndex = 177;
+            this.lblTotalLaptops.Text = "TOTAL DE LAPTOPS\r\n EN LA EMPRESA";
+            this.lblTotalLaptops.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDanado
+            // 
+            this.lblDanado.AutoSize = true;
+            this.lblDanado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDanado.Location = new System.Drawing.Point(21, 147);
+            this.lblDanado.Name = "lblDanado";
+            this.lblDanado.Size = new System.Drawing.Size(66, 16);
+            this.lblDanado.TabIndex = 176;
+            this.lblDanado.Text = "DAÑADO";
+            // 
+            // lblPersonal
+            // 
+            this.lblPersonal.AutoSize = true;
+            this.lblPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonal.Location = new System.Drawing.Point(21, 116);
+            this.lblPersonal.Name = "lblPersonal";
+            this.lblPersonal.Size = new System.Drawing.Size(81, 16);
+            this.lblPersonal.TabIndex = 175;
+            this.lblPersonal.Text = "PERSONAL";
+            // 
+            // lblInutilizables
+            // 
+            this.lblInutilizables.AutoSize = true;
+            this.lblInutilizables.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInutilizables.Location = new System.Drawing.Point(21, 91);
+            this.lblInutilizables.Name = "lblInutilizables";
+            this.lblInutilizables.Size = new System.Drawing.Size(104, 16);
+            this.lblInutilizables.TabIndex = 174;
+            this.lblInutilizables.Text = "INUTILIZABLES";
+            // 
+            // lblAlquilados
+            // 
+            this.lblAlquilados.AutoSize = true;
+            this.lblAlquilados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlquilados.Location = new System.Drawing.Point(21, 64);
+            this.lblAlquilados.Name = "lblAlquilados";
+            this.lblAlquilados.Size = new System.Drawing.Size(92, 16);
+            this.lblAlquilados.TabIndex = 173;
+            this.lblAlquilados.Text = "ALQUILADOS";
+            // 
+            // lblDisponible
+            // 
+            this.lblDisponible.AutoSize = true;
+            this.lblDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisponible.Location = new System.Drawing.Point(21, 37);
+            this.lblDisponible.Name = "lblDisponible";
+            this.lblDisponible.Size = new System.Drawing.Size(96, 16);
+            this.lblDisponible.TabIndex = 172;
+            this.lblDisponible.Text = "DISPONIBLES";
+            // 
+            // verResumen
+            // 
+            this.verResumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.verResumen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.verResumen.Location = new System.Drawing.Point(1166, 528);
+            this.verResumen.Name = "verResumen";
+            this.verResumen.Size = new System.Drawing.Size(10, 10);
+            this.verResumen.TabIndex = 185;
+            this.verResumen.Text = "VER RESUMEN";
+            this.verResumen.UseVisualStyleBackColor = false;
             // 
             // frmReporteStocksLaptops
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1188, 540);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1188, 550);
             this.Controls.Add(this.verResumen);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtTotalLaptops);
+            this.Controls.Add(this.txtDanados);
+            this.Controls.Add(this.txtPersonales);
+            this.Controls.Add(this.txtInutilizables);
+            this.Controls.Add(this.txtAlquilados);
+            this.Controls.Add(this.txtDisponibles);
+            this.Controls.Add(this.lblTotalLaptops);
+            this.Controls.Add(this.lblDanado);
+            this.Controls.Add(this.lblPersonal);
+            this.Controls.Add(this.lblInutilizables);
+            this.Controls.Add(this.lblAlquilados);
+            this.Controls.Add(this.lblDisponible);
+            this.Controls.Add(this.txtCantidadFiltrada);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.giftCarga);
             this.Controls.Add(this.cargarData);
             this.Controls.Add(this.btnExportar);
@@ -426,7 +607,6 @@
         }
 
         #endregion
-        private DevExpress.XtraGrid.GridControl dgvLaptops;
         private DevExpress.XtraGrid.Views.Grid.GridView vista;
         private DevExpress.XtraGrid.Columns.GridColumn CodigoLC;
         private DevExpress.XtraGrid.Columns.GridColumn Marca;
@@ -445,11 +625,26 @@
         private DevExpress.XtraGrid.Columns.GridColumn SerieFabrica;
         private System.Windows.Forms.Button btnExportar;
         private DevExpress.XtraGrid.Columns.GridColumn IdSalida;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button verResumen;
         public System.Windows.Forms.PictureBox giftCarga;
         public System.Windows.Forms.Button cargarData;
         private System.Windows.Forms.Button button1;
         private DevExpress.XtraGrid.Columns.GridColumn RucCliente;
+        private System.Windows.Forms.TextBox txtCantidadFiltrada;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTotalLaptops;
+        private System.Windows.Forms.TextBox txtDanados;
+        private System.Windows.Forms.TextBox txtPersonales;
+        private System.Windows.Forms.TextBox txtInutilizables;
+        private System.Windows.Forms.TextBox txtAlquilados;
+        public System.Windows.Forms.TextBox txtDisponibles;
+        private System.Windows.Forms.Label lblTotalLaptops;
+        private System.Windows.Forms.Label lblDanado;
+        private System.Windows.Forms.Label lblPersonal;
+        private System.Windows.Forms.Label lblInutilizables;
+        private System.Windows.Forms.Label lblAlquilados;
+        private System.Windows.Forms.Label lblDisponible;
+        private System.Windows.Forms.Button verResumen;
+        public DevExpress.XtraGrid.GridControl dgvLaptops;
     }
 }

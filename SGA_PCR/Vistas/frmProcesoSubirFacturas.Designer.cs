@@ -48,14 +48,16 @@
             this.TotalDolares = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TipoCambio = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VentaSoles = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Proveedor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CostoSoles = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CostoDolares = new DevExpress.XtraGrid.Columns.GridColumn();
             this.UtilidadSoles = new DevExpress.XtraGrid.Columns.GridColumn();
             this.UtilidadDolares = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ObservacionXLevantar = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Proveedor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.giftCarga = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLaptops)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giftCarga)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubirFactura
@@ -306,6 +308,17 @@
             this.VentaSoles.VisibleIndex = 14;
             this.VentaSoles.Width = 100;
             // 
+            // Proveedor
+            // 
+            this.Proveedor.Caption = "Proveedor";
+            this.Proveedor.FieldName = "Proveedor";
+            this.Proveedor.MinWidth = 100;
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.Proveedor.Visible = true;
+            this.Proveedor.VisibleIndex = 15;
+            this.Proveedor.Width = 100;
+            // 
             // CostoSoles
             // 
             this.CostoSoles.Caption = "CostoSoles";
@@ -361,16 +374,13 @@
             this.ObservacionXLevantar.VisibleIndex = 20;
             this.ObservacionXLevantar.Width = 300;
             // 
-            // Proveedor
+            // giftCarga
             // 
-            this.Proveedor.Caption = "Proveedor";
-            this.Proveedor.FieldName = "Proveedor";
-            this.Proveedor.MinWidth = 100;
-            this.Proveedor.Name = "Proveedor";
-            this.Proveedor.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.Proveedor.Visible = true;
-            this.Proveedor.VisibleIndex = 15;
-            this.Proveedor.Width = 100;
+            this.giftCarga.Location = new System.Drawing.Point(456, 171);
+            this.giftCarga.Name = "giftCarga";
+            this.giftCarga.Size = new System.Drawing.Size(413, 310);
+            this.giftCarga.TabIndex = 141;
+            this.giftCarga.TabStop = false;
             // 
             // frmProcesoSubirFacturas
             // 
@@ -378,6 +388,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1315, 533);
+            this.Controls.Add(this.giftCarga);
             this.Controls.Add(this.dgvLaptops);
             this.Controls.Add(this.btnValidar);
             this.Controls.Add(this.btnGrabar);
@@ -389,8 +400,10 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturas Sisgeco";
+            this.Load += new System.EventHandler(this.frmProcesoSubirFacturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLaptops)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giftCarga)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -423,5 +436,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn ObservacionXLevantar;
         private DevExpress.XtraGrid.Columns.GridColumn Descripcion;
         private DevExpress.XtraGrid.Columns.GridColumn Proveedor;
+        public System.Windows.Forms.PictureBox giftCarga;
     }
 }

@@ -48,8 +48,10 @@ namespace Apolo
             facturaDA = new FacturaDA();
         }
 
+     
         private void btnSubirFactura_Click(object sender, EventArgs e)
         {
+
             try
             {
                 string path;
@@ -74,7 +76,7 @@ namespace Apolo
                     int iRow = 2;
                     while (!string.IsNullOrEmpty(sl.GetCellValueAsString(iRow, 1)))
                     {
-                        string tipoPago= sl.GetCellValueAsString(iRow, 2);
+                        string tipoPago = sl.GetCellValueAsString(iRow, 2);
                         if ((tipoPago == "RENOVACION") || (tipoPago == "ALQUILER"))
                         {
                             Factura fact = new Factura();
@@ -118,19 +120,38 @@ namespace Apolo
             {
                 MessageBox.Show(ex.Message, "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
-            
+
         }
 
-        private void btnGrabar_Click(object sender, EventArgs e)
+        public bool GrabarFactura()
+        {
+            Validar(2);
+            MessageBox.Show("Se guardó las listas de facturas", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            return true;
+        }
+
+        private async void btnGrabar_Click(object sender, EventArgs e)
         {
             if (facturas.Count > 0)
             {
                 if (MessageBox.Show("Estas seguro que desea Guardar las facturas", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
+                    giftCarga.Enabled = true;
+                    giftCarga.Visible = true;
                     //facturaDA.InsertarFacturas(facturas, this.nombreUsuario);
-                    Validar(2);
-                    MessageBox.Show("Se guardó las listas de facturas", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    
+                    Task<bool> task = new Task<bool>(GrabarFactura);
+                    task.Start();
+                    giftCarga.Image = Image.FromFile(@".\progress.gif");
+                    giftCarga.SizeMode = PictureBoxSizeMode.StretchImage;
+                    btnGrabar.Enabled = false;
+                    btnSubirFactura.Enabled = false;
+                    btnValidar.Enabled = false;
+                    bool resultado = await task; //MIENTRAS CARGA
+                    giftCarga.Enabled = false;
+                    giftCarga.Visible = false;
+                    btnGrabar.Enabled = true;
+                    btnSubirFactura.Enabled = true;
+                    btnValidar.Enabled = true;
                 }
             }
         }
@@ -466,11 +487,40 @@ namespace Apolo
             }
         }
 
-        private void btnValidar_Click(object sender, EventArgs e)
+        private async void btnValidar_Click(object sender, EventArgs e)
+        {
+            giftCarga.Enabled = true;
+            giftCarga.Visible = true;
+            Task<bool> task = new Task<bool>(ValidarFactura);
+            task.Start();
+            giftCarga.Image = Image.FromFile(@".\progress.gif");
+            giftCarga.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            btnSubirFactura.Enabled = false;
+            btnGrabar.Enabled = false;
+            btnValidar.Enabled = false;
+
+            bool resultado = await task; //MIENTRAS CARGA
+
+            giftCarga.Enabled = false;
+            giftCarga.Visible = false;
+
+            btnSubirFactura.Enabled = true;
+            btnGrabar.Enabled = true;
+            btnValidar.Enabled = true;
+        }
+
+        public bool ValidarFactura()
         {
             Validar(1);
             MessageBox.Show("Se terminó la validación", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            return true;
+        }
 
+        private void frmProcesoSubirFacturas_Load(object sender, EventArgs e)
+        {
+            giftCarga.Enabled = false;
+            giftCarga.Visible = false;
         }
     }
 }
