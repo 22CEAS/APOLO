@@ -53,6 +53,7 @@
             this.giftCarga = new System.Windows.Forms.PictureBox();
             this.cargarData = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.RucCliente = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLaptops)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giftCarga)).BeginInit();
@@ -100,6 +101,7 @@
             this.MemoriaRam,
             this.Estado,
             this.Cliente,
+            this.RucCliente,
             this.Ubicacion,
             this.SerieFabrica,
             this.IdSalida});
@@ -272,7 +274,7 @@
             this.Ubicacion.MinWidth = 40;
             this.Ubicacion.Name = "Ubicacion";
             this.Ubicacion.Visible = true;
-            this.Ubicacion.VisibleIndex = 12;
+            this.Ubicacion.VisibleIndex = 13;
             this.Ubicacion.Width = 150;
             // 
             // SerieFabrica
@@ -284,7 +286,7 @@
             this.SerieFabrica.MinWidth = 40;
             this.SerieFabrica.Name = "SerieFabrica";
             this.SerieFabrica.Visible = true;
-            this.SerieFabrica.VisibleIndex = 13;
+            this.SerieFabrica.VisibleIndex = 14;
             this.SerieFabrica.Width = 150;
             // 
             // IdSalida
@@ -297,7 +299,7 @@
             this.IdSalida.Name = "IdSalida";
             this.IdSalida.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.IdSalida.Visible = true;
-            this.IdSalida.VisibleIndex = 14;
+            this.IdSalida.VisibleIndex = 15;
             this.IdSalida.Width = 80;
             // 
             // btnExportar
@@ -381,6 +383,19 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnExportar2_Click);
             // 
+            // RucCliente
+            // 
+            this.RucCliente.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.RucCliente.AppearanceHeader.Options.UseBackColor = true;
+            this.RucCliente.Caption = "RUC";
+            this.RucCliente.FieldName = "RucCliente";
+            this.RucCliente.MinWidth = 40;
+            this.RucCliente.Name = "RucCliente";
+            this.RucCliente.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.RucCliente.Visible = true;
+            this.RucCliente.VisibleIndex = 12;
+            this.RucCliente.Width = 140;
+            // 
             // frmReporteStocksLaptops
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -435,5 +450,6 @@
         public System.Windows.Forms.PictureBox giftCarga;
         public System.Windows.Forms.Button cargarData;
         private System.Windows.Forms.Button button1;
+        private DevExpress.XtraGrid.Columns.GridColumn RucCliente;
     }
 }

@@ -51,6 +51,7 @@
             this.button30 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.PROCESOS = new System.Windows.Forms.Panel();
+            this.btnMovimientosInternos = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
@@ -63,6 +64,7 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ARCHIVO = new System.Windows.Forms.Panel();
+            this.btnLicencias = new System.Windows.Forms.Button();
             this.btnKAM = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -73,6 +75,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.btnVerDashboard = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.usuarioConectado = new System.Windows.Forms.TextBox();
             this.button34 = new System.Windows.Forms.Button();
@@ -87,8 +90,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
-            this.btnLicencias = new System.Windows.Forms.Button();
-            this.btnMovimientosInternos = new System.Windows.Forms.Button();
             this.VerDetallePronos = new System.Windows.Forms.Button();
             this.btnVerDetalleDispo = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -104,7 +105,6 @@
             this.lblLaptopsDisponibles = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panelDashboard = new System.Windows.Forms.Panel();
-            this.btnVerDashboard = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.panelConfiguracion.SuspendLayout();
             this.REPORTES.SuspendLayout();
@@ -521,6 +521,25 @@
             this.PROCESOS.TabIndex = 17;
             this.PROCESOS.Visible = false;
             // 
+            // btnMovimientosInternos
+            // 
+            this.btnMovimientosInternos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnMovimientosInternos.FlatAppearance.BorderSize = 0;
+            this.btnMovimientosInternos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(104)))), ((int)(((byte)(0)))));
+            this.btnMovimientosInternos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovimientosInternos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMovimientosInternos.ForeColor = System.Drawing.Color.Black;
+            this.btnMovimientosInternos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovimientosInternos.Location = new System.Drawing.Point(3, 513);
+            this.btnMovimientosInternos.Name = "btnMovimientosInternos";
+            this.btnMovimientosInternos.Size = new System.Drawing.Size(319, 45);
+            this.btnMovimientosInternos.TabIndex = 20;
+            this.btnMovimientosInternos.Text = "> MOVIMIENTOS INTERNOS";
+            this.btnMovimientosInternos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovimientosInternos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMovimientosInternos.UseVisualStyleBackColor = false;
+            this.btnMovimientosInternos.Click += new System.EventHandler(this.button35_Click_1);
+            // 
             // button19
             // 
             this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -749,6 +768,25 @@
             this.ARCHIVO.TabIndex = 9;
             this.ARCHIVO.Visible = false;
             // 
+            // btnLicencias
+            // 
+            this.btnLicencias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnLicencias.FlatAppearance.BorderSize = 0;
+            this.btnLicencias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(104)))), ((int)(((byte)(0)))));
+            this.btnLicencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLicencias.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLicencias.ForeColor = System.Drawing.Color.Black;
+            this.btnLicencias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLicencias.Location = new System.Drawing.Point(3, 406);
+            this.btnLicencias.Name = "btnLicencias";
+            this.btnLicencias.Size = new System.Drawing.Size(316, 45);
+            this.btnLicencias.TabIndex = 18;
+            this.btnLicencias.Text = "> LICENCIAS";
+            this.btnLicencias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLicencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLicencias.UseVisualStyleBackColor = false;
+            this.btnLicencias.Click += new System.EventHandler(this.btnLicencias_Click);
+            // 
             // btnKAM
             // 
             this.btnKAM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -943,6 +981,17 @@
             this.BarraTitulo.TabIndex = 1;
             this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             // 
+            // btnVerDashboard
+            // 
+            this.btnVerDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnVerDashboard.Image")));
+            this.btnVerDashboard.Location = new System.Drawing.Point(67, 1);
+            this.btnVerDashboard.Name = "btnVerDashboard";
+            this.btnVerDashboard.Size = new System.Drawing.Size(55, 46);
+            this.btnVerDashboard.TabIndex = 14;
+            this.btnVerDashboard.UseVisualStyleBackColor = true;
+            this.btnVerDashboard.Visible = false;
+            this.btnVerDashboard.Click += new System.EventHandler(this.button35_Click_2);
+            // 
             // lblUser
             // 
             this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1081,7 +1130,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(151, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(67, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(173, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1105,44 +1154,6 @@
             // 
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
-            // 
-            // btnLicencias
-            // 
-            this.btnLicencias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnLicencias.FlatAppearance.BorderSize = 0;
-            this.btnLicencias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(104)))), ((int)(((byte)(0)))));
-            this.btnLicencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLicencias.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLicencias.ForeColor = System.Drawing.Color.Black;
-            this.btnLicencias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLicencias.Location = new System.Drawing.Point(3, 406);
-            this.btnLicencias.Name = "btnLicencias";
-            this.btnLicencias.Size = new System.Drawing.Size(316, 45);
-            this.btnLicencias.TabIndex = 18;
-            this.btnLicencias.Text = "> LICENCIAS";
-            this.btnLicencias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLicencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLicencias.UseVisualStyleBackColor = false;
-            this.btnLicencias.Click += new System.EventHandler(this.btnLicencias_Click);
-            // 
-            // btnMovimientosInternos
-            // 
-            this.btnMovimientosInternos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnMovimientosInternos.FlatAppearance.BorderSize = 0;
-            this.btnMovimientosInternos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(104)))), ((int)(((byte)(0)))));
-            this.btnMovimientosInternos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMovimientosInternos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMovimientosInternos.ForeColor = System.Drawing.Color.Black;
-            this.btnMovimientosInternos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMovimientosInternos.Location = new System.Drawing.Point(3, 513);
-            this.btnMovimientosInternos.Name = "btnMovimientosInternos";
-            this.btnMovimientosInternos.Size = new System.Drawing.Size(319, 45);
-            this.btnMovimientosInternos.TabIndex = 20;
-            this.btnMovimientosInternos.Text = "> MOVIMIENTOS INTERNOS";
-            this.btnMovimientosInternos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMovimientosInternos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMovimientosInternos.UseVisualStyleBackColor = false;
-            this.btnMovimientosInternos.Click += new System.EventHandler(this.button35_Click_1);
             // 
             // VerDetallePronos
             // 
@@ -1300,16 +1311,6 @@
             this.panelDashboard.Size = new System.Drawing.Size(594, 569);
             this.panelDashboard.TabIndex = 14;
             this.panelDashboard.Visible = false;
-            // 
-            // btnVerDashboard
-            // 
-            this.btnVerDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnVerDashboard.Image")));
-            this.btnVerDashboard.Location = new System.Drawing.Point(67, 1);
-            this.btnVerDashboard.Name = "btnVerDashboard";
-            this.btnVerDashboard.Size = new System.Drawing.Size(55, 46);
-            this.btnVerDashboard.TabIndex = 14;
-            this.btnVerDashboard.UseVisualStyleBackColor = true;
-            this.btnVerDashboard.Click += new System.EventHandler(this.button35_Click_2);
             // 
             // TEST_MENU_PRINCIPAL
             // 

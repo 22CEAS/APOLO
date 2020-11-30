@@ -84,7 +84,7 @@ namespace Apolo
             // Add an empty row to the output document.
             e.ExportContext.AddRow();
             // Merge cells of two new rows. 
-            e.ExportContext.MergeCells(new DevExpress.Export.Xl.XlCellRange(new DevExpress.Export.Xl.XlCellPosition(0, 0), new DevExpress.Export.Xl.XlCellPosition(14, 1)));
+            e.ExportContext.MergeCells(new DevExpress.Export.Xl.XlCellRange(new DevExpress.Export.Xl.XlCellPosition(0, 0), new DevExpress.Export.Xl.XlCellPosition(15, 1)));
         }
 
 
@@ -373,6 +373,7 @@ namespace Apolo
                     laptop.EstadoNombre = tablaLaptops.Rows[rec]["estado"].ToString();
                     laptop.Estado = int.Parse(tablaLaptops.Rows[rec]["idEstado"].ToString());
                     laptop.Cliente = tablaLaptops.Rows[rec]["cliente"].ToString();
+                    laptop.RucCliente = tablaLaptops.Rows[rec]["rucCliente"].ToString();
                     laptop.Ubicacion = tablaLaptops.Rows[rec]["ubicacion"].ToString();
                     laptop.SerieFabrica = tablaLaptops.Rows[rec]["serieFabrica"].ToString();
 

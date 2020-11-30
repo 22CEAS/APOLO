@@ -30,6 +30,7 @@ namespace Modelo
         private int estado;
         private string estadoNombre;
         private string cliente;
+        private string rucCliente;
         private string disco1;
         private string capacidadDisco1;
         private string disco2;
@@ -216,5 +217,6 @@ namespace Modelo
         public string LicenciaAntivirus { get => licenciaAntivirus; set => licenciaAntivirus = value; }
         public string LicenciaOffice { get => licenciaOffice; set => licenciaOffice = value; }
         public string IdSalida { get => idSalida; set => idSalida = value; }
+        public string RucCliente { get => rucCliente; set => rucCliente = value; }
     }
 }
