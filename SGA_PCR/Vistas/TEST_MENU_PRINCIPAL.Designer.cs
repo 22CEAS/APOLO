@@ -1062,7 +1062,7 @@
             this.btnVerDashboard.Size = new System.Drawing.Size(55, 46);
             this.btnVerDashboard.TabIndex = 14;
             this.btnVerDashboard.UseVisualStyleBackColor = true;
-            this.btnVerDashboard.Visible = false;
+            this.btnVerDashboard.UseWaitCursor = true;
             this.btnVerDashboard.Click += new System.EventHandler(this.button35_Click_2);
             // 
             // lblUser
@@ -1998,7 +1998,7 @@
             this.gridControl2.Location = new System.Drawing.Point(583, 15);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(10, 104);
+            this.gridControl2.Size = new System.Drawing.Size(10, 107);
             this.gridControl2.TabIndex = 136;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});

@@ -488,7 +488,7 @@ namespace Apolo
                         MessageBox.Show("Hubo error en Registrar el Cambio, comunicarse con tu soporte", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                         return;
                     }
-                    MessageBox.Show("Se guradó el Cambio", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show("Se guardó el Cambio", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                     cambio.IdCambio = idCambio;
                     cambioOld = new Cambio(cambio);
                     txtNroCambio.Text = idCambio.ToString();

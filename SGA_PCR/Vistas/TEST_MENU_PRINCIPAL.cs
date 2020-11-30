@@ -1353,7 +1353,6 @@ namespace Apolo
         private void VerDetallePronos_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(FechaPronosticador.SelectionRange.Start.ToShortDateString());
-
             int canDisponibles = 0;
             
             
@@ -1364,13 +1363,15 @@ namespace Apolo
             gridControl1.DataSource = tablaLaptops;
             gridView1.OptionsBehavior.AutoPopulateColumns = false;
             gridView1.OptionsSelection.MultiSelect = true;
-
+            
             //LAPTOPS POR VENCER
             tablaLaptops = reporteDA.ListarLaptopsPorVencer();
 
             gridControl2.DataSource = tablaLaptops;
             gridView2.OptionsBehavior.AutoPopulateColumns = false;
             gridView2.OptionsSelection.MultiSelect = true;
+            //gridView2.ActiveFilterString = $"[fecFinContrato] == '02-12-2020'";
+            MessageBox.Show(gridView2.RowCount.ToString());
 
             canDisponibles = gridView1.RowCount+ gridView2.RowCount;
             lblCantidadPronosticador.Text = canDisponibles.ToString();
