@@ -1234,7 +1234,7 @@
             this.VerDetallePronos.Name = "VerDetallePronos";
             this.VerDetallePronos.Size = new System.Drawing.Size(250, 26);
             this.VerDetallePronos.TabIndex = 13;
-            this.VerDetallePronos.Text = "VER DISPONIBLES";
+            this.VerDetallePronos.Text = "PRONOSTICAR";
             this.VerDetallePronos.UseVisualStyleBackColor = true;
             this.VerDetallePronos.Click += new System.EventHandler(this.VerDetallePronos_Click);
             // 
