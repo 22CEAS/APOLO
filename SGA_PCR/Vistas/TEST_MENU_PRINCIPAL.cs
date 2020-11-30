@@ -39,7 +39,7 @@ namespace Apolo
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 1300, 650, 20, 20));
             InitializeComponent();
             
-            //Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.White;
+            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.White;
             Inicializado();
             customizeDesign();
             MenuVertical.Width = 0;
@@ -63,8 +63,8 @@ namespace Apolo
         private void verificandoPermisosMaestro()
         {
             //BLOQUEAR O DESBLOQUEAR ITEMS DENTRO DE ARCHIVO-------------------
-            Button[] botones_archivo = { button2, button4, button6, button3, button5, button8, button9,btnKAM };
-            string[] idSubmodulo_archivo = { "1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a" };
+            Button[] botones_archivo = { button2, button4, button6, button3, button5, button8, button9,btnKAM,btnLicencias };
+            string[] idSubmodulo_archivo = { "1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a" };
 
             foreach (Button btn in botones_archivo)
             {
@@ -87,8 +87,8 @@ namespace Apolo
         private void verificandoPermisosProcesos()
         {
             //BLOQUEAR O DESBLOQUEAR ITEMS DENTRO DE ARCHIVO-------------------
-            Button[] botones_procesos = { button16, button14, button12, button15, button13, button11, button10, button17, button18, button19 };
-            string[] idSubmodulo_procesos = { "1b", "2b", "3b", "4b", "5b", "6b", "7b", "8b", "9b", "10b" };
+            Button[] botones_procesos = { button16, button14, button12, button15, button13, button11, button10, button17, button18, button19,btnMovimientosInternos };
+            string[] idSubmodulo_procesos = { "1b", "2b", "3b", "4b", "5b", "6b", "7b", "8b", "9b", "10b","11b" };
 
             foreach (Button btn in botones_procesos)
             {
@@ -1093,6 +1093,56 @@ namespace Apolo
                 f2.MdiParent = this;
                 f2.Show();
             }
+        }
+
+        private void btnLicencias_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "frmArchivoLicencias")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmArchivoLicencias f2 = new frmArchivoLicencias(this.idUser, this.nameUser);
+                f2.MdiParent = this;
+                f2.Show();
+            }
+        }
+
+        private void button35_Click_1(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "frmProcesoSalida")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmProcesoSalida f2 = new frmProcesoSalida(this.idUser, this.nameUser);
+                f2.MdiParent = this;
+                f2.Show();
+            }
+        }
+
+        private void button35_Click_2(object sender, EventArgs e)
+        {
+            if (panelDashboard.Visible == false)
+                panelDashboard.Visible = true;
+            else
+                panelDashboard.Visible = false;
+
+
         }
     }
 }

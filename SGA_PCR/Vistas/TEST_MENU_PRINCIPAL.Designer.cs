@@ -87,6 +87,24 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
+            this.btnLicencias = new System.Windows.Forms.Button();
+            this.btnMovimientosInternos = new System.Windows.Forms.Button();
+            this.VerDetallePronos = new System.Windows.Forms.Button();
+            this.btnVerDetalleDispo = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblLaptopsDisponibles = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panelDashboard = new System.Windows.Forms.Panel();
+            this.btnVerDashboard = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.panelConfiguracion.SuspendLayout();
             this.REPORTES.SuspendLayout();
@@ -96,6 +114,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panelDashboard.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -124,7 +148,7 @@
             this.panelConfiguracion.Controls.Add(this.btnConfiguracionPermisos);
             this.panelConfiguracion.Controls.Add(this.btnConfiguracionClientes);
             this.panelConfiguracion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConfiguracion.Location = new System.Drawing.Point(0, 1751);
+            this.panelConfiguracion.Location = new System.Drawing.Point(0, 1862);
             this.panelConfiguracion.Name = "panelConfiguracion";
             this.panelConfiguracion.Size = new System.Drawing.Size(327, 107);
             this.panelConfiguracion.TabIndex = 22;
@@ -179,7 +203,7 @@
             this.btnConfiguracion.ForeColor = System.Drawing.Color.White;
             this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
             this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracion.Location = new System.Drawing.Point(0, 1711);
+            this.btnConfiguracion.Location = new System.Drawing.Point(0, 1822);
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(327, 40);
             this.btnConfiguracion.TabIndex = 21;
@@ -204,7 +228,7 @@
             this.REPORTES.Controls.Add(this.button29);
             this.REPORTES.Controls.Add(this.button30);
             this.REPORTES.Dock = System.Windows.Forms.DockStyle.Top;
-            this.REPORTES.Location = new System.Drawing.Point(0, 1041);
+            this.REPORTES.Location = new System.Drawing.Point(0, 1152);
             this.REPORTES.Name = "REPORTES";
             this.REPORTES.Size = new System.Drawing.Size(327, 670);
             this.REPORTES.TabIndex = 20;
@@ -468,7 +492,7 @@
             this.button20.ForeColor = System.Drawing.Color.White;
             this.button20.Image = ((System.Drawing.Image)(resources.GetObject("button20.Image")));
             this.button20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button20.Location = new System.Drawing.Point(0, 1001);
+            this.button20.Location = new System.Drawing.Point(0, 1112);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(327, 40);
             this.button20.TabIndex = 18;
@@ -479,6 +503,7 @@
             // PROCESOS
             // 
             this.PROCESOS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PROCESOS.Controls.Add(this.btnMovimientosInternos);
             this.PROCESOS.Controls.Add(this.button19);
             this.PROCESOS.Controls.Add(this.button18);
             this.PROCESOS.Controls.Add(this.button17);
@@ -490,9 +515,9 @@
             this.PROCESOS.Controls.Add(this.button15);
             this.PROCESOS.Controls.Add(this.button16);
             this.PROCESOS.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PROCESOS.Location = new System.Drawing.Point(0, 487);
+            this.PROCESOS.Location = new System.Drawing.Point(0, 537);
             this.PROCESOS.Name = "PROCESOS";
-            this.PROCESOS.Size = new System.Drawing.Size(327, 514);
+            this.PROCESOS.Size = new System.Drawing.Size(327, 575);
             this.PROCESOS.TabIndex = 17;
             this.PROCESOS.Visible = false;
             // 
@@ -697,7 +722,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 447);
+            this.button1.Location = new System.Drawing.Point(0, 497);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(327, 40);
             this.button1.TabIndex = 10;
@@ -708,6 +733,7 @@
             // ARCHIVO
             // 
             this.ARCHIVO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ARCHIVO.Controls.Add(this.btnLicencias);
             this.ARCHIVO.Controls.Add(this.btnKAM);
             this.ARCHIVO.Controls.Add(this.button9);
             this.ARCHIVO.Controls.Add(this.button8);
@@ -719,7 +745,7 @@
             this.ARCHIVO.Dock = System.Windows.Forms.DockStyle.Top;
             this.ARCHIVO.Location = new System.Drawing.Point(0, 40);
             this.ARCHIVO.Name = "ARCHIVO";
-            this.ARCHIVO.Size = new System.Drawing.Size(327, 407);
+            this.ARCHIVO.Size = new System.Drawing.Size(327, 457);
             this.ARCHIVO.TabIndex = 9;
             this.ARCHIVO.Visible = false;
             // 
@@ -896,6 +922,7 @@
             // 
             // BarraTitulo
             // 
+            this.BarraTitulo.Controls.Add(this.btnVerDashboard);
             this.BarraTitulo.Controls.Add(this.lblUser);
             this.BarraTitulo.Controls.Add(this.usuarioConectado);
             this.BarraTitulo.Controls.Add(this.button34);
@@ -1054,7 +1081,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(67, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(151, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(173, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1079,13 +1106,218 @@
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
+            // btnLicencias
+            // 
+            this.btnLicencias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnLicencias.FlatAppearance.BorderSize = 0;
+            this.btnLicencias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(104)))), ((int)(((byte)(0)))));
+            this.btnLicencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLicencias.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLicencias.ForeColor = System.Drawing.Color.Black;
+            this.btnLicencias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLicencias.Location = new System.Drawing.Point(3, 406);
+            this.btnLicencias.Name = "btnLicencias";
+            this.btnLicencias.Size = new System.Drawing.Size(316, 45);
+            this.btnLicencias.TabIndex = 18;
+            this.btnLicencias.Text = "> LICENCIAS";
+            this.btnLicencias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLicencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLicencias.UseVisualStyleBackColor = false;
+            this.btnLicencias.Click += new System.EventHandler(this.btnLicencias_Click);
+            // 
+            // btnMovimientosInternos
+            // 
+            this.btnMovimientosInternos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnMovimientosInternos.FlatAppearance.BorderSize = 0;
+            this.btnMovimientosInternos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(104)))), ((int)(((byte)(0)))));
+            this.btnMovimientosInternos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovimientosInternos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMovimientosInternos.ForeColor = System.Drawing.Color.Black;
+            this.btnMovimientosInternos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovimientosInternos.Location = new System.Drawing.Point(3, 513);
+            this.btnMovimientosInternos.Name = "btnMovimientosInternos";
+            this.btnMovimientosInternos.Size = new System.Drawing.Size(319, 45);
+            this.btnMovimientosInternos.TabIndex = 20;
+            this.btnMovimientosInternos.Text = "> MOVIMIENTOS INTERNOS";
+            this.btnMovimientosInternos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovimientosInternos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMovimientosInternos.UseVisualStyleBackColor = false;
+            this.btnMovimientosInternos.Click += new System.EventHandler(this.button35_Click_1);
+            // 
+            // VerDetallePronos
+            // 
+            this.VerDetallePronos.Location = new System.Drawing.Point(20, 323);
+            this.VerDetallePronos.Name = "VerDetallePronos";
+            this.VerDetallePronos.Size = new System.Drawing.Size(250, 26);
+            this.VerDetallePronos.TabIndex = 13;
+            this.VerDetallePronos.Text = "VER DETALLE";
+            this.VerDetallePronos.UseVisualStyleBackColor = true;
+            // 
+            // btnVerDetalleDispo
+            // 
+            this.btnVerDetalleDispo.Location = new System.Drawing.Point(20, 147);
+            this.btnVerDetalleDispo.Name = "btnVerDetalleDispo";
+            this.btnVerDetalleDispo.Size = new System.Drawing.Size(250, 26);
+            this.btnVerDetalleDispo.TabIndex = 12;
+            this.btnVerDetalleDispo.Text = "VER DETALLE";
+            this.btnVerDetalleDispo.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Location = new System.Drawing.Point(20, 373);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(342, 178);
+            this.panel3.TabIndex = 11;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(113, 112);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 55);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "120";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(6, 13);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(326, 72);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "PRONOSTICADOR DE LAPTOPS \r\nDISPONIBLES A LA \r\nFECHA: ";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Location = new System.Drawing.Point(20, 187);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 130);
+            this.panel2.TabIndex = 9;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(122, 41);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(111, 76);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 2;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(3, 59);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 37);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "120";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(6, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(241, 24);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "LAPTOPS A REGRESAR";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(282, 187);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 10;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.lblLaptopsDisponibles);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(20, 15);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 130);
+            this.panel1.TabIndex = 8;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(122, 41);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(111, 76);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
+            // lblLaptopsDisponibles
+            // 
+            this.lblLaptopsDisponibles.AutoSize = true;
+            this.lblLaptopsDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLaptopsDisponibles.ForeColor = System.Drawing.Color.White;
+            this.lblLaptopsDisponibles.Location = new System.Drawing.Point(3, 59);
+            this.lblLaptopsDisponibles.Name = "lblLaptopsDisponibles";
+            this.lblLaptopsDisponibles.Size = new System.Drawing.Size(93, 37);
+            this.lblLaptopsDisponibles.TabIndex = 1;
+            this.lblLaptopsDisponibles.Text = "2960";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(6, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(241, 24);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "LAPTOPS DISPONIBLES";
+            // 
+            // panelDashboard
+            // 
+            this.panelDashboard.Controls.Add(this.panel1);
+            this.panelDashboard.Controls.Add(this.VerDetallePronos);
+            this.panelDashboard.Controls.Add(this.monthCalendar1);
+            this.panelDashboard.Controls.Add(this.btnVerDetalleDispo);
+            this.panelDashboard.Controls.Add(this.panel2);
+            this.panelDashboard.Controls.Add(this.panel3);
+            this.panelDashboard.Location = new System.Drawing.Point(362, 57);
+            this.panelDashboard.Name = "panelDashboard";
+            this.panelDashboard.Size = new System.Drawing.Size(594, 569);
+            this.panelDashboard.TabIndex = 14;
+            this.panelDashboard.Visible = false;
+            // 
+            // btnVerDashboard
+            // 
+            this.btnVerDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnVerDashboard.Image")));
+            this.btnVerDashboard.Location = new System.Drawing.Point(67, 1);
+            this.btnVerDashboard.Name = "btnVerDashboard";
+            this.btnVerDashboard.Size = new System.Drawing.Size(55, 46);
+            this.btnVerDashboard.TabIndex = 14;
+            this.btnVerDashboard.UseVisualStyleBackColor = true;
+            this.btnVerDashboard.Click += new System.EventHandler(this.button35_Click_2);
+            // 
             // TEST_MENU_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1300, 650);
+            this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1106,6 +1338,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panelDashboard.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1169,5 +1410,23 @@
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnKAM;
+        private System.Windows.Forms.Button btnLicencias;
+        private System.Windows.Forms.Button btnMovimientosInternos;
+        private System.Windows.Forms.Button VerDetallePronos;
+        private System.Windows.Forms.Button btnVerDetalleDispo;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lblLaptopsDisponibles;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panelDashboard;
+        private System.Windows.Forms.Button btnVerDashboard;
     }
 }

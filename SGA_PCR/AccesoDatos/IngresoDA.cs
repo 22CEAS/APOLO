@@ -15,6 +15,7 @@ namespace AccesoDatos
         DBManager objManager;
         MySqlParameter[] parametrosEntrada = null;
         MySqlParameter[] parametrosEntrada_aux = null;
+        MySqlParameter[] parametrosEntrada_aux_2 = null;
         int IdCategoriaWindows = 12;
         int IdCategoriaOffice = 13;
         int IdCategoriaAntivirus = 14;
@@ -91,16 +92,17 @@ namespace AccesoDatos
             return objManager.MostrarTablaDatos("Select * from vista_lista_ingresos v " + sql + " ;");
         }
 
-        public int IngresosDetallesYAccesorios(Ingreso ingreso, string usuario , int idProveedor)
+        public int IngresosDetallesYAccesorios(Ingreso ingreso, string usuario, int idProveedor)
         {
 
             bool error = false;
 
-            
+
             string[] datosSalida = new string[1];
+            string[] codigoArrendamientoExistente = new string[1];
+            int idLC = 0;
 
 
-            
 
             if (ingreso.Detalles.Count > 0)
             {
@@ -111,56 +113,79 @@ namespace AccesoDatos
                 {
                     for (int i = 0; i < det.Cantidad; i++)
                     {
-                        //LOGICA CORRELATIVO
-                        string[] codigoSiguiente = new string[2]; 
-                        
 
-                        parametrosEntrada_aux = new MySqlParameter[4];
-                        parametrosEntrada_aux[0] = new MySqlParameter("@_marcaLap", MySqlDbType.VarChar, 80);
-                        parametrosEntrada_aux[1] = new MySqlParameter("@_idProveedor", MySqlDbType.Int32);
-                        parametrosEntrada_aux[2] = new MySqlParameter("@_proximoCodigo", MySqlDbType.Int32);
-                        parametrosEntrada_aux[3] = new MySqlParameter("@_prefijo", MySqlDbType.VarChar, 80);
+                        //SI EXISTE EL CODIGO, BORRAR TODOS LOS REGISTROS Y QUE LUEGO SIGA CON EL FLUJO NORMAL
+                        string[] cantidadArrendamiento = new string[1];
+
+                        parametrosEntrada_aux_2 = new MySqlParameter[3];
+                        parametrosEntrada_aux_2[0] = new MySqlParameter("@_codigoLapArrendamiento", MySqlDbType.VarChar, 255);
+                        parametrosEntrada_aux_2[1] = new MySqlParameter("@_cantidad", MySqlDbType.Int32);
+                        parametrosEntrada_aux_2[2] = new MySqlParameter("@_idLC", MySqlDbType.Int32);
+
+                        parametrosEntrada_aux_2[0].Value = det.Series[i];
 
 
-                        //! VALIDAR SI ES UNA LAP NORMAL O UNA MAC
-                        if (det.LaptopIdMarca == this.idMarcaApple) //APPLE  
+                        //! VERIFICAR DEVOLUCION DE DATOS
+                        objManager.EjecutarProcedureConDatosDevueltos(parametrosEntrada_aux_2, "verificarArrendamiento",
+                                            1, 3, out cantidadArrendamiento, 2);
+                        int cantidadDeArrendamientos = int.Parse(cantidadArrendamiento[0]); //VERIFICA SI EXISTE EL CODIGO
+                        int idLCarrendamiento = int.Parse(cantidadArrendamiento[1]); //CODIGO LC EXISTENTE
+                        //MessageBox.Show(cantidadDeArrendamientos.ToString());
+                        //MessageBox.Show(idLCarrendamiento.ToString());
+
+                        string aux = "";
+                        string aux2 = "";
+                        int codigoCorr = 0;
+
+                        if (ingreso.TipoIngreso == "COMPRA")
                         {
-                            parametrosEntrada_aux[0].Value = "PCR-MAC"; 
+                            //SI ES COMPRA
+                            //LOGICA CORRELATIVO
+                            string[] codigoSiguiente = new string[2];
+
+
+                            parametrosEntrada_aux = new MySqlParameter[4];
+                            parametrosEntrada_aux[0] = new MySqlParameter("@_marcaLap", MySqlDbType.VarChar, 80);
+                            parametrosEntrada_aux[1] = new MySqlParameter("@_idProveedor", MySqlDbType.Int32);
+                            parametrosEntrada_aux[2] = new MySqlParameter("@_proximoCodigo", MySqlDbType.Int32);
+                            parametrosEntrada_aux[3] = new MySqlParameter("@_prefijo", MySqlDbType.VarChar, 80);
+
+
+                            //! VALIDAR SI ES UNA LAP NORMAL O UNA MAC
+                            if (det.LaptopIdMarca == this.idMarcaApple) //APPLE  
+                            {
+                                parametrosEntrada_aux[0].Value = "PCR-MAC";
+                            }
+                            else
+                            {
+                                parametrosEntrada_aux[0].Value = "PCR-LAP";
+                            }
+
+                            parametrosEntrada_aux[1].Value = idProveedor;
+                            //MessageBox.Show("ID DEL PROVEEDOR: "+idProveedor.ToString());
+
+
+
+                            objManager.EjecutarProcedureConDatosDevueltos(parametrosEntrada_aux, "obtener_codigo_correlativo",
+                                            2, 4, out codigoSiguiente, 2);
+
+                            aux = codigoSiguiente[0]; //CODIGO
+                            aux2 = codigoSiguiente[1]; //PREFIJO
+
+                            //MessageBox.Show($"El siguiente codigo es el: {aux} {aux2}");
+
+
+                            codigoCorr = int.Parse(aux);
+
+                            if (codigoSiguiente != null)
+                            {
+                                //VERIFICACION
+                                //MessageBox.Show("El proximo codigo es el: "+(codigoCorr+1));
+                                //MessageBox.Show("El proximo prefijo es el: " + aux2);
+                            }
+                            //FIN LOGICA CORRELATIVO
+
                         }
-                        else
-                        {
-                            parametrosEntrada_aux[0].Value = "PCR-LAP";
-                        }
-
-                         parametrosEntrada_aux[1].Value = idProveedor;
-                        //MessageBox.Show("ID DEL PROVEEDOR: "+idProveedor.ToString());
-                        
-
-
-                        objManager.EjecutarProcedureConDatosDevueltos(parametrosEntrada_aux, "obtener_codigo_correlativo",
-                                        2, 4, out codigoSiguiente, 2);
-
-                        string aux = codigoSiguiente[0]; //CODIGO
-                        string aux2 = codigoSiguiente[1]; //PREFIJO
-
-                        MessageBox.Show($"El siguiente codigo es el: {aux} {aux2}");
-
-
-                        int codigoCorr = int.Parse(aux);
-
-                        if (codigoSiguiente != null)
-                        {
-                            //VERIFICACION
-                            //MessageBox.Show("El proximo codigo es el: "+(codigoCorr+1));
-                            //MessageBox.Show("El proximo prefijo es el: " + aux2);
-                        }
-                        
-
-                        
-
-
-                        //FIN LOGICA CORRELATIVO
-
 
                         //AQUI PONER PROCEDURE DE CODIGO CORRELATIVO
                         parametrosEntrada = new MySqlParameter[18];
@@ -206,21 +231,46 @@ namespace AccesoDatos
                         parametrosEntrada[13].Value = det.Laptop.Observacion;
                         parametrosEntrada[14].Value = usuario;
                         parametrosEntrada[15].Value = ingreso.IdTipoIngreso;
-                        parametrosEntrada[16].Value = aux2 + (codigoCorr + 1).ToString("000");
+                        if (ingreso.TipoIngreso == "COMPRA") //SI ES COMPRA
+                        {
+                            parametrosEntrada[16].Value = aux2 + (codigoCorr + 1).ToString("000");
+                        }
+                        else //SI ES ARRENDAMIENTO GUARDA LO QUE ELLOS HAN INGRESADO
+                        {
+                            //MessageBox.Show(det.Series[i]);
+                            parametrosEntrada[16].Value = det.Series[i];
+                        }
 
 
                         datosSalida = new string[1];
 
-                        //PROCEDURE QUE OBTENGA EL CODIGO
 
 
-                        objManager.EjecutarProcedureConDatosDevueltos(parametrosEntrada, "insert_laptop_cpu",
-                            17, 18, out datosSalida, 1);
+                        //cantidadDeArrendamientos
+                        if (ingreso.TipoIngreso == "COMPRA")
+                        {
+                            objManager.EjecutarProcedureConDatosDevueltos(parametrosEntrada, "insert_laptop_cpu",
+                                17, 18, out datosSalida, 1);
+                            idLC = Convert.ToInt32(datosSalida[0]);
+                        }
+                        else
+                        {
+                            if (cantidadDeArrendamientos == 0)
+                            {
+                                objManager.EjecutarProcedureConDatosDevueltos(parametrosEntrada, "insert_laptop_cpu",
+                                17, 18, out datosSalida, 1);
+                                idLC = Convert.ToInt32(datosSalida[0]);
+                            }
+                            else
+                            {
+                                idLC = idLCarrendamiento;
+                            }
+                        }
+
 
 
                         if (datosSalida != null)
                         {
-                            int idLC = Convert.ToInt32(datosSalida[0]);
 
                             foreach (Memoria mem in det.Laptop.Memorias)
                             {
@@ -417,7 +467,7 @@ namespace AccesoDatos
                 //Aqui ira la recursividad
 
                 //! AQUI PASAR TAMBIEN SI EL PCR-LAP O MAC
-                if (IngresosDetallesYAccesorios(ingreso, usuario , ingreso.IdProveedor) == -1) return -1;
+                if (IngresosDetallesYAccesorios(ingreso, usuario, ingreso.IdProveedor) == -1) return -1;
             }
             return ingreso.IdIngreso;
         }
@@ -523,7 +573,7 @@ namespace AccesoDatos
                     else if (det.Laptop.Licencias[i].IdCategoria == IdCategoriaAntivirus)
                         idAnt = det.Laptop.Licencias[i].IdModelo;
                 }
-                parametrosEntrada[20].Value = (idWin==-1)?0: idWin;
+                parametrosEntrada[20].Value = (idWin == -1) ? 0 : idWin;
                 parametrosEntrada[21].Value = (idOff == -1) ? 0 : idOff;
                 parametrosEntrada[22].Value = (idAnt == -1) ? 0 : idAnt;
                 parametrosEntrada[23].Value = det.Caracteristica;
@@ -769,7 +819,7 @@ namespace AccesoDatos
             okey = objManager.EjecutarProcedure(parametrosEntrada, "update_ingreso");
 
             //Aqui ira la recursividad
-            if (IngresosDetallesYAccesorios(ingreso, usuario,ingreso.IdProveedor) == -1) return -1;
+            if (IngresosDetallesYAccesorios(ingreso, usuario, ingreso.IdProveedor) == -1) return -1;
 
             return 0;
         }
@@ -941,7 +991,7 @@ namespace AccesoDatos
                     Memoria memoria = new Memoria();
                     memoria.IdMemoria = reader.GetInt32("idMemoria1");
                     memoria.Cantidad = reader.GetInt32("cantidadMemoria1");
-                    memoria.Capacidad= reader.GetInt32("CapacidadMemoria1");
+                    memoria.Capacidad = reader.GetInt32("CapacidadMemoria1");
                     memoria.TipoMemoria = reader.GetString("TipoMemoria1");
                     memoria.Tipo = reader.GetString("Tipo2Memoria1");
                     det.Laptop.Memorias.Add(memoria);
@@ -998,8 +1048,8 @@ namespace AccesoDatos
                 det.Observacion = reader.GetString("observacion");
                 det.Estado = reader.GetInt32("estado");
 
-                
-                sql2 = "Select * From laptop_cpu where idIngreso=" + ingresoDevuelto.IdIngreso + " and  idIngresoDet="+ det.IdIngresoDetalle + " ;";
+
+                sql2 = "Select * From laptop_cpu where idIngreso=" + ingresoDevuelto.IdIngreso + " and  idIngresoDet=" + det.IdIngresoDetalle + " ;";
                 reader2 = objManager.MostrarInformacion(sql2);
 
                 BindingList<LC> listaLaptops = new BindingList<LC>();
@@ -1007,8 +1057,8 @@ namespace AccesoDatos
                 while (reader2.Read())
                 {
                     LC lap = new LC();
-                    String serieFabrica= reader2.GetString("serieFabrica");
-                    lap.IdLC= reader2.GetInt32("idLC");
+                    String serieFabrica = reader2.GetString("serieFabrica");
+                    lap.IdLC = reader2.GetInt32("idLC");
                     listaLaptops.Add(lap);
                     det.Series.Add(serieFabrica);
                 }
@@ -1093,7 +1143,7 @@ namespace AccesoDatos
                     memoriaIndependiente.Capacidad = reader.GetInt32("CapacidadMemoria");
                     ingresoDevuelto.Memorias.Add(memoriaIndependiente);
                 }
-                
+
             }
 
             return ingresoDevuelto;
