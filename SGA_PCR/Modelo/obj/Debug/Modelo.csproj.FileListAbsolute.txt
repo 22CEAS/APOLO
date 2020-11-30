@@ -1,0 +1,5 @@
+D:\LEASEIN\Proyecto\SGA_PCR\SGA_PCR\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+D:\LEASEIN\Proyecto\SGA_PCR\SGA_PCR\Modelo\bin\Debug\Modelo.dll
+D:\LEASEIN\Proyecto\SGA_PCR\SGA_PCR\Modelo\bin\Debug\Modelo.pdb
+D:\LEASEIN\Proyecto\SGA_PCR\SGA_PCR\Modelo\obj\Debug\Modelo.dll
+D:\LEASEIN\Proyecto\SGA_PCR\SGA_PCR\Modelo\obj\Debug\Modelo.pdb

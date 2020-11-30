@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B8F0BCB-D50A-4B5B-BFDC-905DDA968D19}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Vistas</RootNamespace>
+    <AssemblyName>Vistas</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.Instrumentation, Version=11.3.0.0, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.4.11.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpreadsheetLight.3.4.11\lib\net40\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmProcesoAgregarGuia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoAgregarGuia.Designer.cs">
+      <DependentUpon>frmProcesoAgregarGuia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoAlquilerAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoAlquilerAgregarProducto.Designer.cs">
+      <DependentUpon>frmProcesoAlquilerAgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoAlquilerBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoAlquilerBuscar.Designer.cs">
+      <DependentUpon>frmProcesoAlquilerBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoCambioBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoCambioBuscar.Designer.cs">
+      <DependentUpon>frmProcesoCambioBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoCambioComponentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoCambioComponentes.Designer.cs">
+      <DependentUpon>frmProcesoCambioComponentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArchivoClienteSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArchivoClienteSucursal.Designer.cs">
+      <DependentUpon>frmArchivoClienteSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoDevolucionAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoDevolucionAgregarProducto.Designer.cs">
+      <DependentUpon>frmProcesoDevolucionAgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoDevolucionBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoDevolucionBuscar.Designer.cs">
+      <DependentUpon>frmProcesoDevolucionBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoIngresoBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoIngresoBuscar.Designer.cs">
+      <DependentUpon>frmProcesoIngresoBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoIngresoDisco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoIngresoDisco.Designer.cs">
+      <DependentUpon>frmProcesoIngresoDisco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoIngresoLicencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoIngresoLicencia.Designer.cs">
+      <DependentUpon>frmProcesoIngresoLicencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoIngresoMemoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoIngresoMemoria.Designer.cs">
+      <DependentUpon>frmProcesoIngresoMemoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoRenovacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoRenovacion.Designer.cs">
+      <DependentUpon>frmProcesoRenovacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoRenovacionAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoRenovacionAgregarProducto.Designer.cs">
+      <DependentUpon>frmProcesoRenovacionAgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteAlquileresPorVencer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteAlquileresPorVencer.Designer.cs">
+      <DependentUpon>frmReporteAlquileresPorVencer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteCuadroVencimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteCuadroVencimiento.Designer.cs">
+      <DependentUpon>frmReporteCuadroVencimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoEditarDisco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoEditarDisco.Designer.cs">
+      <DependentUpon>frmProcesoEditarDisco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoEditarLicencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoEditarLicencia.Designer.cs">
+      <DependentUpon>frmProcesoEditarLicencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoEditarMemoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoEditarMemoria.Designer.cs">
+      <DependentUpon>frmProcesoEditarMemoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoAlquiler.Designer.cs">
+      <DependentUpon>frmProcesoAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoCambio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoCambio.Designer.cs">
+      <DependentUpon>frmProcesoCambio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArchivoCrearCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArchivoCrearCliente.Designer.cs">
+      <DependentUpon>frmArchivoCrearCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArchivoCrearDiscoDuro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArchivoCrearDiscoDuro.Designer.cs">
+      <DependentUpon>frmArchivoCrearDiscoDuro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArchivoCrearProcesador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArchivoCrearProcesador.Designer.cs">
+      <DependentUpon>frmArchivoCrearProcesador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArchivoCrearMemoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArchivoCrearMemoria.Designer.cs">
+      <DependentUpon>frmArchivoCrearMemoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArchivoCrearProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArchivoCrearProveedor.Designer.cs">
+      <DependentUpon>frmArchivoCrearProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArchivoCrearTarjetaVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArchivoCrearTarjetaVideo.Designer.cs">
+      <DependentUpon>frmArchivoCrearTarjetaVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoDevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoDevolucion.Designer.cs">
+      <DependentUpon>frmProcesoDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoDevolucionEvaluarEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoDevolucionEvaluarEquipo.Designer.cs">
+      <DependentUpon>frmProcesoDevolucionEvaluarEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoIngreso.Designer.cs">
+      <DependentUpon>frmProcesoIngreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteInventario.Designer.cs">
+      <DependentUpon>frmReporteInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoIngresoLaptopCpu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoIngresoLaptopCpu.Designer.cs">
+      <DependentUpon>frmProcesoIngresoLaptopCpu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoLevantamientoObservaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoLevantamientoObservaciones.Designer.cs">
+      <DependentUpon>frmProcesoLevantamientoObservaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogueo.Designer.cs">
+      <DependentUpon>frmLogueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoMantenimiento.Designer.cs">
+      <DependentUpon>frmProcesoMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoSubirFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoSubirFacturas.Designer.cs">
+      <DependentUpon>frmProcesoSubirFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoCambioAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoCambioAgregarProducto.Designer.cs">
+      <DependentUpon>frmProcesoCambioAgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteAlquiler.Designer.cs">
+      <DependentUpon>frmReporteAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteCompras.Designer.cs">
+      <DependentUpon>frmReporteCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteMantenimiento.Designer.cs">
+      <DependentUpon>frmReporteMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteMemoriaDisco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteMemoriaDisco.Designer.cs">
+      <DependentUpon>frmReporteMemoriaDisco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportePendienteFacturar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportePendienteFacturar.Designer.cs">
+      <DependentUpon>frmReportePendienteFacturar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportePendienteRecoger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportePendienteRecoger.Designer.cs">
+      <DependentUpon>frmReportePendienteRecoger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportePendienteReposicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportePendienteReposicion.Designer.cs">
+      <DependentUpon>frmReportePendienteReposicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteStocksLaptops.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteStocksLaptops.Designer.cs">
+      <DependentUpon>frmReporteStocksLaptops.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmProcesoAgregarGuia.resx">
+      <DependentUpon>frmProcesoAgregarGuia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoAlquilerAgregarProducto.resx">
+      <DependentUpon>frmProcesoAlquilerAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoAlquiler.resx">
+      <DependentUpon>frmProcesoAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoAlquilerBuscar.resx">
+      <DependentUpon>frmProcesoAlquilerBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoCambio.resx">
+      <DependentUpon>frmProcesoCambio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoCambioBuscar.resx">
+      <DependentUpon>frmProcesoCambioBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoCambioComponentes.resx">
+      <DependentUpon>frmProcesoCambioComponentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArchivoClienteSucursal.resx">
+      <DependentUpon>frmArchivoClienteSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArchivoCrearCliente.resx">
+      <DependentUpon>frmArchivoCrearCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArchivoCrearDiscoDuro.resx">
+      <DependentUpon>frmArchivoCrearDiscoDuro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArchivoCrearProcesador.resx">
+      <DependentUpon>frmArchivoCrearProcesador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArchivoCrearMemoria.resx">
+      <DependentUpon>frmArchivoCrearMemoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArchivoCrearProveedor.resx">
+      <DependentUpon>frmArchivoCrearProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArchivoCrearTarjetaVideo.resx">
+      <DependentUpon>frmArchivoCrearTarjetaVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoDevolucionAgregarProducto.resx">
+      <DependentUpon>frmProcesoDevolucionAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoDevolucionBuscar.resx">
+      <DependentUpon>frmProcesoDevolucionBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoIngresoBuscar.resx">
+      <DependentUpon>frmProcesoIngresoBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoIngresoDisco.resx">
+      <DependentUpon>frmProcesoIngresoDisco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoIngresoLicencia.resx">
+      <DependentUpon>frmProcesoIngresoLicencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoIngresoMemoria.resx">
+      <DependentUpon>frmProcesoIngresoMemoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoRenovacion.resx">
+      <DependentUpon>frmProcesoRenovacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoRenovacionAgregarProducto.resx">
+      <DependentUpon>frmProcesoRenovacionAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteAlquileresPorVencer.resx">
+      <DependentUpon>frmReporteAlquileresPorVencer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteCuadroVencimiento.resx">
+      <DependentUpon>frmReporteCuadroVencimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoDevolucion.resx">
+      <DependentUpon>frmProcesoDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoEditarDisco.resx">
+      <DependentUpon>frmProcesoEditarDisco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoEditarLicencia.resx">
+      <DependentUpon>frmProcesoEditarLicencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoEditarMemoria.resx">
+      <DependentUpon>frmProcesoEditarMemoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoDevolucionEvaluarEquipo.resx">
+      <DependentUpon>frmProcesoDevolucionEvaluarEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoIngreso.resx">
+      <DependentUpon>frmProcesoIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteInventario.resx">
+      <DependentUpon>frmReporteInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoIngresoLaptopCpu.resx">
+      <DependentUpon>frmProcesoIngresoLaptopCpu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoLevantamientoObservaciones.resx">
+      <DependentUpon>frmProcesoLevantamientoObservaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogueo.resx">
+      <DependentUpon>frmLogueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoMantenimiento.resx">
+      <DependentUpon>frmProcesoMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoSubirFacturas.resx">
+      <DependentUpon>frmProcesoSubirFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoCambioAgregarProducto.resx">
+      <DependentUpon>frmProcesoCambioAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteAlquiler.resx">
+      <DependentUpon>frmReporteAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteCompras.resx">
+      <DependentUpon>frmReporteCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteMantenimiento.resx">
+      <DependentUpon>frmReporteMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteMemoriaDisco.resx">
+      <DependentUpon>frmReporteMemoriaDisco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportePendienteFacturar.resx">
+      <DependentUpon>frmReportePendienteFacturar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportePendienteRecoger.resx">
+      <DependentUpon>frmReportePendienteRecoger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportePendienteReposicion.resx">
+      <DependentUpon>frmReportePendienteReposicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteStocksLaptops.resx">
+      <DependentUpon>frmReporteStocksLaptops.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{AAF7DEE5-9044-4BE5-950D-DCB7AC2A5672}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{374DB1ED-EE2D-416D-A254-1A4DC182F1AE}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
