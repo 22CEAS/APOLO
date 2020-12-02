@@ -66,6 +66,7 @@
     <Compile Include="AreaDA.cs" />
     <Compile Include="AuxiliarDA.cs" />
     <Compile Include="CambioDA.cs" />
+    <Compile Include="CorteAlquilerDA.cs" />
     <Compile Include="EstadosDA.cs" />
     <Compile Include="IngresoSalidaDA.cs" />
     <Compile Include="MarcaDA.cs" />

@@ -48,6 +48,7 @@
     <Compile Include="Auxiliar.cs" />
     <Compile Include="Cambio.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="CorteAlquiler.cs" />
     <Compile Include="Estados.cs" />
     <Compile Include="IngresoSalida.cs" />
     <Compile Include="ModulosPrincipales.cs" />

@@ -160,6 +160,18 @@
     <Compile Include="frmProcesoCambioDescripcion.Designer.cs">
       <DependentUpon>frmProcesoCambioDescripcion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProcesoCorteAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoCorteAlquiler.Designer.cs">
+      <DependentUpon>frmProcesoCorteAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcesoCorteAlquilerAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcesoCorteAlquilerAgregarProducto.Designer.cs">
+      <DependentUpon>frmProcesoCorteAlquilerAgregarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProcesoDevolucionAgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -521,6 +533,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProcesoCambioDescripcion.resx">
       <DependentUpon>frmProcesoCambioDescripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoCorteAlquiler.resx">
+      <DependentUpon>frmProcesoCorteAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcesoCorteAlquilerAgregarProducto.resx">
+      <DependentUpon>frmProcesoCorteAlquilerAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProcesoDevolucionAgregarProducto.resx">
       <DependentUpon>frmProcesoDevolucionAgregarProducto.cs</DependentUpon>

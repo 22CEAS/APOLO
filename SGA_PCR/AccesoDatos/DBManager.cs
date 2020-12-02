@@ -23,8 +23,9 @@ namespace AccesoDatos
         public static string servidor = ConfigurationManager.AppSettings["ServidorMySql"].ToString();
         public static string basedatos = ConfigurationManager.AppSettings["BaseDatosMySql"].ToString();
 
-        public static string cadena = "server=" + "209.45.53.41" + "; user=root; password=root; database=" + "bd_leasein_test" + "; SslMode=None;Connect Timeout=300000";
+        //public static string cadena = "server=" + "209.45.53.41" + "; user=root; password=root; database=" + "bd_leasein_test" + "; SslMode=None;Connect Timeout=300000";
         //public static string cadena = "server="+ servidor + "; user=root; password=; database="+ basedatos + "; SslMode=None;Connect Timeout=300000";
+        public static string cadena = "server=" + "localhost" + "; user=root; password=root; database=" + "bd_leasein" + "; SslMode=None;Connect Timeout=300000";
 
         //public static string cadena = "server=" + "209.45.53.41" + "; user=root; password=root; database=" + "bd_leasein" + "; SslMode=None;Connect Timeout=300000";
         public MySqlConnection conexion = null;
