@@ -415,7 +415,7 @@ namespace Apolo
 
         private async void cargarData_Click(object sender, EventArgs e)
         {
-            label1.Text = $"CANTIDAD FILTRADA: ";
+            //label1.Text = $"CANTIDAD FILTRADA: ";
             Task<bool> task = new Task<bool>(cargarDataTabla);
             task.Start();
             giftCarga.Image = Image.FromFile(@".\progress.gif");
