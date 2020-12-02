@@ -89,7 +89,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 16);
             this.label3.TabIndex = 47;
-            this.label3.Text = "Guía de Remision";
+            this.label3.Text = "Guía de Remisión";
             // 
             // label1
             // 

@@ -261,7 +261,7 @@
             gridColumn10.AllowEdit = false;
             gridColumn10.ColumnSortMode = DevComponents.DotNetBar.SuperGrid.ColumnSortMode.None;
             gridColumn10.DataPropertyName = "Tamano";
-            gridColumn10.Name = "Tamano";
+            gridColumn10.Name = "Tamaño";
             gridColumn10.SortIndicator = DevComponents.DotNetBar.SuperGrid.SortIndicator.None;
             this.dgvDisco.PrimaryGrid.Columns.Add(gridColumn6);
             this.dgvDisco.PrimaryGrid.Columns.Add(gridColumn7);
@@ -511,7 +511,7 @@
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cambio Descripcion";
+            this.Text = "Cambio Descripción";
             this.ResumeLayout(false);
             this.PerformLayout();
 

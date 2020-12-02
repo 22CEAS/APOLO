@@ -256,8 +256,8 @@ namespace Apolo
         private void verificandoPermisosProcesos()
         {
             //BLOQUEAR O DESBLOQUEAR ITEMS DENTRO DE ARCHIVO-------------------
-            Button[] botones_procesos = { button16, button14, button12, button15, button13, button11, button10, button17, button18, button19,btnMovimientosInternos };
-            string[] idSubmodulo_procesos = { "1b", "2b", "3b", "4b", "5b", "6b", "7b", "8b", "9b", "10b","11b" };
+            Button[] botones_procesos = { button16, button14, button12, button15, button13, button11, button10, button17, button18, button19,btnMovimientosInternos,btnCorteAlquiler };
+            string[] idSubmodulo_procesos = { "1b", "2b", "3b", "4b", "5b", "6b", "7b", "8b", "9b", "10b","11b","12b" };
 
             foreach (Button btn in botones_procesos)
             {
@@ -1647,6 +1647,26 @@ namespace Apolo
             else
                 pnlFacturacion.Visible = false;
             
+        }
+
+        private void btnCorteAlquiler_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "frmProcesoCorteAlquiler")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (IsOpen == false)
+            {
+                frmProcesoCorteAlquiler f2 = new frmProcesoCorteAlquiler(this.idUser, this.nameUser);
+                f2.MdiParent = this;
+                f2.Show();
+            }
         }
     }
 }

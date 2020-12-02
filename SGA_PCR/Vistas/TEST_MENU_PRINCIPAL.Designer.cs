@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TEST_MENU_PRINCIPAL));
             DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
@@ -98,7 +97,7 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.horafecha = new System.Windows.Forms.Timer(this.components);
+            this.horafecha = new System.Windows.Forms.Timer();
             this.VerDetallePronos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -250,6 +249,7 @@
             this.button38 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
+            this.btnCorteAlquiler = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.panelConfiguracion.SuspendLayout();
             this.REPORTES.SuspendLayout();
@@ -336,7 +336,7 @@
             this.panelConfiguracion.Controls.Add(this.btnConfiguracionPermisos);
             this.panelConfiguracion.Controls.Add(this.btnConfiguracionClientes);
             this.panelConfiguracion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConfiguracion.Location = new System.Drawing.Point(0, 1862);
+            this.panelConfiguracion.Location = new System.Drawing.Point(0, 1905);
             this.panelConfiguracion.Name = "panelConfiguracion";
             this.panelConfiguracion.Size = new System.Drawing.Size(327, 107);
             this.panelConfiguracion.TabIndex = 22;
@@ -391,7 +391,7 @@
             this.btnConfiguracion.ForeColor = System.Drawing.Color.White;
             this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
             this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracion.Location = new System.Drawing.Point(0, 1822);
+            this.btnConfiguracion.Location = new System.Drawing.Point(0, 1865);
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(327, 40);
             this.btnConfiguracion.TabIndex = 21;
@@ -416,7 +416,7 @@
             this.REPORTES.Controls.Add(this.button29);
             this.REPORTES.Controls.Add(this.button30);
             this.REPORTES.Dock = System.Windows.Forms.DockStyle.Top;
-            this.REPORTES.Location = new System.Drawing.Point(0, 1152);
+            this.REPORTES.Location = new System.Drawing.Point(0, 1195);
             this.REPORTES.Name = "REPORTES";
             this.REPORTES.Size = new System.Drawing.Size(327, 670);
             this.REPORTES.TabIndex = 20;
@@ -680,7 +680,7 @@
             this.button20.ForeColor = System.Drawing.Color.White;
             this.button20.Image = ((System.Drawing.Image)(resources.GetObject("button20.Image")));
             this.button20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button20.Location = new System.Drawing.Point(0, 1112);
+            this.button20.Location = new System.Drawing.Point(0, 1155);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(327, 40);
             this.button20.TabIndex = 18;
@@ -691,6 +691,7 @@
             // PROCESOS
             // 
             this.PROCESOS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PROCESOS.Controls.Add(this.btnCorteAlquiler);
             this.PROCESOS.Controls.Add(this.btnMovimientosInternos);
             this.PROCESOS.Controls.Add(this.button19);
             this.PROCESOS.Controls.Add(this.button18);
@@ -705,7 +706,7 @@
             this.PROCESOS.Dock = System.Windows.Forms.DockStyle.Top;
             this.PROCESOS.Location = new System.Drawing.Point(0, 537);
             this.PROCESOS.Name = "PROCESOS";
-            this.PROCESOS.Size = new System.Drawing.Size(327, 575);
+            this.PROCESOS.Size = new System.Drawing.Size(327, 618);
             this.PROCESOS.TabIndex = 17;
             this.PROCESOS.Visible = false;
             // 
@@ -3366,6 +3367,25 @@
             this.button36.TabIndex = 138;
             this.button36.UseVisualStyleBackColor = false;
             // 
+            // btnCorteAlquiler
+            // 
+            this.btnCorteAlquiler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCorteAlquiler.FlatAppearance.BorderSize = 0;
+            this.btnCorteAlquiler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(104)))), ((int)(((byte)(0)))));
+            this.btnCorteAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCorteAlquiler.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCorteAlquiler.ForeColor = System.Drawing.Color.Black;
+            this.btnCorteAlquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCorteAlquiler.Location = new System.Drawing.Point(0, 564);
+            this.btnCorteAlquiler.Name = "btnCorteAlquiler";
+            this.btnCorteAlquiler.Size = new System.Drawing.Size(319, 45);
+            this.btnCorteAlquiler.TabIndex = 21;
+            this.btnCorteAlquiler.Text = "> CORTE ALQUILER";
+            this.btnCorteAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCorteAlquiler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCorteAlquiler.UseVisualStyleBackColor = false;
+            this.btnCorteAlquiler.Click += new System.EventHandler(this.btnCorteAlquiler_Click);
+            // 
             // TEST_MENU_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3644,5 +3664,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn PendienteFacturarSoles;
         private DevExpress.XtraGrid.Columns.GridColumn PendienteFacturarDolares;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
+        private System.Windows.Forms.Button btnCorteAlquiler;
     }
 }
