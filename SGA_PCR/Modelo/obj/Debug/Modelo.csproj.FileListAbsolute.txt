@@ -8,4 +8,3 @@ D:\LEASEIN\Proyecto\APOLO\SGA_PCR\Modelo\bin\Debug\Modelo.pdb
 D:\LEASEIN\Proyecto\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 D:\LEASEIN\Proyecto\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.dll
 D:\LEASEIN\Proyecto\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.pdb
-D:\LEASEIN\Proyecto\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
