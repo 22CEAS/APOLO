@@ -2055,3 +2055,51 @@ BEGIN
 END
 $$
 DELIMITER ;
+
+DROP PROCEDURE IF EXISTS `update_salida_det_corte_alquiler`;
+DELIMITER $$
+CREATE DEFINER=`root`@`%` PROCEDURE `update_salida_det_corte_alquiler`(
+		IN _idSalidaDet INT,
+		IN _fecIniContrato DATETIME,
+		IN _fecFinContrato DATETIME,
+		IN _idSalidaTipo INT,
+		IN _nombreSalidaTipo NVARCHAR(255),
+		IN _documentoRenovacion NVARCHAR(255),
+		IN _usuario_mod NVARCHAR(100),
+		IN _corteAlquiler INT
+	)
+BEGIN
+		SET @fechaModificacion=(SELECT now());
+		UPDATE salida_det 
+		SET fecIniContrato=_fecIniContrato,
+			fecFinContrato=_fecFinContrato,
+			fec_mod=@fechaModificacion,
+			idSalidaTipo=_idSalidaTipo,
+			nombreSalidaTipo=_nombreSalidaTipo,
+			documentoSalidaTipo=_documentoRenovacion,
+			usuario_mod=_usuario_mod,
+			corteAlquiler=_corteAlquiler
+		WHERE idSalidaDet=_idSalidaDet; 
+END
+$$
+DELIMITER ;
+
+
+
+DROP PROCEDURE IF EXISTS `update_salida_det_fechaFinalPlazoEvento`;
+DELIMITER $$
+CREATE PROCEDURE update_salida_det_fechaFinalPlazoEvento(
+	)
+BEGIN
+		SET @fechaModificacion=(SELECT now());
+		UPDATE salida_det 
+		SET fecFinContrato=DATE(DATE_ADD(fecFinContrato, INTERVAL 1 MONTH))
+		WHERE corteAlquiler=0 and fueDevuelto=0 and estado=4 and cast(fecFinContrato as date)<cast(@fechaModificacion as date); 
+END
+$$
+DELIMITER ;
+
+
+CREATE EVENT update_salida_det_fechaFinalPlazoEvento
+ON SCHEDULE EVERY 1 DAY STARTS '2020-12-02 00:01:00'
+DO call update_salida_det_fechaFinalPlazoEvento();
