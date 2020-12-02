@@ -633,3 +633,5 @@ C:\Users\USUARIO\Documents\GitHub\APOLO\SGA_PCR\Vistas\obj\Debug\Apolo.exe
 C:\Users\USUARIO\Documents\GitHub\APOLO\SGA_PCR\Vistas\obj\Debug\Apolo.pdb
 D:\LEASEIN\Proyecto\APOLO\SGA_PCR\Vistas\obj\Debug\Apolo.frmProcesoCorteAlquiler.resources
 D:\LEASEIN\Proyecto\APOLO\SGA_PCR\Vistas\obj\Debug\Apolo.frmProcesoCorteAlquilerAgregarProducto.resources
+C:\Users\USUARIO\Documents\GitHub\APOLO\SGA_PCR\Vistas\obj\Debug\Apolo.frmProcesoCorteAlquiler.resources
+C:\Users\USUARIO\Documents\GitHub\APOLO\SGA_PCR\Vistas\obj\Debug\Apolo.frmProcesoCorteAlquilerAgregarProducto.resources

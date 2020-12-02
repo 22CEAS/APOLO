@@ -1079,7 +1079,7 @@ namespace Apolo
                         MessageBox.Show("Hubo error en Registrar el Pre-Alquiler, comunicarse con tu soporte", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                         return;
                     }
-                    MessageBox.Show("Se guradó el Pre-Alquiler", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show("Se guardó el Pre-Alquiler", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                     alquiler.IdAlquiler = idAlquiler;
                     txtNroAlquiler.Text = idAlquiler.ToString();
                     estadoComponentes(TipoVista.Guardar);

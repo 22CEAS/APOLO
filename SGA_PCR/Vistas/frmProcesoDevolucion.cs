@@ -355,7 +355,7 @@ namespace Apolo
             
             if (numDevolucion.Length == 0)
             {
-                if (MessageBox.Show("Estas seguro que deseas Guardar este proceso de Devolución", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show("Estas seguro que deseas guardar este proceso de Devolución", "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     int idDevolucion=0;
                     idDevolucion = devolucionDA.InsertarDevolucion(devolucion, this.nombreUsuario);

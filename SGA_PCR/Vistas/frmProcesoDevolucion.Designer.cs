@@ -75,7 +75,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 16);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Guía de Remision";
+            this.label3.Text = "Guía de Remisión";
             // 
             // label1
             // 
@@ -439,7 +439,7 @@
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Devolucion";
+            this.Text = "Devolución";
             ((System.ComponentModel.ISupportInitialize)(this.dtpFechaIngreso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
