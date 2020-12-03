@@ -840,3 +840,11 @@ C:\Users\User\Documents\GitHub\APOLO\SGA_PCR\Vistas\obj\Debug\Apolo.csproj.CoreC
 C:\Users\User\Documents\GitHub\APOLO\SGA_PCR\Vistas\obj\Debug\Apolo.csproj.CopyComplete
 C:\Users\User\Documents\GitHub\APOLO\SGA_PCR\Vistas\obj\Debug\Apolo.exe
 C:\Users\User\Documents\GitHub\APOLO\SGA_PCR\Vistas\obj\Debug\Apolo.pdb
+C:\Users\user\Documents\GitHub\APOLO\SGA_PCR\Vistas\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\user\Documents\GitHub\APOLO\SGA_PCR\Vistas\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\user\Documents\GitHub\APOLO\SGA_PCR\Vistas\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\user\Documents\GitHub\APOLO\SGA_PCR\Vistas\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\user\Documents\GitHub\APOLO\SGA_PCR\Vistas\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\user\Documents\GitHub\APOLO\SGA_PCR\Vistas\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\user\Documents\GitHub\APOLO\SGA_PCR\Vistas\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\user\Documents\GitHub\APOLO\SGA_PCR\Vistas\bin\Debug\DevComponents.Instrumentation.xml
