@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TEST_MENU_PRINCIPAL));
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule5 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue5 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule6 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue6 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.DíasVencidos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MenuVertical = new System.Windows.Forms.Panel();
@@ -98,7 +99,7 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.horafecha = new System.Windows.Forms.Timer();
+            this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.VerDetallePronos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -110,32 +111,7 @@
             this.lblLaptopsDisponibles = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panelDashboard = new System.Windows.Forms.Panel();
-            this.pnlFacturacion = new System.Windows.Forms.Panel();
-            this.dgvFacturas = new DevExpress.XtraGrid.GridControl();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.FechaInicioFactura = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.FechaFinFactura = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TotalSoles = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.PendienteFacturarSoles = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.PendienteFacturarDolares = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
+            this.btnCargarResumenDispo = new System.Windows.Forms.Button();
             this.pnlPronosticador = new System.Windows.Forms.Panel();
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -233,7 +209,32 @@
             this.CostoDolares = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VersionOffice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.KAM = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnCargarResumenDispo = new System.Windows.Forms.Button();
+            this.pnlFacturacion = new System.Windows.Forms.Panel();
+            this.dgvFacturas = new DevExpress.XtraGrid.GridControl();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FechaInicioFactura = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FechaFinFactura = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TotalSoles = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PendienteFacturarSoles = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PendienteFacturarDolares = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.panelConfiguracion.SuspendLayout();
             this.REPORTES.SuspendLayout();
@@ -248,9 +249,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelDashboard.SuspendLayout();
-            this.pnlFacturacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             this.pnlPronosticador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
@@ -266,6 +264,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.pnlFacturacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             this.SuspendLayout();
             // 
             // DíasVencidos
@@ -1170,7 +1171,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(344, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1022, 50);
+            this.BarraTitulo.Size = new System.Drawing.Size(1018, 50);
             this.BarraTitulo.TabIndex = 1;
             this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             // 
@@ -1202,7 +1203,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblUser.Location = new System.Drawing.Point(805, 9);
+            this.lblUser.Location = new System.Drawing.Point(801, 9);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(70, 25);
             this.lblUser.TabIndex = 13;
@@ -1215,7 +1216,7 @@
             this.usuarioConectado.Enabled = false;
             this.usuarioConectado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarioConectado.ForeColor = System.Drawing.Color.Transparent;
-            this.usuarioConectado.Location = new System.Drawing.Point(665, 23);
+            this.usuarioConectado.Location = new System.Drawing.Point(661, 23);
             this.usuarioConectado.Name = "usuarioConectado";
             this.usuarioConectado.Size = new System.Drawing.Size(37, 19);
             this.usuarioConectado.TabIndex = 7;
@@ -1239,7 +1240,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(670, 7);
+            this.label3.Location = new System.Drawing.Point(666, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 25);
             this.label3.TabIndex = 9;
@@ -1252,7 +1253,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblHora.Location = new System.Drawing.Point(549, 9);
+            this.lblHora.Location = new System.Drawing.Point(547, 9);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(72, 25);
             this.lblHora.TabIndex = 3;
@@ -1263,7 +1264,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(934, 9);
+            this.pictureBox3.Location = new System.Drawing.Point(930, 9);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1278,7 +1279,7 @@
             this.usuario.Enabled = false;
             this.usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.usuario.Location = new System.Drawing.Point(881, 24);
+            this.usuario.Location = new System.Drawing.Point(877, 24);
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(13, 19);
             this.usuario.TabIndex = 11;
@@ -1290,7 +1291,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(470, 9);
+            this.label2.Location = new System.Drawing.Point(468, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 25);
             this.label2.TabIndex = 6;
@@ -1302,7 +1303,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(729, 9);
+            this.label4.Location = new System.Drawing.Point(725, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 25);
             this.label4.TabIndex = 12;
@@ -1314,7 +1315,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(259, 9);
+            this.label1.Location = new System.Drawing.Point(257, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 25);
             this.label1.TabIndex = 5;
@@ -1326,7 +1327,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblFecha.Location = new System.Drawing.Point(342, 9);
+            this.lblFecha.Location = new System.Drawing.Point(340, 9);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(83, 25);
             this.lblFecha.TabIndex = 4;
@@ -1347,7 +1348,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(975, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(971, 9);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1474,394 +1475,21 @@
             this.panelDashboard.Controls.Add(this.VerDetallePronos);
             this.panelDashboard.Controls.Add(this.FechaPronosticador);
             this.panelDashboard.Controls.Add(this.panel2);
-            this.panelDashboard.Location = new System.Drawing.Point(356, 56);
+            this.panelDashboard.Location = new System.Drawing.Point(345, 56);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1010, 644);
+            this.panelDashboard.Size = new System.Drawing.Size(943, 729);
             this.panelDashboard.TabIndex = 14;
             this.panelDashboard.Visible = false;
             // 
-            // pnlFacturacion
+            // btnCargarResumenDispo
             // 
-            this.pnlFacturacion.Controls.Add(this.dgvFacturas);
-            this.pnlFacturacion.Controls.Add(this.label14);
-            this.pnlFacturacion.Controls.Add(this.label13);
-            this.pnlFacturacion.Controls.Add(this.label12);
-            this.pnlFacturacion.Controls.Add(this.label11);
-            this.pnlFacturacion.Controls.Add(this.button38);
-            this.pnlFacturacion.Controls.Add(this.button37);
-            this.pnlFacturacion.Controls.Add(this.button36);
-            this.pnlFacturacion.Location = new System.Drawing.Point(0, 302);
-            this.pnlFacturacion.Name = "pnlFacturacion";
-            this.pnlFacturacion.Size = new System.Drawing.Size(947, 784);
-            this.pnlFacturacion.TabIndex = 16;
-            this.pnlFacturacion.Visible = false;
-            // 
-            // dgvFacturas
-            // 
-            this.dgvFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvFacturas.Location = new System.Drawing.Point(3, 3);
-            this.dgvFacturas.MainView = this.gridView5;
-            this.dgvFacturas.Name = "dgvFacturas";
-            this.dgvFacturas.Size = new System.Drawing.Size(945, 644);
-            this.dgvFacturas.TabIndex = 145;
-            this.dgvFacturas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView5});
-            // 
-            // gridView5
-            // 
-            this.gridView5.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView5.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
-            this.gridView5.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView5.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.gridView5.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.gridView5.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView5.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView5.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView5.Appearance.Row.ForeColor = System.Drawing.Color.Black;
-            this.gridView5.Appearance.Row.Options.UseFont = true;
-            this.gridView5.Appearance.Row.Options.UseForeColor = true;
-            this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn42,
-            this.gridColumn43,
-            this.gridColumn44,
-            this.gridColumn45,
-            this.gridColumn46,
-            this.FechaInicioFactura,
-            this.FechaFinFactura,
-            this.gridColumn47,
-            this.gridColumn48,
-            this.gridColumn49,
-            this.DíasVencidos,
-            this.TotalSoles,
-            this.gridColumn50,
-            this.gridColumn51,
-            this.gridColumn52,
-            this.PendienteFacturarSoles,
-            this.PendienteFacturarDolares,
-            this.gridColumn53});
-            gridFormatRule4.Column = this.DíasVencidos;
-            gridFormatRule4.ColumnApplyTo = this.gridColumn45;
-            gridFormatRule4.Name = "Menor a 2 dias";
-            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue4.Expression = "[diasVencidos] < 2";
-            gridFormatRule4.Rule = formatConditionRuleValue4;
-            gridFormatRule5.Column = this.DíasVencidos;
-            gridFormatRule5.ColumnApplyTo = this.gridColumn45;
-            gridFormatRule5.Name = "De 2 a 7 dias";
-            formatConditionRuleValue5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue5.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue5.Expression = "[diasVencidos] >= 2 And [diasVencidos] <= 7";
-            gridFormatRule5.Rule = formatConditionRuleValue5;
-            gridFormatRule6.Column = this.DíasVencidos;
-            gridFormatRule6.ColumnApplyTo = this.gridColumn45;
-            gridFormatRule6.Name = "Mas de 7";
-            formatConditionRuleValue6.Appearance.BackColor = System.Drawing.Color.Red;
-            formatConditionRuleValue6.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue6.Expression = "[diasVencidos] > 7";
-            gridFormatRule6.Rule = formatConditionRuleValue6;
-            this.gridView5.FormatRules.Add(gridFormatRule4);
-            this.gridView5.FormatRules.Add(gridFormatRule5);
-            this.gridView5.FormatRules.Add(gridFormatRule6);
-            this.gridView5.GridControl = this.dgvFacturas;
-            this.gridView5.GroupCount = 1;
-            this.gridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, ""),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", this.PendienteFacturarSoles, "TOTAL = {0:c2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarDolares", this.PendienteFacturarDolares, "TOTAL = {0:c2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "", null, "")});
-            this.gridView5.Name = "gridView5";
-            this.gridView5.OptionsBehavior.Editable = false;
-            this.gridView5.OptionsView.ColumnAutoWidth = false;
-            this.gridView5.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView5.OptionsView.ShowAutoFilterRow = true;
-            this.gridView5.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn42, DevExpress.Data.ColumnSortOrder.Ascending)});
-            // 
-            // gridColumn42
-            // 
-            this.gridColumn42.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn42.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn42.Caption = "Cliente";
-            this.gridColumn42.FieldName = "cliente";
-            this.gridColumn42.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-            this.gridColumn42.MinWidth = 40;
-            this.gridColumn42.Name = "gridColumn42";
-            this.gridColumn42.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn42.Visible = true;
-            this.gridColumn42.VisibleIndex = 0;
-            this.gridColumn42.Width = 200;
-            // 
-            // gridColumn43
-            // 
-            this.gridColumn43.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn43.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn43.Caption = "Ruc";
-            this.gridColumn43.FieldName = "ruc";
-            this.gridColumn43.Name = "gridColumn43";
-            this.gridColumn43.Visible = true;
-            this.gridColumn43.VisibleIndex = 0;
-            // 
-            // gridColumn44
-            // 
-            this.gridColumn44.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn44.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn44.Caption = "Inicio Plazo Alquiler";
-            this.gridColumn44.FieldName = "fecIniPlazoAlquiler";
-            this.gridColumn44.MinWidth = 40;
-            this.gridColumn44.Name = "gridColumn44";
-            this.gridColumn44.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
-            this.gridColumn44.Visible = true;
-            this.gridColumn44.VisibleIndex = 1;
-            this.gridColumn44.Width = 107;
-            // 
-            // gridColumn46
-            // 
-            this.gridColumn46.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn46.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn46.Caption = "Factura";
-            this.gridColumn46.FieldName = "factura";
-            this.gridColumn46.MinWidth = 40;
-            this.gridColumn46.Name = "gridColumn46";
-            this.gridColumn46.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn46.Visible = true;
-            this.gridColumn46.VisibleIndex = 3;
-            this.gridColumn46.Width = 140;
-            // 
-            // FechaInicioFactura
-            // 
-            this.FechaInicioFactura.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.FechaInicioFactura.AppearanceHeader.Options.UseBackColor = true;
-            this.FechaInicioFactura.Caption = "Fecha Inicio Factura";
-            this.FechaInicioFactura.FieldName = "fecInicioFactura";
-            this.FechaInicioFactura.MinWidth = 40;
-            this.FechaInicioFactura.Name = "FechaInicioFactura";
-            this.FechaInicioFactura.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
-            this.FechaInicioFactura.Visible = true;
-            this.FechaInicioFactura.VisibleIndex = 4;
-            this.FechaInicioFactura.Width = 140;
-            // 
-            // FechaFinFactura
-            // 
-            this.FechaFinFactura.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.FechaFinFactura.AppearanceHeader.Options.UseBackColor = true;
-            this.FechaFinFactura.Caption = "Fecha Fin Factura";
-            this.FechaFinFactura.FieldName = "fecFinFactura";
-            this.FechaFinFactura.MinWidth = 40;
-            this.FechaFinFactura.Name = "FechaFinFactura";
-            this.FechaFinFactura.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
-            this.FechaFinFactura.Visible = true;
-            this.FechaFinFactura.VisibleIndex = 5;
-            this.FechaFinFactura.Width = 140;
-            // 
-            // gridColumn47
-            // 
-            this.gridColumn47.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn47.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn47.Caption = "Código";
-            this.gridColumn47.FieldName = "codigoEquipo";
-            this.gridColumn47.MinWidth = 40;
-            this.gridColumn47.Name = "gridColumn47";
-            this.gridColumn47.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn47.Visible = true;
-            this.gridColumn47.VisibleIndex = 6;
-            this.gridColumn47.Width = 140;
-            // 
-            // gridColumn48
-            // 
-            this.gridColumn48.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn48.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn48.Caption = "Guía";
-            this.gridColumn48.FieldName = "guia";
-            this.gridColumn48.MinWidth = 40;
-            this.gridColumn48.Name = "gridColumn48";
-            this.gridColumn48.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn48.Visible = true;
-            this.gridColumn48.VisibleIndex = 7;
-            this.gridColumn48.Width = 140;
-            // 
-            // gridColumn49
-            // 
-            this.gridColumn49.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn49.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn49.Caption = "Código Antiguo";
-            this.gridColumn49.FieldName = "CodigoAntiguo";
-            this.gridColumn49.MinWidth = 40;
-            this.gridColumn49.Name = "gridColumn49";
-            this.gridColumn49.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn49.Visible = true;
-            this.gridColumn49.VisibleIndex = 8;
-            this.gridColumn49.Width = 140;
-            // 
-            // TotalSoles
-            // 
-            this.TotalSoles.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.TotalSoles.AppearanceHeader.Options.UseBackColor = true;
-            this.TotalSoles.Caption = "Total Soles";
-            this.TotalSoles.FieldName = "TotalSoles";
-            this.TotalSoles.MinWidth = 40;
-            this.TotalSoles.Name = "TotalSoles";
-            this.TotalSoles.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.TotalSoles.Visible = true;
-            this.TotalSoles.VisibleIndex = 10;
-            this.TotalSoles.Width = 100;
-            // 
-            // gridColumn50
-            // 
-            this.gridColumn50.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn50.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn50.Caption = "Total Dolares";
-            this.gridColumn50.FieldName = "TotalDolares";
-            this.gridColumn50.MinWidth = 40;
-            this.gridColumn50.Name = "gridColumn50";
-            this.gridColumn50.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.gridColumn50.Visible = true;
-            this.gridColumn50.VisibleIndex = 11;
-            this.gridColumn50.Width = 100;
-            // 
-            // gridColumn51
-            // 
-            this.gridColumn51.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn51.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn51.Caption = "Costo Soles";
-            this.gridColumn51.FieldName = "CostoSoles";
-            this.gridColumn51.MinWidth = 40;
-            this.gridColumn51.Name = "gridColumn51";
-            this.gridColumn51.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.gridColumn51.Visible = true;
-            this.gridColumn51.VisibleIndex = 12;
-            this.gridColumn51.Width = 100;
-            // 
-            // gridColumn52
-            // 
-            this.gridColumn52.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn52.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn52.Caption = "Costo Dolares";
-            this.gridColumn52.FieldName = "CostoDolares";
-            this.gridColumn52.MinWidth = 40;
-            this.gridColumn52.Name = "gridColumn52";
-            this.gridColumn52.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.gridColumn52.Visible = true;
-            this.gridColumn52.VisibleIndex = 13;
-            this.gridColumn52.Width = 100;
-            // 
-            // PendienteFacturarSoles
-            // 
-            this.PendienteFacturarSoles.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.PendienteFacturarSoles.AppearanceHeader.Options.UseBackColor = true;
-            this.PendienteFacturarSoles.Caption = "Pendiente Facturar Soles";
-            this.PendienteFacturarSoles.FieldName = "PendienteFacturarSoles";
-            this.PendienteFacturarSoles.MinWidth = 40;
-            this.PendienteFacturarSoles.Name = "PendienteFacturarSoles";
-            this.PendienteFacturarSoles.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", "Tot. ={0:#.##}")});
-            this.PendienteFacturarSoles.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.PendienteFacturarSoles.Visible = true;
-            this.PendienteFacturarSoles.VisibleIndex = 14;
-            this.PendienteFacturarSoles.Width = 100;
-            // 
-            // PendienteFacturarDolares
-            // 
-            this.PendienteFacturarDolares.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.PendienteFacturarDolares.AppearanceHeader.Options.UseBackColor = true;
-            this.PendienteFacturarDolares.Caption = "Pendiente Facturar Dolares";
-            this.PendienteFacturarDolares.FieldName = "PendienteFacturarDolares";
-            this.PendienteFacturarDolares.MinWidth = 40;
-            this.PendienteFacturarDolares.Name = "PendienteFacturarDolares";
-            this.PendienteFacturarDolares.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarDolares", "SUMA={0:#.##}")});
-            this.PendienteFacturarDolares.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.PendienteFacturarDolares.Visible = true;
-            this.PendienteFacturarDolares.VisibleIndex = 15;
-            this.PendienteFacturarDolares.Width = 100;
-            // 
-            // gridColumn53
-            // 
-            this.gridColumn53.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn53.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn53.Caption = "KAM";
-            this.gridColumn53.FieldName = "KAM";
-            this.gridColumn53.MinWidth = 40;
-            this.gridColumn53.Name = "gridColumn53";
-            this.gridColumn53.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn53.Visible = true;
-            this.gridColumn53.VisibleIndex = 16;
-            this.gridColumn53.Width = 200;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(61, 742);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(430, 15);
-            this.label14.TabIndex = 144;
-            this.label14.Text = "EL CLIENTE TIENES MAS DE UNA SEMANA SIN SER FACTURADO";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(61, 714);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(394, 15);
-            this.label13.TabIndex = 143;
-            this.label13.Text = "EL CLIENTE TIENE ENTRE 2 Y 7 DIAS SIN SER FACTURADO";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(61, 689);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(397, 15);
-            this.label12.TabIndex = 142;
-            this.label12.Text = "EL CLIENTE TIENE MENOS DE 2 DIAS SIN SER FACTURADO";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(31, 667);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 15);
-            this.label11.TabIndex = 141;
-            this.label11.Text = "LEYENDA";
-            // 
-            // button38
-            // 
-            this.button38.BackColor = System.Drawing.Color.Red;
-            this.button38.Enabled = false;
-            this.button38.Location = new System.Drawing.Point(34, 738);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(21, 19);
-            this.button38.TabIndex = 140;
-            this.button38.UseVisualStyleBackColor = false;
-            // 
-            // button37
-            // 
-            this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button37.Enabled = false;
-            this.button37.Location = new System.Drawing.Point(34, 713);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(21, 19);
-            this.button37.TabIndex = 139;
-            this.button37.UseVisualStyleBackColor = false;
-            // 
-            // button36
-            // 
-            this.button36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button36.Enabled = false;
-            this.button36.Location = new System.Drawing.Point(34, 688);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(21, 19);
-            this.button36.TabIndex = 138;
-            this.button36.UseVisualStyleBackColor = false;
+            this.btnCargarResumenDispo.Location = new System.Drawing.Point(81, 142);
+            this.btnCargarResumenDispo.Name = "btnCargarResumenDispo";
+            this.btnCargarResumenDispo.Size = new System.Drawing.Size(250, 25);
+            this.btnCargarResumenDispo.TabIndex = 176;
+            this.btnCargarResumenDispo.Text = "VER RESUMEN";
+            this.btnCargarResumenDispo.UseVisualStyleBackColor = true;
+            this.btnCargarResumenDispo.Click += new System.EventHandler(this.button39_Click);
             // 
             // pnlPronosticador
             // 
@@ -2123,7 +1751,6 @@
             // pnlDispo
             // 
             this.pnlDispo.Controls.Add(this.panel4);
-            this.pnlDispo.Controls.Add(this.pnlFacturacion);
             this.pnlDispo.Controls.Add(this.dgvLaptops);
             this.pnlDispo.Location = new System.Drawing.Point(6, 173);
             this.pnlDispo.Name = "pnlDispo";
@@ -2533,10 +2160,10 @@
             this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl2.Location = new System.Drawing.Point(748, 21);
+            this.gridControl2.Location = new System.Drawing.Point(970, 233);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(60, 0);
+            this.gridControl2.Size = new System.Drawing.Size(406, 383);
             this.gridControl2.TabIndex = 136;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -2779,10 +2406,10 @@
             this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl1.Location = new System.Drawing.Point(733, 20);
+            this.gridControl1.Location = new System.Drawing.Point(981, 191);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(60, 0);
+            this.gridControl1.Size = new System.Drawing.Size(380, 424);
             this.gridControl1.TabIndex = 135;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -3166,29 +2793,403 @@
             this.KAM.VisibleIndex = 23;
             this.KAM.Width = 200;
             // 
-            // btnCargarResumenDispo
+            // pnlFacturacion
             // 
-            this.btnCargarResumenDispo.Location = new System.Drawing.Point(81, 142);
-            this.btnCargarResumenDispo.Name = "btnCargarResumenDispo";
-            this.btnCargarResumenDispo.Size = new System.Drawing.Size(250, 25);
-            this.btnCargarResumenDispo.TabIndex = 176;
-            this.btnCargarResumenDispo.Text = "VER RESUMEN";
-            this.btnCargarResumenDispo.UseVisualStyleBackColor = true;
-            this.btnCargarResumenDispo.Click += new System.EventHandler(this.button39_Click);
+            this.pnlFacturacion.Controls.Add(this.dgvFacturas);
+            this.pnlFacturacion.Controls.Add(this.label14);
+            this.pnlFacturacion.Controls.Add(this.label13);
+            this.pnlFacturacion.Controls.Add(this.label12);
+            this.pnlFacturacion.Controls.Add(this.label11);
+            this.pnlFacturacion.Controls.Add(this.button38);
+            this.pnlFacturacion.Controls.Add(this.button37);
+            this.pnlFacturacion.Controls.Add(this.button36);
+            this.pnlFacturacion.Location = new System.Drawing.Point(362, 56);
+            this.pnlFacturacion.Name = "pnlFacturacion";
+            this.pnlFacturacion.Size = new System.Drawing.Size(934, 769);
+            this.pnlFacturacion.TabIndex = 16;
+            this.pnlFacturacion.Visible = false;
+            // 
+            // dgvFacturas
+            // 
+            this.dgvFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvFacturas.Location = new System.Drawing.Point(3, 3);
+            this.dgvFacturas.MainView = this.gridView5;
+            this.dgvFacturas.Name = "dgvFacturas";
+            this.dgvFacturas.Size = new System.Drawing.Size(932, 664);
+            this.dgvFacturas.TabIndex = 145;
+            this.dgvFacturas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView5});
+            // 
+            // gridView5
+            // 
+            this.gridView5.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView5.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
+            this.gridView5.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView5.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.gridView5.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView5.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView5.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView5.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView5.Appearance.Row.ForeColor = System.Drawing.Color.Black;
+            this.gridView5.Appearance.Row.Options.UseFont = true;
+            this.gridView5.Appearance.Row.Options.UseForeColor = true;
+            this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn42,
+            this.gridColumn43,
+            this.gridColumn44,
+            this.gridColumn45,
+            this.gridColumn46,
+            this.FechaInicioFactura,
+            this.FechaFinFactura,
+            this.gridColumn47,
+            this.gridColumn48,
+            this.gridColumn49,
+            this.DíasVencidos,
+            this.TotalSoles,
+            this.gridColumn50,
+            this.gridColumn51,
+            this.gridColumn52,
+            this.PendienteFacturarSoles,
+            this.PendienteFacturarDolares,
+            this.gridColumn53});
+            gridFormatRule1.Column = this.DíasVencidos;
+            gridFormatRule1.ColumnApplyTo = this.gridColumn45;
+            gridFormatRule1.Name = "Menor a 2 dias";
+            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue1.Expression = "[diasVencidos] < 2";
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            gridFormatRule2.Column = this.DíasVencidos;
+            gridFormatRule2.ColumnApplyTo = this.gridColumn45;
+            gridFormatRule2.Name = "De 2 a 7 dias";
+            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue2.Expression = "[diasVencidos] >= 2 And [diasVencidos] <= 7";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            gridFormatRule3.Column = this.DíasVencidos;
+            gridFormatRule3.ColumnApplyTo = this.gridColumn45;
+            gridFormatRule3.Name = "Mas de 7";
+            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.Red;
+            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue3.Expression = "[diasVencidos] > 7";
+            gridFormatRule3.Rule = formatConditionRuleValue3;
+            this.gridView5.FormatRules.Add(gridFormatRule1);
+            this.gridView5.FormatRules.Add(gridFormatRule2);
+            this.gridView5.FormatRules.Add(gridFormatRule3);
+            this.gridView5.GridControl = this.dgvFacturas;
+            this.gridView5.GroupCount = 1;
+            this.gridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, ""),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", this.PendienteFacturarSoles, "TOTAL = {0:c2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarDolares", this.PendienteFacturarDolares, "TOTAL = {0:c2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "", null, "")});
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsBehavior.Editable = false;
+            this.gridView5.OptionsView.ColumnAutoWidth = false;
+            this.gridView5.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView5.OptionsView.ShowAutoFilterRow = true;
+            this.gridView5.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn42, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // gridColumn42
+            // 
+            this.gridColumn42.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn42.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn42.Caption = "Cliente";
+            this.gridColumn42.FieldName = "cliente";
+            this.gridColumn42.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            this.gridColumn42.MinWidth = 40;
+            this.gridColumn42.Name = "gridColumn42";
+            this.gridColumn42.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn42.Visible = true;
+            this.gridColumn42.VisibleIndex = 0;
+            this.gridColumn42.Width = 200;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn43.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn43.Caption = "Ruc";
+            this.gridColumn43.FieldName = "ruc";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.Visible = true;
+            this.gridColumn43.VisibleIndex = 0;
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn44.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn44.Caption = "Inicio Plazo Alquiler";
+            this.gridColumn44.FieldName = "fecIniPlazoAlquiler";
+            this.gridColumn44.MinWidth = 40;
+            this.gridColumn44.Name = "gridColumn44";
+            this.gridColumn44.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+            this.gridColumn44.Visible = true;
+            this.gridColumn44.VisibleIndex = 1;
+            this.gridColumn44.Width = 107;
+            // 
+            // gridColumn46
+            // 
+            this.gridColumn46.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn46.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn46.Caption = "Factura";
+            this.gridColumn46.FieldName = "factura";
+            this.gridColumn46.MinWidth = 40;
+            this.gridColumn46.Name = "gridColumn46";
+            this.gridColumn46.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn46.Visible = true;
+            this.gridColumn46.VisibleIndex = 3;
+            this.gridColumn46.Width = 140;
+            // 
+            // FechaInicioFactura
+            // 
+            this.FechaInicioFactura.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.FechaInicioFactura.AppearanceHeader.Options.UseBackColor = true;
+            this.FechaInicioFactura.Caption = "Fecha Inicio Factura";
+            this.FechaInicioFactura.FieldName = "fecInicioFactura";
+            this.FechaInicioFactura.MinWidth = 40;
+            this.FechaInicioFactura.Name = "FechaInicioFactura";
+            this.FechaInicioFactura.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+            this.FechaInicioFactura.Visible = true;
+            this.FechaInicioFactura.VisibleIndex = 4;
+            this.FechaInicioFactura.Width = 140;
+            // 
+            // FechaFinFactura
+            // 
+            this.FechaFinFactura.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.FechaFinFactura.AppearanceHeader.Options.UseBackColor = true;
+            this.FechaFinFactura.Caption = "Fecha Fin Factura";
+            this.FechaFinFactura.FieldName = "fecFinFactura";
+            this.FechaFinFactura.MinWidth = 40;
+            this.FechaFinFactura.Name = "FechaFinFactura";
+            this.FechaFinFactura.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+            this.FechaFinFactura.Visible = true;
+            this.FechaFinFactura.VisibleIndex = 5;
+            this.FechaFinFactura.Width = 140;
+            // 
+            // gridColumn47
+            // 
+            this.gridColumn47.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn47.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn47.Caption = "Código";
+            this.gridColumn47.FieldName = "codigoEquipo";
+            this.gridColumn47.MinWidth = 40;
+            this.gridColumn47.Name = "gridColumn47";
+            this.gridColumn47.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn47.Visible = true;
+            this.gridColumn47.VisibleIndex = 6;
+            this.gridColumn47.Width = 140;
+            // 
+            // gridColumn48
+            // 
+            this.gridColumn48.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn48.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn48.Caption = "Guía";
+            this.gridColumn48.FieldName = "guia";
+            this.gridColumn48.MinWidth = 40;
+            this.gridColumn48.Name = "gridColumn48";
+            this.gridColumn48.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn48.Visible = true;
+            this.gridColumn48.VisibleIndex = 7;
+            this.gridColumn48.Width = 140;
+            // 
+            // gridColumn49
+            // 
+            this.gridColumn49.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn49.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn49.Caption = "Código Antiguo";
+            this.gridColumn49.FieldName = "CodigoAntiguo";
+            this.gridColumn49.MinWidth = 40;
+            this.gridColumn49.Name = "gridColumn49";
+            this.gridColumn49.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn49.Visible = true;
+            this.gridColumn49.VisibleIndex = 8;
+            this.gridColumn49.Width = 140;
+            // 
+            // TotalSoles
+            // 
+            this.TotalSoles.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.TotalSoles.AppearanceHeader.Options.UseBackColor = true;
+            this.TotalSoles.Caption = "Total Soles";
+            this.TotalSoles.FieldName = "TotalSoles";
+            this.TotalSoles.MinWidth = 40;
+            this.TotalSoles.Name = "TotalSoles";
+            this.TotalSoles.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.TotalSoles.Visible = true;
+            this.TotalSoles.VisibleIndex = 10;
+            this.TotalSoles.Width = 100;
+            // 
+            // gridColumn50
+            // 
+            this.gridColumn50.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn50.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn50.Caption = "Total Dolares";
+            this.gridColumn50.FieldName = "TotalDolares";
+            this.gridColumn50.MinWidth = 40;
+            this.gridColumn50.Name = "gridColumn50";
+            this.gridColumn50.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.gridColumn50.Visible = true;
+            this.gridColumn50.VisibleIndex = 11;
+            this.gridColumn50.Width = 100;
+            // 
+            // gridColumn51
+            // 
+            this.gridColumn51.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn51.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn51.Caption = "Costo Soles";
+            this.gridColumn51.FieldName = "CostoSoles";
+            this.gridColumn51.MinWidth = 40;
+            this.gridColumn51.Name = "gridColumn51";
+            this.gridColumn51.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.gridColumn51.Visible = true;
+            this.gridColumn51.VisibleIndex = 12;
+            this.gridColumn51.Width = 100;
+            // 
+            // gridColumn52
+            // 
+            this.gridColumn52.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn52.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn52.Caption = "Costo Dolares";
+            this.gridColumn52.FieldName = "CostoDolares";
+            this.gridColumn52.MinWidth = 40;
+            this.gridColumn52.Name = "gridColumn52";
+            this.gridColumn52.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.gridColumn52.Visible = true;
+            this.gridColumn52.VisibleIndex = 13;
+            this.gridColumn52.Width = 100;
+            // 
+            // PendienteFacturarSoles
+            // 
+            this.PendienteFacturarSoles.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.PendienteFacturarSoles.AppearanceHeader.Options.UseBackColor = true;
+            this.PendienteFacturarSoles.Caption = "Pendiente Facturar Soles";
+            this.PendienteFacturarSoles.FieldName = "PendienteFacturarSoles";
+            this.PendienteFacturarSoles.MinWidth = 40;
+            this.PendienteFacturarSoles.Name = "PendienteFacturarSoles";
+            this.PendienteFacturarSoles.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", "Tot. ={0:#.##}")});
+            this.PendienteFacturarSoles.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.PendienteFacturarSoles.Visible = true;
+            this.PendienteFacturarSoles.VisibleIndex = 14;
+            this.PendienteFacturarSoles.Width = 100;
+            // 
+            // PendienteFacturarDolares
+            // 
+            this.PendienteFacturarDolares.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.PendienteFacturarDolares.AppearanceHeader.Options.UseBackColor = true;
+            this.PendienteFacturarDolares.Caption = "Pendiente Facturar Dolares";
+            this.PendienteFacturarDolares.FieldName = "PendienteFacturarDolares";
+            this.PendienteFacturarDolares.MinWidth = 40;
+            this.PendienteFacturarDolares.Name = "PendienteFacturarDolares";
+            this.PendienteFacturarDolares.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarDolares", "SUMA={0:#.##}")});
+            this.PendienteFacturarDolares.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.PendienteFacturarDolares.Visible = true;
+            this.PendienteFacturarDolares.VisibleIndex = 15;
+            this.PendienteFacturarDolares.Width = 100;
+            // 
+            // gridColumn53
+            // 
+            this.gridColumn53.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn53.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn53.Caption = "KAM";
+            this.gridColumn53.FieldName = "KAM";
+            this.gridColumn53.MinWidth = 40;
+            this.gridColumn53.Name = "gridColumn53";
+            this.gridColumn53.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn53.Visible = true;
+            this.gridColumn53.VisibleIndex = 16;
+            this.gridColumn53.Width = 200;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(61, 742);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(430, 15);
+            this.label14.TabIndex = 144;
+            this.label14.Text = "EL CLIENTE TIENES MAS DE UNA SEMANA SIN SER FACTURADO";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(61, 714);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(394, 15);
+            this.label13.TabIndex = 143;
+            this.label13.Text = "EL CLIENTE TIENE ENTRE 2 Y 7 DIAS SIN SER FACTURADO";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(61, 689);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(397, 15);
+            this.label12.TabIndex = 142;
+            this.label12.Text = "EL CLIENTE TIENE MENOS DE 2 DIAS SIN SER FACTURADO";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(31, 667);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 15);
+            this.label11.TabIndex = 141;
+            this.label11.Text = "LEYENDA";
+            // 
+            // button38
+            // 
+            this.button38.BackColor = System.Drawing.Color.Red;
+            this.button38.Enabled = false;
+            this.button38.Location = new System.Drawing.Point(34, 738);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(21, 19);
+            this.button38.TabIndex = 140;
+            this.button38.UseVisualStyleBackColor = false;
+            // 
+            // button37
+            // 
+            this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button37.Enabled = false;
+            this.button37.Location = new System.Drawing.Point(34, 713);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(21, 19);
+            this.button37.TabIndex = 139;
+            this.button37.UseVisualStyleBackColor = false;
+            // 
+            // button36
+            // 
+            this.button36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button36.Enabled = false;
+            this.button36.Location = new System.Drawing.Point(34, 688);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(21, 19);
+            this.button36.TabIndex = 138;
+            this.button36.UseVisualStyleBackColor = false;
             // 
             // TEST_MENU_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 40);
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1366, 1070);
+            this.ClientSize = new System.Drawing.Size(1362, 1070);
             this.Controls.Add(this.panelDashboard);
+            this.Controls.Add(this.pnlFacturacion);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.Name = "TEST_MENU_PRINCIPAL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TEST_MENU_PRINCIPAL";
@@ -3211,10 +3212,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelDashboard.ResumeLayout(false);
-            this.pnlFacturacion.ResumeLayout(false);
-            this.pnlFacturacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             this.pnlPronosticador.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
@@ -3232,6 +3229,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.pnlFacturacion.ResumeLayout(false);
+            this.pnlFacturacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             this.ResumeLayout(false);
 
         }
