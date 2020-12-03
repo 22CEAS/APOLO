@@ -1370,7 +1370,7 @@ namespace Apolo
             gridControl2.DataSource = tablaLaptops;
             gridView2.OptionsBehavior.AutoPopulateColumns = false;
             gridView2.OptionsSelection.MultiSelect = true;
-            gridView2.ActiveFilterString = $"[fecFinContrato] <= #{FechaPronosticador.SelectionRange.Start.ToString("yyyy-MM-dd")}#";
+            gridView2.ActiveFilterString = $"[fecFinContrato] < #{FechaPronosticador.SelectionRange.Start.ToString("yyyy-MM-dd")}#";
 
             //ALMACENANDO LOS CODIGOS DE LAS LAPTOPS POR VENCER
             for (int i = 0; i < gridView2.RowCount; i++)
