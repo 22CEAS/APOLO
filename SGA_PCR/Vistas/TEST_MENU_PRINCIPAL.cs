@@ -1405,6 +1405,7 @@ namespace Apolo
             dt.Columns.Add("MarcaLC");
             dt.Columns.Add("NombreModeloLC");
             dt.Columns.Add("TipoProcesador");
+            /*
             dt.Columns.Add("NombreModeloVideo");
             dt.Columns.Add("CapacidadVideo");
             dt.Columns.Add("Disco1");
@@ -1417,6 +1418,7 @@ namespace Apolo
             dt.Columns.Add("Ubicacion");
             dt.Columns.Add("SerieFabrica");
             dt.Columns.Add("IdSalida");
+            */
             DataRow dr = null;
 
 
@@ -1429,8 +1431,9 @@ namespace Apolo
                 dr["MarcaLC"] = gridView3.GetRowCellValue(0, "MarcaLC");
                 dr["NombreModeloLC"] = gridView3.GetRowCellValue(0, "NombreModeloLC");
                 dr["TipoProcesador"] = gridView3.GetRowCellValue(0, "TipoProcesador");
+                /*
                 dr["NombreModeloVideo"] = gridView3.GetRowCellValue(0, "NombreModeloVideo");
-                dr["CapacidadVideo"] = gridView3.GetRowCellValue(0, "CapacidadVideo");
+                dr["CapacidadVideo"] = gridView3.GetRowCellValue(0, "CapacidadVideo");                
                 dr["Disco1"] = gridView3.GetRowCellValue(0, "Disco1");
                 dr["CapacidadDisco1"] = gridView3.GetRowCellValue(0, "CapacidadDisco1");
                 dr["Disco2"] = gridView3.GetRowCellValue(0, "Disco2");
@@ -1441,6 +1444,7 @@ namespace Apolo
                 dr["Ubicacion"] = gridView3.GetRowCellValue(0, "Ubicacion");
                 dr["SerieFabrica"] = gridView3.GetRowCellValue(0, "SerieFabrica");
                 dr["IdSalida"] = gridView3.GetRowCellValue(0, "IdSalida");
+                */
                 dt.Rows.Add(dr);
             }
 
@@ -1474,9 +1478,11 @@ namespace Apolo
                 tablaProcesadoresGeneracion = reporteDA.tablaProcesadoresGeneracion(codTablaProcesadorGeneracion);
 
                 laptops = new BindingList<LC>();
+                /*
                 tablaDisco = reporteDA.ListarLaptopDisco();
                 tablaMemoria = reporteDA.ListarLaptopMemoria();
                 tablaLicencia = reporteDA.ListarLaptopLicencia();
+                */
                 DataView viewDisco = new DataView(tablaDisco);
                 DataView viewMemoria = new DataView(tablaMemoria);
                 DataView viewLicencia = new DataView(tablaLicencia);
@@ -1508,6 +1514,7 @@ namespace Apolo
                     laptop.SetMemoria(viewMemoria);
                     laptop.SetLicencia(viewLicencia);
 
+                    /*
                     if (laptop.Discos.Count > 0)
                     {
                         if (laptop.Discos.Count == 1)
@@ -1560,7 +1567,7 @@ namespace Apolo
                     laptop.Memorias = null;
 
                     laptop.IdSalida = tablaLaptops.Rows[rec]["idSalida"].ToString();
-
+                    */
                     laptops.Add(laptop);
                     rec++;
                 }
@@ -1568,6 +1575,7 @@ namespace Apolo
                 this.cantGeneraciones = tablaProcesadoresGeneracion.Rows.Count;
                 this.cantModeloProcesador = tablaProcesadoresModelos.Rows.Count;
 
+                /*
                 this.arregloLCGeneral = new int[cantGeneraciones][];
                 this.arregloLCApple = new int[cantGeneraciones][];
 
@@ -1587,7 +1595,7 @@ namespace Apolo
                     }
                 }
 
-
+                */
                 gridControl3.DataSource = laptops;
                 gridView3.OptionsBehavior.AutoPopulateColumns = false;
                 gridView3.OptionsSelection.MultiSelect = true;

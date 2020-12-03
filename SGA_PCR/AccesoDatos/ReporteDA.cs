@@ -54,6 +54,11 @@ namespace AccesoDatos
             return objManager.MostrarTablaDatos("SELECT * FROM vista_inventario_laptops ;");
         }
 
+        public DataTable ListarLaptopsInventarioPronosticador()
+        {
+            return objManager.MostrarTablaDatos("SELECT * FROM vista_inventario_pronosticador ;");
+        }
+
         public DataTable ListarLaptopDisco(int idLC)
         {
             return objManager.MostrarTablaDatos("Select * from vista_laptops_discos where idLC=" + idLC + " ;");
