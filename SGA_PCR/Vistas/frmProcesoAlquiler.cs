@@ -93,6 +93,8 @@ namespace Apolo
             dgvDisco.PrimaryGrid.AutoGenerateColumns = false;
             dgvLicencia.PrimaryGrid.AutoGenerateColumns = false;
 
+            lblContador.Text = $"CANTIDAD REGISTRO: {alquiler.Detalles.Count.ToString()}";
+
         }
 
         public void ObtenerDatosAlquiler()
@@ -475,6 +477,7 @@ namespace Apolo
             }
 
             dgvLaptopsSeleccionados.PrimaryGrid.DataSource = alquiler.Detalles;
+            lblContador.Text = $"CANTIDAD REGISTRO: {alquiler.Detalles.Count.ToString()}";
             if (alquiler.Detalles.Count > 0)
             {
                 dgvDisco.Enabled = true;
@@ -1412,6 +1415,8 @@ namespace Apolo
             {
                 estadoComponentes(TipoVista.Inicial);
             }
+
+            lblContador.Text = $"CANTIDAD REGISTRO: {alquiler.Detalles.Count.ToString()}";
         }
 
         private void btnAgregarGuia_Click(object sender, EventArgs e)
@@ -1511,6 +1516,7 @@ namespace Apolo
                 }
             }
 
+            lblContador.Text = $"CANTIDAD REGISTRO: {alquiler.Detalles.Count.ToString()}";
         }
 
         private void btnAnular_Click(object sender, EventArgs e)

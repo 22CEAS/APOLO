@@ -100,6 +100,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAgregarGuia = new System.Windows.Forms.Button();
             this.btnAnular = new System.Windows.Forms.Button();
+            this.lblContador = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtpFechaTraslado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpIniPlazo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpFinPlazo)).BeginInit();
@@ -116,7 +117,7 @@
             this.LabelX4.ForeColor = System.Drawing.Color.Black;
             this.LabelX4.Location = new System.Drawing.Point(611, 114);
             this.LabelX4.Name = "LabelX4";
-            this.LabelX4.Size = new System.Drawing.Size(68, 18);
+            this.LabelX4.Size = new System.Drawing.Size(84, 22);
             this.LabelX4.TabIndex = 29;
             this.LabelX4.Text = "RUC / DNI:";
             // 
@@ -137,7 +138,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(45, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 16);
+            this.label4.Size = new System.Drawing.Size(165, 19);
             this.label4.TabIndex = 24;
             this.label4.Text = "Fecha de Traslado:";
             // 
@@ -147,7 +148,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(45, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(71, 19);
             this.label1.TabIndex = 22;
             this.label1.Text = "Cliente:";
             // 
@@ -182,7 +183,7 @@
             this.dtpFechaTraslado.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtpFechaTraslado.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dtpFechaTraslado.Name = "dtpFechaTraslado";
-            this.dtpFechaTraslado.Size = new System.Drawing.Size(115, 20);
+            this.dtpFechaTraslado.Size = new System.Drawing.Size(115, 22);
             this.dtpFechaTraslado.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dtpFechaTraslado.TabIndex = 1;
             this.dtpFechaTraslado.ValueChanged += new System.EventHandler(this.dtpFechaTraslado_ValueChanged);
@@ -192,7 +193,7 @@
             this.txtNroDocumento.Location = new System.Drawing.Point(681, 113);
             this.txtNroDocumento.Name = "txtNroDocumento";
             this.txtNroDocumento.ReadOnly = true;
-            this.txtNroDocumento.Size = new System.Drawing.Size(210, 20);
+            this.txtNroDocumento.Size = new System.Drawing.Size(210, 22);
             this.txtNroDocumento.TabIndex = 17;
             // 
             // lblNroDias
@@ -201,7 +202,7 @@
             this.lblNroDias.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNroDias.Location = new System.Drawing.Point(766, 79);
             this.lblNroDias.Name = "lblNroDias";
-            this.lblNroDias.Size = new System.Drawing.Size(46, 16);
+            this.lblNroDias.Size = new System.Drawing.Size(58, 19);
             this.lblNroDias.TabIndex = 33;
             this.lblNroDias.Text = "0 días";
             // 
@@ -211,7 +212,7 @@
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(352, 76);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 16);
+            this.label7.Size = new System.Drawing.Size(152, 19);
             this.label7.TabIndex = 35;
             this.label7.Text = "Plazo de Alquiler:";
             // 
@@ -246,7 +247,7 @@
             this.dtpIniPlazo.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtpIniPlazo.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dtpIniPlazo.Name = "dtpIniPlazo";
-            this.dtpIniPlazo.Size = new System.Drawing.Size(123, 20);
+            this.dtpIniPlazo.Size = new System.Drawing.Size(123, 22);
             this.dtpIniPlazo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dtpIniPlazo.TabIndex = 2;
             this.dtpIniPlazo.ValueChanged += new System.EventHandler(this.dtpIniPlazo_ValueChanged);
@@ -257,7 +258,7 @@
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(45, 31);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 16);
+            this.label8.Size = new System.Drawing.Size(101, 19);
             this.label8.TabIndex = 37;
             this.label8.Text = "Alquiler N°:";
             // 
@@ -266,7 +267,7 @@
             this.txtNroAlquiler.Location = new System.Drawing.Point(136, 30);
             this.txtNroAlquiler.Name = "txtNroAlquiler";
             this.txtNroAlquiler.ReadOnly = true;
-            this.txtNroAlquiler.Size = new System.Drawing.Size(106, 20);
+            this.txtNroAlquiler.Size = new System.Drawing.Size(106, 22);
             this.txtNroAlquiler.TabIndex = 36;
             // 
             // label9
@@ -275,7 +276,7 @@
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(621, 80);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 16);
+            this.label9.Size = new System.Drawing.Size(16, 19);
             this.label9.TabIndex = 38;
             this.label9.Text = "-";
             // 
@@ -310,7 +311,7 @@
             this.dtpFinPlazo.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtpFinPlazo.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dtpFinPlazo.Name = "dtpFinPlazo";
-            this.dtpFinPlazo.Size = new System.Drawing.Size(113, 20);
+            this.dtpFinPlazo.Size = new System.Drawing.Size(113, 22);
             this.dtpFinPlazo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dtpFinPlazo.TabIndex = 3;
             this.dtpFinPlazo.ValueChanged += new System.EventHandler(this.dtpFinPlazo_ValueChanged);
@@ -321,7 +322,7 @@
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(651, 217);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 16);
+            this.label11.Size = new System.Drawing.Size(87, 19);
             this.label11.TabIndex = 42;
             this.label11.Text = "Memoria:";
             // 
@@ -331,7 +332,7 @@
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(651, 369);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 16);
+            this.label12.Size = new System.Drawing.Size(103, 19);
             this.label12.TabIndex = 43;
             this.label12.Text = "Disco Duro:";
             // 
@@ -506,7 +507,7 @@
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(651, 512);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 16);
+            this.label13.Size = new System.Drawing.Size(84, 19);
             this.label13.TabIndex = 48;
             this.label13.Text = "Software:";
             // 
@@ -516,7 +517,7 @@
             this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(98, 210);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(173, 16);
+            this.label14.Size = new System.Drawing.Size(222, 19);
             this.label14.TabIndex = 51;
             this.label14.Text = "Productos seleccionados:";
             // 
@@ -526,7 +527,7 @@
             this.label15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(43, 151);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 16);
+            this.label15.Size = new System.Drawing.Size(82, 19);
             this.label15.TabIndex = 54;
             this.label15.Text = "Sucursal:";
             // 
@@ -541,7 +542,7 @@
             this.labelX1.ForeColor = System.Drawing.Color.Black;
             this.labelX1.Location = new System.Drawing.Point(611, 150);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(76, 18);
+            this.labelX1.Size = new System.Drawing.Size(94, 22);
             this.labelX1.TabIndex = 56;
             this.labelX1.Text = "N° Contrato";
             this.labelX1.Visible = false;
@@ -550,7 +551,7 @@
             // 
             this.txtNroContrato.Location = new System.Drawing.Point(693, 151);
             this.txtNroContrato.Name = "txtNroContrato";
-            this.txtNroContrato.Size = new System.Drawing.Size(85, 20);
+            this.txtNroContrato.Size = new System.Drawing.Size(85, 22);
             this.txtNroContrato.TabIndex = 6;
             this.txtNroContrato.Visible = false;
             // 
@@ -565,7 +566,7 @@
             this.labelX2.ForeColor = System.Drawing.Color.Black;
             this.labelX2.Location = new System.Drawing.Point(793, 154);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(42, 18);
+            this.labelX2.Size = new System.Drawing.Size(52, 22);
             this.labelX2.TabIndex = 58;
             this.labelX2.Text = "N° OC";
             this.labelX2.Visible = false;
@@ -574,7 +575,7 @@
             // 
             this.txtNroOC.Location = new System.Drawing.Point(837, 153);
             this.txtNroOC.Name = "txtNroOC";
-            this.txtNroOC.Size = new System.Drawing.Size(85, 20);
+            this.txtNroOC.Size = new System.Drawing.Size(85, 22);
             this.txtNroOC.TabIndex = 7;
             this.txtNroOC.Visible = false;
             // 
@@ -586,7 +587,7 @@
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(112, 110);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(466, 21);
+            this.cmbCliente.Size = new System.Drawing.Size(466, 24);
             this.cmbCliente.TabIndex = 4;
             this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
             // 
@@ -687,7 +688,7 @@
             this.cmbSucursal.FormattingEnabled = true;
             this.cmbSucursal.Location = new System.Drawing.Point(112, 149);
             this.cmbSucursal.Name = "cmbSucursal";
-            this.cmbSucursal.Size = new System.Drawing.Size(466, 21);
+            this.cmbSucursal.Size = new System.Drawing.Size(466, 24);
             this.cmbSucursal.TabIndex = 5;
             // 
             // btnGuardarMemoria
@@ -767,9 +768,9 @@
             this.btnImprimir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnImprimir.Location = new System.Drawing.Point(3, 596);
+            this.btnImprimir.Location = new System.Drawing.Point(-5, 594);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(75, 66);
+            this.btnImprimir.Size = new System.Drawing.Size(83, 66);
             this.btnImprimir.TabIndex = 146;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -786,9 +787,9 @@
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(8, 525);
+            this.btnCancelar.Location = new System.Drawing.Point(-10, 523);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(80, 65);
+            this.btnCancelar.Size = new System.Drawing.Size(98, 65);
             this.btnCancelar.TabIndex = 145;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -805,9 +806,9 @@
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(8, 308);
+            this.btnEditar.Location = new System.Drawing.Point(-11, 306);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(80, 65);
+            this.btnEditar.Size = new System.Drawing.Size(99, 65);
             this.btnEditar.TabIndex = 144;
             this.btnEditar.Text = "Modificar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -825,9 +826,9 @@
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNuevo.Location = new System.Drawing.Point(8, 239);
+            this.btnNuevo.Location = new System.Drawing.Point(7, 237);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 63);
+            this.btnNuevo.Size = new System.Drawing.Size(76, 63);
             this.btnNuevo.TabIndex = 143;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -845,7 +846,7 @@
             this.btnGrabarPreAlquiler.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabarPreAlquiler.Image = ((System.Drawing.Image)(resources.GetObject("btnGrabarPreAlquiler.Image")));
             this.btnGrabarPreAlquiler.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGrabarPreAlquiler.Location = new System.Drawing.Point(-6, 380);
+            this.btnGrabarPreAlquiler.Location = new System.Drawing.Point(-6, 378);
             this.btnGrabarPreAlquiler.Name = "btnGrabarPreAlquiler";
             this.btnGrabarPreAlquiler.Size = new System.Drawing.Size(94, 64);
             this.btnGrabarPreAlquiler.TabIndex = 142;
@@ -865,9 +866,9 @@
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(256, 8);
+            this.btnBuscar.Location = new System.Drawing.Point(248, 12);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(62, 56);
+            this.btnBuscar.Size = new System.Drawing.Size(74, 56);
             this.btnBuscar.TabIndex = 147;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -897,20 +898,31 @@
             this.btnAnular.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnular.Image = ((System.Drawing.Image)(resources.GetObject("btnAnular.Image")));
             this.btnAnular.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAnular.Location = new System.Drawing.Point(15, 453);
+            this.btnAnular.Location = new System.Drawing.Point(2, 451);
             this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(60, 66);
+            this.btnAnular.Size = new System.Drawing.Size(73, 66);
             this.btnAnular.TabIndex = 149;
             this.btnAnular.Text = "Anular";
             this.btnAnular.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAnular.UseVisualStyleBackColor = false;
             this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
+            // lblContador
+            // 
+            this.lblContador.AutoSize = true;
+            this.lblContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContador.Location = new System.Drawing.Point(98, 673);
+            this.lblContador.Name = "lblContador";
+            this.lblContador.Size = new System.Drawing.Size(202, 20);
+            this.lblContador.TabIndex = 153;
+            this.lblContador.Text = "CANTIDAD REGISTROS:";
+            // 
             // frmProcesoAlquiler
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1147, 676);
+            this.ClientSize = new System.Drawing.Size(1147, 702);
+            this.Controls.Add(this.lblContador);
             this.Controls.Add(this.btnAnular);
             this.Controls.Add(this.btnAgregarGuia);
             this.Controls.Add(this.btnBuscar);
@@ -1018,5 +1030,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnAgregarGuia;
         private System.Windows.Forms.Button btnAnular;
+        private System.Windows.Forms.Label lblContador;
     }
 }
