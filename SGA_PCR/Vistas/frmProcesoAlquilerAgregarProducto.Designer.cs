@@ -44,6 +44,7 @@
             this.dgvLaptops = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnSubirSeries = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dgvLaptops
@@ -151,9 +152,9 @@
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(619, 303);
+            this.btnCancelar.Location = new System.Drawing.Point(601, 303);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(80, 65);
+            this.btnCancelar.Size = new System.Drawing.Size(98, 65);
             this.btnCancelar.TabIndex = 120;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -171,26 +172,46 @@
             this.btnGrabar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.Image = ((System.Drawing.Image)(resources.GetObject("btnGrabar.Image")));
             this.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGrabar.Location = new System.Drawing.Point(696, 305);
+            this.btnGrabar.Location = new System.Drawing.Point(690, 305);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(75, 63);
+            this.btnGrabar.Size = new System.Drawing.Size(81, 63);
             this.btnGrabar.TabIndex = 119;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGrabar.UseVisualStyleBackColor = false;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
-            // frmAgregarProducto
+            // btnSubirSeries
+            // 
+            this.btnSubirSeries.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSubirSeries.AutoSize = true;
+            this.btnSubirSeries.BackColor = System.Drawing.Color.Transparent;
+            this.btnSubirSeries.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubirSeries.FlatAppearance.BorderSize = 0;
+            this.btnSubirSeries.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubirSeries.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubirSeries.Image = ((System.Drawing.Image)(resources.GetObject("btnSubirSeries.Image")));
+            this.btnSubirSeries.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSubirSeries.Location = new System.Drawing.Point(503, 322);
+            this.btnSubirSeries.Name = "btnSubirSeries";
+            this.btnSubirSeries.Size = new System.Drawing.Size(40, 34);
+            this.btnSubirSeries.TabIndex = 128;
+            this.btnSubirSeries.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSubirSeries.UseVisualStyleBackColor = false;
+            this.btnSubirSeries.Click += new System.EventHandler(this.btnSubirSeries_Click);
+            // 
+            // frmProcesoAlquilerAgregarProducto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(821, 388);
+            this.Controls.Add(this.btnSubirSeries);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.dgvLaptops);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmAgregarProducto";
+            this.Name = "frmProcesoAlquilerAgregarProducto";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -204,5 +225,6 @@
         private DevComponents.DotNetBar.SuperGrid.SuperGridControl dgvLaptops;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.Button btnSubirSeries;
     }
 }

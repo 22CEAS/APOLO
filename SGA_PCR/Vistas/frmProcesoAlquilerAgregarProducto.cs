@@ -1,6 +1,7 @@
 ﻿using AccesoDatos;
 using DevComponents.DotNetBar.SuperGrid;
 using Modelo;
+using SpreadsheetLight;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,6 +96,68 @@ namespace Apolo
         {
             this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
+        }
+
+        private void btnSubirSeries_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path;
+
+                OpenFileDialog openFileDialog = new OpenFileDialog
+                {
+                    //DE ESTA MANERA FILTRAMOS TODOS LOS ARCHIVOS EXCEL EN EL NAVEGADOR DE ARCHIVOS
+                    Filter = "Excel | *.xls;*.xlsx;",
+
+                    //AQUÍ INDICAMOS QUE NOMBRE TENDRÁ EL NAVEGADOR DE ARCHIVOS COMO TITULO
+                    Title = "Seleccionar Archivo"
+                };
+
+                //EN CASO DE SELECCIONAR EL ARCHIVO, ENTONCES PROCEDEMOS A ABRIR EL ARCHIVO CORRESPONDIENTE
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    DataTable miDataTable = new DataTable();
+                    miDataTable.Columns.Add("CODIGO_LC");
+
+                    path = openFileDialog.FileName;
+                    SLDocument sl = new SLDocument(path);
+
+                    int iRow = 2;
+                    while (!string.IsNullOrEmpty(sl.GetCellValueAsString(iRow, 1)))
+                    {
+                        DataRow Renglon = miDataTable.NewRow();
+                        Renglon["CODIGO_LC"] = sl.GetCellValueAsString(iRow, 1);
+                        iRow++;
+                        miDataTable.Rows.Add(Renglon);
+                    }
+
+                    //dgvSerieFabrica.DataSource = miDataTable;
+                    //dgvSerieFabrica.AutoGenerateColumns = false;
+
+                    int filasExcel = miDataTable.Rows.Count;
+                    for (int i = 0; i < filasExcel; i++)
+                    {
+                        string codigo = miDataTable.Rows[i]["CODIGO_LC"].ToString();
+                        int filasDgv = tablaLaptops.Rows.Count;
+                        for (int j = 0; j < filasDgv; j++)
+                        {
+                            if (codigo == ((GridCell)(dgvLaptops.PrimaryGrid.GetCell(j, 1))).Value.ToString())
+                            {
+                                ((GridCell)(dgvLaptops.PrimaryGrid.GetCell(j, 0))).Value = true;
+                                break;
+                            }
+                        }
+                    }
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "◄ AVISO | LEASEIN S.A.C. ►", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
+
+
         }
     }
 }
