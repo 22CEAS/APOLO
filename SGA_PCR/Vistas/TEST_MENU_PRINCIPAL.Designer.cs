@@ -1476,7 +1476,7 @@
             this.panelDashboard.Controls.Add(this.VerDetallePronos);
             this.panelDashboard.Controls.Add(this.FechaPronosticador);
             this.panelDashboard.Controls.Add(this.panel2);
-            this.panelDashboard.Location = new System.Drawing.Point(350, 53);
+            this.panelDashboard.Location = new System.Drawing.Point(3, 665);
             this.panelDashboard.Name = "panelDashboard";
             this.panelDashboard.Size = new System.Drawing.Size(969, 729);
             this.panelDashboard.TabIndex = 14;
@@ -2796,6 +2796,7 @@
             // 
             // pnlFacturacion
             // 
+            this.pnlFacturacion.Controls.Add(this.panelDashboard);
             this.pnlFacturacion.Controls.Add(this.dgvFacturas);
             this.pnlFacturacion.Controls.Add(this.label14);
             this.pnlFacturacion.Controls.Add(this.label13);
@@ -3184,7 +3185,6 @@
             this.AutoScrollMargin = new System.Drawing.Size(0, 40);
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1362, 788);
-            this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.pnlFacturacion);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.MenuVertical);
