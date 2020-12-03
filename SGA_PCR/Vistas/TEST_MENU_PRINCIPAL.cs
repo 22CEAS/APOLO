@@ -1651,12 +1651,14 @@ namespace Apolo
             if (pnlFacturacion.Visible == false)
             {
                 reporteDA = new ReporteDA();
-                tablaLaptops = reporteDA.ListarLaptopsPorFacturar();
+                tablaLaptops = reporteDA.ListarLaptopsPorFacturarDASH();
 
                 dgvFacturas.DataSource = tablaLaptops;
                 gridView5.OptionsBehavior.AutoPopulateColumns = false;
                 gridView5.OptionsSelection.MultiSelect = true;
-                
+
+                txtPendientePorFacturar.Text = gridView5.RowCount.ToString();
+
                 pnlFacturacion.Visible = true;
             }
             else

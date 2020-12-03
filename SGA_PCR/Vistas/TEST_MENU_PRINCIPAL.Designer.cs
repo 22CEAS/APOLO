@@ -235,6 +235,8 @@
             this.button38 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPendientePorFacturar = new System.Windows.Forms.TextBox();
             this.MenuVertical.SuspendLayout();
             this.panelConfiguracion.SuspendLayout();
             this.REPORTES.SuspendLayout();
@@ -279,7 +281,7 @@
             this.DíasVencidos.Name = "DíasVencidos";
             this.DíasVencidos.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.DíasVencidos.Visible = true;
-            this.DíasVencidos.VisibleIndex = 9;
+            this.DíasVencidos.VisibleIndex = 7;
             this.DíasVencidos.Width = 100;
             // 
             // gridColumn45
@@ -291,8 +293,6 @@
             this.gridColumn45.MinWidth = 40;
             this.gridColumn45.Name = "gridColumn45";
             this.gridColumn45.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
-            this.gridColumn45.Visible = true;
-            this.gridColumn45.VisibleIndex = 2;
             this.gridColumn45.Width = 110;
             // 
             // MenuVertical
@@ -2796,6 +2796,8 @@
             // 
             // pnlFacturacion
             // 
+            this.pnlFacturacion.Controls.Add(this.txtPendientePorFacturar);
+            this.pnlFacturacion.Controls.Add(this.label6);
             this.pnlFacturacion.Controls.Add(this.panelDashboard);
             this.pnlFacturacion.Controls.Add(this.dgvFacturas);
             this.pnlFacturacion.Controls.Add(this.label14);
@@ -2884,19 +2886,13 @@
             this.gridView5.FormatRules.Add(gridFormatRule2);
             this.gridView5.FormatRules.Add(gridFormatRule3);
             this.gridView5.GridControl = this.dgvFacturas;
-            this.gridView5.GroupCount = 1;
             this.gridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, ""),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", this.PendienteFacturarSoles, "TOTAL = {0:c2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarDolares", this.PendienteFacturarDolares, "TOTAL = {0:c2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "", null, "")});
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", this.PendienteFacturarSoles, "TOTAL = {0:c2}")});
             this.gridView5.Name = "gridView5";
             this.gridView5.OptionsBehavior.Editable = false;
             this.gridView5.OptionsView.ColumnAutoWidth = false;
             this.gridView5.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             this.gridView5.OptionsView.ShowAutoFilterRow = true;
-            this.gridView5.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn42, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // gridColumn42
             // 
@@ -2919,8 +2915,6 @@
             this.gridColumn43.Caption = "Ruc";
             this.gridColumn43.FieldName = "ruc";
             this.gridColumn43.Name = "gridColumn43";
-            this.gridColumn43.Visible = true;
-            this.gridColumn43.VisibleIndex = 0;
             // 
             // gridColumn44
             // 
@@ -2931,47 +2925,45 @@
             this.gridColumn44.MinWidth = 40;
             this.gridColumn44.Name = "gridColumn44";
             this.gridColumn44.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
-            this.gridColumn44.Visible = true;
-            this.gridColumn44.VisibleIndex = 1;
             this.gridColumn44.Width = 107;
             // 
             // gridColumn46
             // 
             this.gridColumn46.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.gridColumn46.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn46.Caption = "Factura";
+            this.gridColumn46.Caption = "Ultima Factura";
             this.gridColumn46.FieldName = "factura";
             this.gridColumn46.MinWidth = 40;
             this.gridColumn46.Name = "gridColumn46";
             this.gridColumn46.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.gridColumn46.Visible = true;
-            this.gridColumn46.VisibleIndex = 3;
+            this.gridColumn46.VisibleIndex = 1;
             this.gridColumn46.Width = 140;
             // 
             // FechaInicioFactura
             // 
             this.FechaInicioFactura.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.FechaInicioFactura.AppearanceHeader.Options.UseBackColor = true;
-            this.FechaInicioFactura.Caption = "Fecha Inicio Factura";
+            this.FechaInicioFactura.Caption = "Fecha Inicio Ultima Factura";
             this.FechaInicioFactura.FieldName = "fecInicioFactura";
             this.FechaInicioFactura.MinWidth = 40;
             this.FechaInicioFactura.Name = "FechaInicioFactura";
             this.FechaInicioFactura.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
             this.FechaInicioFactura.Visible = true;
-            this.FechaInicioFactura.VisibleIndex = 4;
+            this.FechaInicioFactura.VisibleIndex = 2;
             this.FechaInicioFactura.Width = 140;
             // 
             // FechaFinFactura
             // 
             this.FechaFinFactura.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.FechaFinFactura.AppearanceHeader.Options.UseBackColor = true;
-            this.FechaFinFactura.Caption = "Fecha Fin Factura";
+            this.FechaFinFactura.Caption = "Fecha Fin Ultima Factura";
             this.FechaFinFactura.FieldName = "fecFinFactura";
             this.FechaFinFactura.MinWidth = 40;
             this.FechaFinFactura.Name = "FechaFinFactura";
             this.FechaFinFactura.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
             this.FechaFinFactura.Visible = true;
-            this.FechaFinFactura.VisibleIndex = 5;
+            this.FechaFinFactura.VisibleIndex = 3;
             this.FechaFinFactura.Width = 140;
             // 
             // gridColumn47
@@ -2984,7 +2976,7 @@
             this.gridColumn47.Name = "gridColumn47";
             this.gridColumn47.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.gridColumn47.Visible = true;
-            this.gridColumn47.VisibleIndex = 6;
+            this.gridColumn47.VisibleIndex = 4;
             this.gridColumn47.Width = 140;
             // 
             // gridColumn48
@@ -2997,7 +2989,7 @@
             this.gridColumn48.Name = "gridColumn48";
             this.gridColumn48.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.gridColumn48.Visible = true;
-            this.gridColumn48.VisibleIndex = 7;
+            this.gridColumn48.VisibleIndex = 5;
             this.gridColumn48.Width = 140;
             // 
             // gridColumn49
@@ -3010,33 +3002,33 @@
             this.gridColumn49.Name = "gridColumn49";
             this.gridColumn49.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.gridColumn49.Visible = true;
-            this.gridColumn49.VisibleIndex = 8;
+            this.gridColumn49.VisibleIndex = 6;
             this.gridColumn49.Width = 140;
             // 
             // TotalSoles
             // 
             this.TotalSoles.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.TotalSoles.AppearanceHeader.Options.UseBackColor = true;
-            this.TotalSoles.Caption = "Total Soles";
+            this.TotalSoles.Caption = "Venta Soles";
             this.TotalSoles.FieldName = "TotalSoles";
             this.TotalSoles.MinWidth = 40;
             this.TotalSoles.Name = "TotalSoles";
             this.TotalSoles.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.TotalSoles.Visible = true;
-            this.TotalSoles.VisibleIndex = 10;
+            this.TotalSoles.VisibleIndex = 8;
             this.TotalSoles.Width = 100;
             // 
             // gridColumn50
             // 
             this.gridColumn50.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.gridColumn50.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn50.Caption = "Total Dolares";
+            this.gridColumn50.Caption = "Venta Dolares";
             this.gridColumn50.FieldName = "TotalDolares";
             this.gridColumn50.MinWidth = 40;
             this.gridColumn50.Name = "gridColumn50";
             this.gridColumn50.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.gridColumn50.Visible = true;
-            this.gridColumn50.VisibleIndex = 11;
+            this.gridColumn50.VisibleIndex = 9;
             this.gridColumn50.Width = 100;
             // 
             // gridColumn51
@@ -3049,7 +3041,7 @@
             this.gridColumn51.Name = "gridColumn51";
             this.gridColumn51.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.gridColumn51.Visible = true;
-            this.gridColumn51.VisibleIndex = 12;
+            this.gridColumn51.VisibleIndex = 10;
             this.gridColumn51.Width = 100;
             // 
             // gridColumn52
@@ -3062,7 +3054,7 @@
             this.gridColumn52.Name = "gridColumn52";
             this.gridColumn52.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.gridColumn52.Visible = true;
-            this.gridColumn52.VisibleIndex = 13;
+            this.gridColumn52.VisibleIndex = 11;
             this.gridColumn52.Width = 100;
             // 
             // PendienteFacturarSoles
@@ -3077,7 +3069,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", "Tot. ={0:#.##}")});
             this.PendienteFacturarSoles.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.PendienteFacturarSoles.Visible = true;
-            this.PendienteFacturarSoles.VisibleIndex = 14;
+            this.PendienteFacturarSoles.VisibleIndex = 12;
             this.PendienteFacturarSoles.Width = 100;
             // 
             // PendienteFacturarDolares
@@ -3092,7 +3084,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarDolares", "SUMA={0:#.##}")});
             this.PendienteFacturarDolares.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.PendienteFacturarDolares.Visible = true;
-            this.PendienteFacturarDolares.VisibleIndex = 15;
+            this.PendienteFacturarDolares.VisibleIndex = 13;
             this.PendienteFacturarDolares.Width = 100;
             // 
             // gridColumn53
@@ -3105,7 +3097,7 @@
             this.gridColumn53.Name = "gridColumn53";
             this.gridColumn53.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.gridColumn53.Visible = true;
-            this.gridColumn53.VisibleIndex = 16;
+            this.gridColumn53.VisibleIndex = 14;
             this.gridColumn53.Width = 200;
             // 
             // label14
@@ -3177,6 +3169,22 @@
             this.button36.Size = new System.Drawing.Size(21, 19);
             this.button36.TabIndex = 138;
             this.button36.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(569, 559);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(156, 13);
+            this.label6.TabIndex = 146;
+            this.label6.Text = "PENDIENTE POR FACTURAR";
+            // 
+            // txtPendientePorFacturar
+            // 
+            this.txtPendientePorFacturar.Location = new System.Drawing.Point(731, 553);
+            this.txtPendientePorFacturar.Name = "txtPendientePorFacturar";
+            this.txtPendientePorFacturar.Size = new System.Drawing.Size(110, 20);
+            this.txtPendientePorFacturar.TabIndex = 147;
             // 
             // TEST_MENU_PRINCIPAL
             // 
@@ -3439,5 +3447,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
         private System.Windows.Forms.Button btnCorteAlquiler;
         private System.Windows.Forms.Button btnCargarResumenDispo;
+        private System.Windows.Forms.TextBox txtPendientePorFacturar;
+        private System.Windows.Forms.Label label6;
     }
 }
