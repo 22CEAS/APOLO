@@ -183,7 +183,7 @@ namespace Apolo
             rango.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
             rango.Style.Font.Bold = false;
 
-
+            
 
             for (int i = 1; i <= this.cantModeloProcesador * 2 + 4; i++)
             {
@@ -191,7 +191,7 @@ namespace Apolo
                 rango.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
             }
 
-
+            //CANTIDAD DE LAPTOP/MAC POR GENERACION
             for (int i = 0; i < this.cantGeneraciones; i++)
             {
                 int cantGenLCGeneral = 0;
@@ -210,9 +210,11 @@ namespace Apolo
                 }
                 hoja_trabajo.Cells[fila2, i + 2] = cantGenLCGeneral;
                 hoja_trabajo.Cells[fila2 + cantModeloProcesador + 1, i + 2] = cantGenLCApple;
+                
             }
 
-
+            
+            //CANTIDAD DE LAPTOP POR PROCESADOR -> LAP Y MAC
             for (int j = 0; j < this.cantModeloProcesador; j++)
             {
                 int cantProLCGeneral = 0;
@@ -224,10 +226,15 @@ namespace Apolo
                 }
                 hoja_trabajo.Cells[fila2 + 1 + j, cantGeneraciones + 2] = cantProLCGeneral;
                 hoja_trabajo.Cells[fila2 + cantModeloProcesador + 1 + 1 + j, cantGeneraciones + 2] = cantProLCApple;
+
+                
             }
+
+            
 
             var cantidadLCGeneral = new BindingList<LC>(laptops.Where(p => p.IdMarca != this.idMarcaAppleLC && p.IdMarca != this.idMarcaApplePC && p.Estado == this.estadoDisponible).ToList());
             var cantidadLCApple = new BindingList<LC>(laptops.Where(p => p.IdMarca == this.idMarcaAppleLC && p.IdMarca != this.idMarcaApplePC && p.Estado == this.estadoDisponible).ToList());
+            
 
             hoja_trabajo.Cells[fila2, cantGeneraciones + 2] = cantidadLCGeneral.Count;
             hoja_trabajo.Cells[fila2 + cantModeloProcesador + 1, cantGeneraciones + 2] = cantidadLCApple.Count;

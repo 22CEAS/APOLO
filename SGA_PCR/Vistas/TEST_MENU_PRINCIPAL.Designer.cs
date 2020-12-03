@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TEST_MENU_PRINCIPAL));
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule5 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue5 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule6 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue6 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.DíasVencidos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MenuVertical = new System.Windows.Forms.Panel();
@@ -110,8 +110,33 @@
             this.lblLaptopsDisponibles = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panelDashboard = new System.Windows.Forms.Panel();
+            this.pnlFacturacion = new System.Windows.Forms.Panel();
+            this.dgvFacturas = new DevExpress.XtraGrid.GridControl();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FechaInicioFactura = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FechaFinFactura = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TotalSoles = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PendienteFacturarSoles = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PendienteFacturarDolares = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
             this.pnlPronosticador = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -130,9 +155,7 @@
             this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtCantidadF2 = new System.Windows.Forms.TextBox();
             this.pnlDispo = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -154,25 +177,11 @@
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtCantidadFiltrada = new System.Windows.Forms.TextBox();
             this.dgvLaptops = new DevExpress.XtraGrid.GridControl();
             this.vista = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CodigoLC = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Marca = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Modelo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Procesador = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Video = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CapacidadVideo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Disco1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CapacidadDisco1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Disco2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CapacidadDisco2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.MemoriaRam = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Estado = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Cliente = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Ubicacion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SerieFabrica = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.IdSalida = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PROCESADOR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LAPTOP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MACBOOK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblFechaPronosticador = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -224,32 +233,7 @@
             this.CostoDolares = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VersionOffice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.KAM = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.pnlFacturacion = new System.Windows.Forms.Panel();
-            this.dgvFacturas = new DevExpress.XtraGrid.GridControl();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.FechaInicioFactura = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.FechaFinFactura = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TotalSoles = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.PendienteFacturarSoles = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.PendienteFacturarDolares = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
+            this.btnCargarResumenDispo = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.panelConfiguracion.SuspendLayout();
             this.REPORTES.SuspendLayout();
@@ -264,6 +248,9 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelDashboard.SuspendLayout();
+            this.pnlFacturacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             this.pnlPronosticador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
@@ -279,9 +266,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            this.pnlFacturacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             this.SuspendLayout();
             // 
             // DíasVencidos
@@ -1186,7 +1170,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(344, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(956, 50);
+            this.BarraTitulo.Size = new System.Drawing.Size(1022, 50);
             this.BarraTitulo.TabIndex = 1;
             this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             // 
@@ -1218,7 +1202,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblUser.Location = new System.Drawing.Point(739, 9);
+            this.lblUser.Location = new System.Drawing.Point(805, 9);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(70, 25);
             this.lblUser.TabIndex = 13;
@@ -1231,7 +1215,7 @@
             this.usuarioConectado.Enabled = false;
             this.usuarioConectado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarioConectado.ForeColor = System.Drawing.Color.Transparent;
-            this.usuarioConectado.Location = new System.Drawing.Point(599, 23);
+            this.usuarioConectado.Location = new System.Drawing.Point(665, 23);
             this.usuarioConectado.Name = "usuarioConectado";
             this.usuarioConectado.Size = new System.Drawing.Size(37, 19);
             this.usuarioConectado.TabIndex = 7;
@@ -1255,7 +1239,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(604, 7);
+            this.label3.Location = new System.Drawing.Point(670, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 25);
             this.label3.TabIndex = 9;
@@ -1268,7 +1252,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblHora.Location = new System.Drawing.Point(516, 9);
+            this.lblHora.Location = new System.Drawing.Point(549, 9);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(72, 25);
             this.lblHora.TabIndex = 3;
@@ -1279,7 +1263,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(868, 9);
+            this.pictureBox3.Location = new System.Drawing.Point(934, 9);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1294,7 +1278,7 @@
             this.usuario.Enabled = false;
             this.usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.usuario.Location = new System.Drawing.Point(815, 24);
+            this.usuario.Location = new System.Drawing.Point(881, 24);
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(13, 19);
             this.usuario.TabIndex = 11;
@@ -1306,7 +1290,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(437, 9);
+            this.label2.Location = new System.Drawing.Point(470, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 25);
             this.label2.TabIndex = 6;
@@ -1318,7 +1302,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(663, 9);
+            this.label4.Location = new System.Drawing.Point(729, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 25);
             this.label4.TabIndex = 12;
@@ -1330,7 +1314,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(226, 9);
+            this.label1.Location = new System.Drawing.Point(259, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 25);
             this.label1.TabIndex = 5;
@@ -1342,7 +1326,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblFecha.Location = new System.Drawing.Point(309, 9);
+            this.lblFecha.Location = new System.Drawing.Point(342, 9);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(83, 25);
             this.lblFecha.TabIndex = 4;
@@ -1363,7 +1347,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(909, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(975, 9);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1414,9 +1398,9 @@
             this.lblCantidadPronosticador.ForeColor = System.Drawing.Color.White;
             this.lblCantidadPronosticador.Location = new System.Drawing.Point(3, 59);
             this.lblCantidadPronosticador.Name = "lblCantidadPronosticador";
-            this.lblCantidadPronosticador.Size = new System.Drawing.Size(72, 37);
+            this.lblCantidadPronosticador.Size = new System.Drawing.Size(36, 37);
             this.lblCantidadPronosticador.TabIndex = 1;
-            this.lblCantidadPronosticador.Text = "120";
+            this.lblCantidadPronosticador.Text = "0";
             // 
             // label8
             // 
@@ -1480,7 +1464,7 @@
             // 
             // panelDashboard
             // 
-            this.panelDashboard.Controls.Add(this.pnlFacturacion);
+            this.panelDashboard.Controls.Add(this.btnCargarResumenDispo);
             this.panelDashboard.Controls.Add(this.pnlPronosticador);
             this.panelDashboard.Controls.Add(this.pnlDispo);
             this.panelDashboard.Controls.Add(this.panel3);
@@ -1490,31 +1474,403 @@
             this.panelDashboard.Controls.Add(this.VerDetallePronos);
             this.panelDashboard.Controls.Add(this.FechaPronosticador);
             this.panelDashboard.Controls.Add(this.panel2);
-            this.panelDashboard.Location = new System.Drawing.Point(350, 56);
+            this.panelDashboard.Location = new System.Drawing.Point(356, 56);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(950, 644);
+            this.panelDashboard.Size = new System.Drawing.Size(1010, 644);
             this.panelDashboard.TabIndex = 14;
             this.panelDashboard.Visible = false;
             // 
+            // pnlFacturacion
+            // 
+            this.pnlFacturacion.Controls.Add(this.dgvFacturas);
+            this.pnlFacturacion.Controls.Add(this.label14);
+            this.pnlFacturacion.Controls.Add(this.label13);
+            this.pnlFacturacion.Controls.Add(this.label12);
+            this.pnlFacturacion.Controls.Add(this.label11);
+            this.pnlFacturacion.Controls.Add(this.button38);
+            this.pnlFacturacion.Controls.Add(this.button37);
+            this.pnlFacturacion.Controls.Add(this.button36);
+            this.pnlFacturacion.Location = new System.Drawing.Point(0, 302);
+            this.pnlFacturacion.Name = "pnlFacturacion";
+            this.pnlFacturacion.Size = new System.Drawing.Size(947, 784);
+            this.pnlFacturacion.TabIndex = 16;
+            this.pnlFacturacion.Visible = false;
+            // 
+            // dgvFacturas
+            // 
+            this.dgvFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvFacturas.Location = new System.Drawing.Point(3, 3);
+            this.dgvFacturas.MainView = this.gridView5;
+            this.dgvFacturas.Name = "dgvFacturas";
+            this.dgvFacturas.Size = new System.Drawing.Size(945, 644);
+            this.dgvFacturas.TabIndex = 145;
+            this.dgvFacturas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView5});
+            // 
+            // gridView5
+            // 
+            this.gridView5.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView5.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
+            this.gridView5.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView5.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.gridView5.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView5.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView5.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView5.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView5.Appearance.Row.ForeColor = System.Drawing.Color.Black;
+            this.gridView5.Appearance.Row.Options.UseFont = true;
+            this.gridView5.Appearance.Row.Options.UseForeColor = true;
+            this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn42,
+            this.gridColumn43,
+            this.gridColumn44,
+            this.gridColumn45,
+            this.gridColumn46,
+            this.FechaInicioFactura,
+            this.FechaFinFactura,
+            this.gridColumn47,
+            this.gridColumn48,
+            this.gridColumn49,
+            this.DíasVencidos,
+            this.TotalSoles,
+            this.gridColumn50,
+            this.gridColumn51,
+            this.gridColumn52,
+            this.PendienteFacturarSoles,
+            this.PendienteFacturarDolares,
+            this.gridColumn53});
+            gridFormatRule4.Column = this.DíasVencidos;
+            gridFormatRule4.ColumnApplyTo = this.gridColumn45;
+            gridFormatRule4.Name = "Menor a 2 dias";
+            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue4.Expression = "[diasVencidos] < 2";
+            gridFormatRule4.Rule = formatConditionRuleValue4;
+            gridFormatRule5.Column = this.DíasVencidos;
+            gridFormatRule5.ColumnApplyTo = this.gridColumn45;
+            gridFormatRule5.Name = "De 2 a 7 dias";
+            formatConditionRuleValue5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue5.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue5.Expression = "[diasVencidos] >= 2 And [diasVencidos] <= 7";
+            gridFormatRule5.Rule = formatConditionRuleValue5;
+            gridFormatRule6.Column = this.DíasVencidos;
+            gridFormatRule6.ColumnApplyTo = this.gridColumn45;
+            gridFormatRule6.Name = "Mas de 7";
+            formatConditionRuleValue6.Appearance.BackColor = System.Drawing.Color.Red;
+            formatConditionRuleValue6.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue6.Expression = "[diasVencidos] > 7";
+            gridFormatRule6.Rule = formatConditionRuleValue6;
+            this.gridView5.FormatRules.Add(gridFormatRule4);
+            this.gridView5.FormatRules.Add(gridFormatRule5);
+            this.gridView5.FormatRules.Add(gridFormatRule6);
+            this.gridView5.GridControl = this.dgvFacturas;
+            this.gridView5.GroupCount = 1;
+            this.gridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, ""),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", this.PendienteFacturarSoles, "TOTAL = {0:c2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarDolares", this.PendienteFacturarDolares, "TOTAL = {0:c2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "", null, "")});
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsBehavior.Editable = false;
+            this.gridView5.OptionsView.ColumnAutoWidth = false;
+            this.gridView5.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView5.OptionsView.ShowAutoFilterRow = true;
+            this.gridView5.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn42, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // gridColumn42
+            // 
+            this.gridColumn42.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn42.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn42.Caption = "Cliente";
+            this.gridColumn42.FieldName = "cliente";
+            this.gridColumn42.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            this.gridColumn42.MinWidth = 40;
+            this.gridColumn42.Name = "gridColumn42";
+            this.gridColumn42.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn42.Visible = true;
+            this.gridColumn42.VisibleIndex = 0;
+            this.gridColumn42.Width = 200;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn43.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn43.Caption = "Ruc";
+            this.gridColumn43.FieldName = "ruc";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.Visible = true;
+            this.gridColumn43.VisibleIndex = 0;
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn44.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn44.Caption = "Inicio Plazo Alquiler";
+            this.gridColumn44.FieldName = "fecIniPlazoAlquiler";
+            this.gridColumn44.MinWidth = 40;
+            this.gridColumn44.Name = "gridColumn44";
+            this.gridColumn44.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+            this.gridColumn44.Visible = true;
+            this.gridColumn44.VisibleIndex = 1;
+            this.gridColumn44.Width = 107;
+            // 
+            // gridColumn46
+            // 
+            this.gridColumn46.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn46.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn46.Caption = "Factura";
+            this.gridColumn46.FieldName = "factura";
+            this.gridColumn46.MinWidth = 40;
+            this.gridColumn46.Name = "gridColumn46";
+            this.gridColumn46.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn46.Visible = true;
+            this.gridColumn46.VisibleIndex = 3;
+            this.gridColumn46.Width = 140;
+            // 
+            // FechaInicioFactura
+            // 
+            this.FechaInicioFactura.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.FechaInicioFactura.AppearanceHeader.Options.UseBackColor = true;
+            this.FechaInicioFactura.Caption = "Fecha Inicio Factura";
+            this.FechaInicioFactura.FieldName = "fecInicioFactura";
+            this.FechaInicioFactura.MinWidth = 40;
+            this.FechaInicioFactura.Name = "FechaInicioFactura";
+            this.FechaInicioFactura.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+            this.FechaInicioFactura.Visible = true;
+            this.FechaInicioFactura.VisibleIndex = 4;
+            this.FechaInicioFactura.Width = 140;
+            // 
+            // FechaFinFactura
+            // 
+            this.FechaFinFactura.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.FechaFinFactura.AppearanceHeader.Options.UseBackColor = true;
+            this.FechaFinFactura.Caption = "Fecha Fin Factura";
+            this.FechaFinFactura.FieldName = "fecFinFactura";
+            this.FechaFinFactura.MinWidth = 40;
+            this.FechaFinFactura.Name = "FechaFinFactura";
+            this.FechaFinFactura.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+            this.FechaFinFactura.Visible = true;
+            this.FechaFinFactura.VisibleIndex = 5;
+            this.FechaFinFactura.Width = 140;
+            // 
+            // gridColumn47
+            // 
+            this.gridColumn47.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn47.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn47.Caption = "Código";
+            this.gridColumn47.FieldName = "codigoEquipo";
+            this.gridColumn47.MinWidth = 40;
+            this.gridColumn47.Name = "gridColumn47";
+            this.gridColumn47.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn47.Visible = true;
+            this.gridColumn47.VisibleIndex = 6;
+            this.gridColumn47.Width = 140;
+            // 
+            // gridColumn48
+            // 
+            this.gridColumn48.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn48.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn48.Caption = "Guía";
+            this.gridColumn48.FieldName = "guia";
+            this.gridColumn48.MinWidth = 40;
+            this.gridColumn48.Name = "gridColumn48";
+            this.gridColumn48.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn48.Visible = true;
+            this.gridColumn48.VisibleIndex = 7;
+            this.gridColumn48.Width = 140;
+            // 
+            // gridColumn49
+            // 
+            this.gridColumn49.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn49.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn49.Caption = "Código Antiguo";
+            this.gridColumn49.FieldName = "CodigoAntiguo";
+            this.gridColumn49.MinWidth = 40;
+            this.gridColumn49.Name = "gridColumn49";
+            this.gridColumn49.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn49.Visible = true;
+            this.gridColumn49.VisibleIndex = 8;
+            this.gridColumn49.Width = 140;
+            // 
+            // TotalSoles
+            // 
+            this.TotalSoles.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.TotalSoles.AppearanceHeader.Options.UseBackColor = true;
+            this.TotalSoles.Caption = "Total Soles";
+            this.TotalSoles.FieldName = "TotalSoles";
+            this.TotalSoles.MinWidth = 40;
+            this.TotalSoles.Name = "TotalSoles";
+            this.TotalSoles.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.TotalSoles.Visible = true;
+            this.TotalSoles.VisibleIndex = 10;
+            this.TotalSoles.Width = 100;
+            // 
+            // gridColumn50
+            // 
+            this.gridColumn50.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn50.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn50.Caption = "Total Dolares";
+            this.gridColumn50.FieldName = "TotalDolares";
+            this.gridColumn50.MinWidth = 40;
+            this.gridColumn50.Name = "gridColumn50";
+            this.gridColumn50.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.gridColumn50.Visible = true;
+            this.gridColumn50.VisibleIndex = 11;
+            this.gridColumn50.Width = 100;
+            // 
+            // gridColumn51
+            // 
+            this.gridColumn51.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn51.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn51.Caption = "Costo Soles";
+            this.gridColumn51.FieldName = "CostoSoles";
+            this.gridColumn51.MinWidth = 40;
+            this.gridColumn51.Name = "gridColumn51";
+            this.gridColumn51.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.gridColumn51.Visible = true;
+            this.gridColumn51.VisibleIndex = 12;
+            this.gridColumn51.Width = 100;
+            // 
+            // gridColumn52
+            // 
+            this.gridColumn52.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn52.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn52.Caption = "Costo Dolares";
+            this.gridColumn52.FieldName = "CostoDolares";
+            this.gridColumn52.MinWidth = 40;
+            this.gridColumn52.Name = "gridColumn52";
+            this.gridColumn52.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.gridColumn52.Visible = true;
+            this.gridColumn52.VisibleIndex = 13;
+            this.gridColumn52.Width = 100;
+            // 
+            // PendienteFacturarSoles
+            // 
+            this.PendienteFacturarSoles.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.PendienteFacturarSoles.AppearanceHeader.Options.UseBackColor = true;
+            this.PendienteFacturarSoles.Caption = "Pendiente Facturar Soles";
+            this.PendienteFacturarSoles.FieldName = "PendienteFacturarSoles";
+            this.PendienteFacturarSoles.MinWidth = 40;
+            this.PendienteFacturarSoles.Name = "PendienteFacturarSoles";
+            this.PendienteFacturarSoles.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", "Tot. ={0:#.##}")});
+            this.PendienteFacturarSoles.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.PendienteFacturarSoles.Visible = true;
+            this.PendienteFacturarSoles.VisibleIndex = 14;
+            this.PendienteFacturarSoles.Width = 100;
+            // 
+            // PendienteFacturarDolares
+            // 
+            this.PendienteFacturarDolares.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.PendienteFacturarDolares.AppearanceHeader.Options.UseBackColor = true;
+            this.PendienteFacturarDolares.Caption = "Pendiente Facturar Dolares";
+            this.PendienteFacturarDolares.FieldName = "PendienteFacturarDolares";
+            this.PendienteFacturarDolares.MinWidth = 40;
+            this.PendienteFacturarDolares.Name = "PendienteFacturarDolares";
+            this.PendienteFacturarDolares.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarDolares", "SUMA={0:#.##}")});
+            this.PendienteFacturarDolares.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            this.PendienteFacturarDolares.Visible = true;
+            this.PendienteFacturarDolares.VisibleIndex = 15;
+            this.PendienteFacturarDolares.Width = 100;
+            // 
+            // gridColumn53
+            // 
+            this.gridColumn53.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridColumn53.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn53.Caption = "KAM";
+            this.gridColumn53.FieldName = "KAM";
+            this.gridColumn53.MinWidth = 40;
+            this.gridColumn53.Name = "gridColumn53";
+            this.gridColumn53.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumn53.Visible = true;
+            this.gridColumn53.VisibleIndex = 16;
+            this.gridColumn53.Width = 200;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(61, 742);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(430, 15);
+            this.label14.TabIndex = 144;
+            this.label14.Text = "EL CLIENTE TIENES MAS DE UNA SEMANA SIN SER FACTURADO";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(61, 714);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(394, 15);
+            this.label13.TabIndex = 143;
+            this.label13.Text = "EL CLIENTE TIENE ENTRE 2 Y 7 DIAS SIN SER FACTURADO";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(61, 689);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(397, 15);
+            this.label12.TabIndex = 142;
+            this.label12.Text = "EL CLIENTE TIENE MENOS DE 2 DIAS SIN SER FACTURADO";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(31, 667);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 15);
+            this.label11.TabIndex = 141;
+            this.label11.Text = "LEYENDA";
+            // 
+            // button38
+            // 
+            this.button38.BackColor = System.Drawing.Color.Red;
+            this.button38.Enabled = false;
+            this.button38.Location = new System.Drawing.Point(34, 738);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(21, 19);
+            this.button38.TabIndex = 140;
+            this.button38.UseVisualStyleBackColor = false;
+            // 
+            // button37
+            // 
+            this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button37.Enabled = false;
+            this.button37.Location = new System.Drawing.Point(34, 713);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(21, 19);
+            this.button37.TabIndex = 139;
+            this.button37.UseVisualStyleBackColor = false;
+            // 
+            // button36
+            // 
+            this.button36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button36.Enabled = false;
+            this.button36.Location = new System.Drawing.Point(34, 688);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(21, 19);
+            this.button36.TabIndex = 138;
+            this.button36.UseVisualStyleBackColor = false;
+            // 
             // pnlPronosticador
             // 
-            this.pnlPronosticador.Controls.Add(this.label10);
             this.pnlPronosticador.Controls.Add(this.gridControl4);
-            this.pnlPronosticador.Controls.Add(this.txtCantidadF2);
             this.pnlPronosticador.Location = new System.Drawing.Point(480, 173);
             this.pnlPronosticador.Name = "pnlPronosticador";
-            this.pnlPronosticador.Size = new System.Drawing.Size(458, 322);
+            this.pnlPronosticador.Size = new System.Drawing.Size(458, 296);
             this.pnlPronosticador.TabIndex = 175;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(307, 293);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 16);
-            this.label10.TabIndex = 174;
-            this.label10.Text = "STOCK:";
+            this.pnlPronosticador.Visible = false;
             // 
             // gridControl4
             // 
@@ -1524,7 +1880,7 @@
             this.gridControl4.Location = new System.Drawing.Point(3, 3);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(452, 283);
+            this.gridControl4.Size = new System.Drawing.Size(452, 290);
             this.gridControl4.TabIndex = 174;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -1562,10 +1918,16 @@
             this.gridColumn40,
             this.gridColumn41});
             this.gridView4.GridControl = this.gridControl4;
+            this.gridView4.GroupCount = 2;
+            this.gridView4.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, "")});
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsBehavior.Editable = false;
             this.gridView4.OptionsView.ColumnAutoWidth = false;
             this.gridView4.OptionsView.ShowAutoFilterRow = true;
+            this.gridView4.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn27, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn29, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // gridColumn26
             // 
@@ -1600,7 +1962,7 @@
             this.gridColumn28.MinWidth = 40;
             this.gridColumn28.Name = "gridColumn28";
             this.gridColumn28.Visible = true;
-            this.gridColumn28.VisibleIndex = 2;
+            this.gridColumn28.VisibleIndex = 1;
             this.gridColumn28.Width = 200;
             // 
             // gridColumn29
@@ -1612,7 +1974,7 @@
             this.gridColumn29.MinWidth = 40;
             this.gridColumn29.Name = "gridColumn29";
             this.gridColumn29.Visible = true;
-            this.gridColumn29.VisibleIndex = 3;
+            this.gridColumn29.VisibleIndex = 2;
             this.gridColumn29.Width = 100;
             // 
             // gridColumn30
@@ -1634,7 +1996,7 @@
             this.gridColumn31.MinWidth = 40;
             this.gridColumn31.Name = "gridColumn31";
             this.gridColumn31.Visible = true;
-            this.gridColumn31.VisibleIndex = 4;
+            this.gridColumn31.VisibleIndex = 2;
             this.gridColumn31.Width = 130;
             // 
             // gridColumn32
@@ -1646,7 +2008,7 @@
             this.gridColumn32.MinWidth = 40;
             this.gridColumn32.Name = "gridColumn32";
             this.gridColumn32.Visible = true;
-            this.gridColumn32.VisibleIndex = 5;
+            this.gridColumn32.VisibleIndex = 3;
             this.gridColumn32.Width = 70;
             // 
             // gridColumn33
@@ -1658,7 +2020,7 @@
             this.gridColumn33.MinWidth = 40;
             this.gridColumn33.Name = "gridColumn33";
             this.gridColumn33.Visible = true;
-            this.gridColumn33.VisibleIndex = 6;
+            this.gridColumn33.VisibleIndex = 4;
             this.gridColumn33.Width = 130;
             // 
             // gridColumn34
@@ -1670,7 +2032,7 @@
             this.gridColumn34.MinWidth = 40;
             this.gridColumn34.Name = "gridColumn34";
             this.gridColumn34.Visible = true;
-            this.gridColumn34.VisibleIndex = 7;
+            this.gridColumn34.VisibleIndex = 5;
             this.gridColumn34.Width = 70;
             // 
             // gridColumn35
@@ -1682,7 +2044,7 @@
             this.gridColumn35.MinWidth = 40;
             this.gridColumn35.Name = "gridColumn35";
             this.gridColumn35.Visible = true;
-            this.gridColumn35.VisibleIndex = 8;
+            this.gridColumn35.VisibleIndex = 6;
             this.gridColumn35.Width = 130;
             // 
             // gridColumn36
@@ -1694,7 +2056,7 @@
             this.gridColumn36.MinWidth = 40;
             this.gridColumn36.Name = "gridColumn36";
             this.gridColumn36.Visible = true;
-            this.gridColumn36.VisibleIndex = 9;
+            this.gridColumn36.VisibleIndex = 7;
             this.gridColumn36.Width = 100;
             // 
             // gridColumn37
@@ -1706,7 +2068,7 @@
             this.gridColumn37.MinWidth = 40;
             this.gridColumn37.Name = "gridColumn37";
             this.gridColumn37.Visible = true;
-            this.gridColumn37.VisibleIndex = 10;
+            this.gridColumn37.VisibleIndex = 8;
             this.gridColumn37.Width = 130;
             // 
             // gridColumn38
@@ -1718,7 +2080,7 @@
             this.gridColumn38.MinWidth = 40;
             this.gridColumn38.Name = "gridColumn38";
             this.gridColumn38.Visible = true;
-            this.gridColumn38.VisibleIndex = 11;
+            this.gridColumn38.VisibleIndex = 9;
             this.gridColumn38.Width = 150;
             // 
             // gridColumn39
@@ -1730,7 +2092,7 @@
             this.gridColumn39.MinWidth = 40;
             this.gridColumn39.Name = "gridColumn39";
             this.gridColumn39.Visible = true;
-            this.gridColumn39.VisibleIndex = 12;
+            this.gridColumn39.VisibleIndex = 10;
             this.gridColumn39.Width = 150;
             // 
             // gridColumn40
@@ -1742,7 +2104,7 @@
             this.gridColumn40.MinWidth = 40;
             this.gridColumn40.Name = "gridColumn40";
             this.gridColumn40.Visible = true;
-            this.gridColumn40.VisibleIndex = 13;
+            this.gridColumn40.VisibleIndex = 11;
             this.gridColumn40.Width = 150;
             // 
             // gridColumn41
@@ -1755,39 +2117,19 @@
             this.gridColumn41.Name = "gridColumn41";
             this.gridColumn41.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.gridColumn41.Visible = true;
-            this.gridColumn41.VisibleIndex = 14;
+            this.gridColumn41.VisibleIndex = 12;
             this.gridColumn41.Width = 80;
-            // 
-            // txtCantidadF2
-            // 
-            this.txtCantidadF2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadF2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCantidadF2.Location = new System.Drawing.Point(369, 289);
-            this.txtCantidadF2.Name = "txtCantidadF2";
-            this.txtCantidadF2.Size = new System.Drawing.Size(86, 22);
-            this.txtCantidadF2.TabIndex = 175;
-            this.txtCantidadF2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pnlDispo
             // 
-            this.pnlDispo.Controls.Add(this.label6);
             this.pnlDispo.Controls.Add(this.panel4);
-            this.pnlDispo.Controls.Add(this.txtCantidadFiltrada);
+            this.pnlDispo.Controls.Add(this.pnlFacturacion);
             this.pnlDispo.Controls.Add(this.dgvLaptops);
             this.pnlDispo.Location = new System.Drawing.Point(6, 173);
             this.pnlDispo.Name = "pnlDispo";
-            this.pnlDispo.Size = new System.Drawing.Size(450, 322);
+            this.pnlDispo.Size = new System.Drawing.Size(458, 299);
             this.pnlDispo.TabIndex = 137;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(291, 293);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
-            this.label6.TabIndex = 172;
-            this.label6.Text = "STOCK:";
+            this.pnlDispo.Visible = false;
             // 
             // panel4
             // 
@@ -2059,16 +2401,6 @@
             this.gridColumn25.VisibleIndex = 14;
             this.gridColumn25.Width = 80;
             // 
-            // txtCantidadFiltrada
-            // 
-            this.txtCantidadFiltrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadFiltrada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCantidadFiltrada.Location = new System.Drawing.Point(353, 292);
-            this.txtCantidadFiltrada.Name = "txtCantidadFiltrada";
-            this.txtCantidadFiltrada.Size = new System.Drawing.Size(86, 22);
-            this.txtCantidadFiltrada.TabIndex = 173;
-            this.txtCantidadFiltrada.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // dgvLaptops
             // 
             this.dgvLaptops.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2077,12 +2409,10 @@
             this.dgvLaptops.Location = new System.Drawing.Point(3, 3);
             this.dgvLaptops.MainView = this.vista;
             this.dgvLaptops.Name = "dgvLaptops";
-            this.dgvLaptops.Size = new System.Drawing.Size(444, 283);
+            this.dgvLaptops.Size = new System.Drawing.Size(452, 293);
             this.dgvLaptops.TabIndex = 134;
             this.dgvLaptops.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.vista});
-            this.dgvLaptops.MouseLeave += new System.EventHandler(this.dgvLaptops_MouseLeave);
-            this.dgvLaptops.MouseHover += new System.EventHandler(this.dgvLaptops_MouseHover);
             // 
             // vista
             // 
@@ -2098,218 +2428,50 @@
             this.vista.Appearance.Row.Options.UseFont = true;
             this.vista.Appearance.Row.Options.UseForeColor = true;
             this.vista.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.CodigoLC,
-            this.Marca,
-            this.Modelo,
-            this.Procesador,
-            this.Video,
-            this.CapacidadVideo,
-            this.Disco1,
-            this.CapacidadDisco1,
-            this.Disco2,
-            this.CapacidadDisco2,
-            this.MemoriaRam,
-            this.Estado,
-            this.Cliente,
-            this.Ubicacion,
-            this.SerieFabrica,
-            this.IdSalida});
+            this.PROCESADOR,
+            this.LAPTOP,
+            this.MACBOOK});
             this.vista.GridControl = this.dgvLaptops;
             this.vista.Name = "vista";
             this.vista.OptionsBehavior.Editable = false;
             this.vista.OptionsView.ColumnAutoWidth = false;
             this.vista.OptionsView.ShowAutoFilterRow = true;
             // 
-            // CodigoLC
+            // PROCESADOR
             // 
-            this.CodigoLC.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.CodigoLC.AppearanceHeader.Options.UseBackColor = true;
-            this.CodigoLC.Caption = "Código";
-            this.CodigoLC.FieldName = "Codigo";
-            this.CodigoLC.MinWidth = 40;
-            this.CodigoLC.Name = "CodigoLC";
-            this.CodigoLC.Visible = true;
-            this.CodigoLC.VisibleIndex = 0;
-            this.CodigoLC.Width = 130;
+            this.PROCESADOR.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.PROCESADOR.AppearanceHeader.Options.UseBackColor = true;
+            this.PROCESADOR.Caption = "Procesador";
+            this.PROCESADOR.FieldName = "PROCESADOR";
+            this.PROCESADOR.MinWidth = 40;
+            this.PROCESADOR.Name = "PROCESADOR";
+            this.PROCESADOR.Visible = true;
+            this.PROCESADOR.VisibleIndex = 0;
+            this.PROCESADOR.Width = 130;
             // 
-            // Marca
+            // LAPTOP
             // 
-            this.Marca.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Marca.AppearanceHeader.Options.UseBackColor = true;
-            this.Marca.Caption = "Marca";
-            this.Marca.FieldName = "MarcaLC";
-            this.Marca.MinWidth = 40;
-            this.Marca.Name = "Marca";
-            this.Marca.Visible = true;
-            this.Marca.VisibleIndex = 1;
-            this.Marca.Width = 100;
+            this.LAPTOP.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.LAPTOP.AppearanceHeader.Options.UseBackColor = true;
+            this.LAPTOP.Caption = "Laptop";
+            this.LAPTOP.FieldName = "LAP";
+            this.LAPTOP.MinWidth = 40;
+            this.LAPTOP.Name = "LAPTOP";
+            this.LAPTOP.Visible = true;
+            this.LAPTOP.VisibleIndex = 1;
+            this.LAPTOP.Width = 100;
             // 
-            // Modelo
+            // MACBOOK
             // 
-            this.Modelo.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Modelo.AppearanceHeader.Options.UseBackColor = true;
-            this.Modelo.Caption = "Modelo";
-            this.Modelo.FieldName = "NombreModeloLC";
-            this.Modelo.MinWidth = 40;
-            this.Modelo.Name = "Modelo";
-            this.Modelo.Visible = true;
-            this.Modelo.VisibleIndex = 2;
-            this.Modelo.Width = 200;
-            // 
-            // Procesador
-            // 
-            this.Procesador.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Procesador.AppearanceHeader.Options.UseBackColor = true;
-            this.Procesador.Caption = "Procesador";
-            this.Procesador.FieldName = "TipoProcesador";
-            this.Procesador.MinWidth = 40;
-            this.Procesador.Name = "Procesador";
-            this.Procesador.Visible = true;
-            this.Procesador.VisibleIndex = 3;
-            this.Procesador.Width = 100;
-            // 
-            // Video
-            // 
-            this.Video.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Video.AppearanceHeader.Options.UseBackColor = true;
-            this.Video.Caption = "Video";
-            this.Video.FieldName = "NombreModeloVideo";
-            this.Video.MinWidth = 40;
-            this.Video.Name = "Video";
-            this.Video.Width = 170;
-            // 
-            // CapacidadVideo
-            // 
-            this.CapacidadVideo.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.CapacidadVideo.AppearanceHeader.Options.UseBackColor = true;
-            this.CapacidadVideo.Caption = "Capacidad Video";
-            this.CapacidadVideo.FieldName = "CapacidadVideo";
-            this.CapacidadVideo.MinWidth = 40;
-            this.CapacidadVideo.Name = "CapacidadVideo";
-            this.CapacidadVideo.Visible = true;
-            this.CapacidadVideo.VisibleIndex = 4;
-            this.CapacidadVideo.Width = 130;
-            // 
-            // Disco1
-            // 
-            this.Disco1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Disco1.AppearanceHeader.Options.UseBackColor = true;
-            this.Disco1.Caption = "Disco1";
-            this.Disco1.FieldName = "Disco1";
-            this.Disco1.MinWidth = 40;
-            this.Disco1.Name = "Disco1";
-            this.Disco1.Visible = true;
-            this.Disco1.VisibleIndex = 5;
-            this.Disco1.Width = 70;
-            // 
-            // CapacidadDisco1
-            // 
-            this.CapacidadDisco1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.CapacidadDisco1.AppearanceHeader.Options.UseBackColor = true;
-            this.CapacidadDisco1.Caption = "Capacidad Disco1";
-            this.CapacidadDisco1.FieldName = "CapacidadDisco1";
-            this.CapacidadDisco1.MinWidth = 40;
-            this.CapacidadDisco1.Name = "CapacidadDisco1";
-            this.CapacidadDisco1.Visible = true;
-            this.CapacidadDisco1.VisibleIndex = 6;
-            this.CapacidadDisco1.Width = 130;
-            // 
-            // Disco2
-            // 
-            this.Disco2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Disco2.AppearanceHeader.Options.UseBackColor = true;
-            this.Disco2.Caption = "Disco2";
-            this.Disco2.FieldName = "Disco2";
-            this.Disco2.MinWidth = 40;
-            this.Disco2.Name = "Disco2";
-            this.Disco2.Visible = true;
-            this.Disco2.VisibleIndex = 7;
-            this.Disco2.Width = 70;
-            // 
-            // CapacidadDisco2
-            // 
-            this.CapacidadDisco2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.CapacidadDisco2.AppearanceHeader.Options.UseBackColor = true;
-            this.CapacidadDisco2.Caption = "Capacidad Disco2";
-            this.CapacidadDisco2.FieldName = "CapacidadDisco2";
-            this.CapacidadDisco2.MinWidth = 40;
-            this.CapacidadDisco2.Name = "CapacidadDisco2";
-            this.CapacidadDisco2.Visible = true;
-            this.CapacidadDisco2.VisibleIndex = 8;
-            this.CapacidadDisco2.Width = 130;
-            // 
-            // MemoriaRam
-            // 
-            this.MemoriaRam.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.MemoriaRam.AppearanceHeader.Options.UseBackColor = true;
-            this.MemoriaRam.Caption = "Memoria Ram";
-            this.MemoriaRam.FieldName = "CapacidadMemoria";
-            this.MemoriaRam.MinWidth = 40;
-            this.MemoriaRam.Name = "MemoriaRam";
-            this.MemoriaRam.Visible = true;
-            this.MemoriaRam.VisibleIndex = 9;
-            this.MemoriaRam.Width = 100;
-            // 
-            // Estado
-            // 
-            this.Estado.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Estado.AppearanceHeader.Options.UseBackColor = true;
-            this.Estado.Caption = "Estado";
-            this.Estado.FieldName = "EstadoNombre";
-            this.Estado.MinWidth = 40;
-            this.Estado.Name = "Estado";
-            this.Estado.Visible = true;
-            this.Estado.VisibleIndex = 10;
-            this.Estado.Width = 130;
-            // 
-            // Cliente
-            // 
-            this.Cliente.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Cliente.AppearanceHeader.Options.UseBackColor = true;
-            this.Cliente.Caption = "Cliente";
-            this.Cliente.FieldName = "Cliente";
-            this.Cliente.MinWidth = 40;
-            this.Cliente.Name = "Cliente";
-            this.Cliente.Visible = true;
-            this.Cliente.VisibleIndex = 11;
-            this.Cliente.Width = 150;
-            // 
-            // Ubicacion
-            // 
-            this.Ubicacion.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Ubicacion.AppearanceHeader.Options.UseBackColor = true;
-            this.Ubicacion.Caption = "Ubicación";
-            this.Ubicacion.FieldName = "Ubicacion";
-            this.Ubicacion.MinWidth = 40;
-            this.Ubicacion.Name = "Ubicacion";
-            this.Ubicacion.Visible = true;
-            this.Ubicacion.VisibleIndex = 12;
-            this.Ubicacion.Width = 150;
-            // 
-            // SerieFabrica
-            // 
-            this.SerieFabrica.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.SerieFabrica.AppearanceHeader.Options.UseBackColor = true;
-            this.SerieFabrica.Caption = "Serie Fabrica";
-            this.SerieFabrica.FieldName = "SerieFabrica";
-            this.SerieFabrica.MinWidth = 40;
-            this.SerieFabrica.Name = "SerieFabrica";
-            this.SerieFabrica.Visible = true;
-            this.SerieFabrica.VisibleIndex = 13;
-            this.SerieFabrica.Width = 150;
-            // 
-            // IdSalida
-            // 
-            this.IdSalida.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.IdSalida.AppearanceHeader.Options.UseBackColor = true;
-            this.IdSalida.Caption = "Id Salida";
-            this.IdSalida.FieldName = "IdSalida";
-            this.IdSalida.MinWidth = 40;
-            this.IdSalida.Name = "IdSalida";
-            this.IdSalida.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.IdSalida.Visible = true;
-            this.IdSalida.VisibleIndex = 14;
-            this.IdSalida.Width = 80;
+            this.MACBOOK.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.MACBOOK.AppearanceHeader.Options.UseBackColor = true;
+            this.MACBOOK.Caption = "Macbook";
+            this.MACBOOK.FieldName = "MAC";
+            this.MACBOOK.MinWidth = 40;
+            this.MACBOOK.Name = "MACBOOK";
+            this.MACBOOK.Visible = true;
+            this.MACBOOK.VisibleIndex = 2;
+            this.MACBOOK.Width = 200;
             // 
             // panel3
             // 
@@ -2330,9 +2492,9 @@
             this.lblFechaPronosticador.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblFechaPronosticador.Location = new System.Drawing.Point(6, 37);
             this.lblFechaPronosticador.Name = "lblFechaPronosticador";
-            this.lblFechaPronosticador.Size = new System.Drawing.Size(86, 24);
+            this.lblFechaPronosticador.Size = new System.Drawing.Size(116, 24);
             this.lblFechaPronosticador.TabIndex = 3;
-            this.lblFechaPronosticador.Text = "FECHA:";
+            this.lblFechaPronosticador.Text = "FECHA: nn";
             // 
             // pictureBox6
             // 
@@ -2351,9 +2513,9 @@
             this.lblTotal.ForeColor = System.Drawing.Color.White;
             this.lblTotal.Location = new System.Drawing.Point(85, 63);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(108, 55);
+            this.lblTotal.Size = new System.Drawing.Size(52, 55);
             this.lblTotal.TabIndex = 1;
-            this.lblTotal.Text = "120";
+            this.lblTotal.Text = "0";
             // 
             // label7
             // 
@@ -2374,7 +2536,7 @@
             this.gridControl2.Location = new System.Drawing.Point(748, 21);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(0, 0);
+            this.gridControl2.Size = new System.Drawing.Size(60, 0);
             this.gridControl2.TabIndex = 136;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -2620,7 +2782,7 @@
             this.gridControl1.Location = new System.Drawing.Point(733, 20);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(0, 0);
+            this.gridControl1.Size = new System.Drawing.Size(60, 0);
             this.gridControl1.TabIndex = 135;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -3004,401 +3166,29 @@
             this.KAM.VisibleIndex = 23;
             this.KAM.Width = 200;
             // 
-            // pnlFacturacion
+            // btnCargarResumenDispo
             // 
-            this.pnlFacturacion.Controls.Add(this.dgvFacturas);
-            this.pnlFacturacion.Controls.Add(this.label14);
-            this.pnlFacturacion.Controls.Add(this.label13);
-            this.pnlFacturacion.Controls.Add(this.label12);
-            this.pnlFacturacion.Controls.Add(this.label11);
-            this.pnlFacturacion.Controls.Add(this.button38);
-            this.pnlFacturacion.Controls.Add(this.button37);
-            this.pnlFacturacion.Controls.Add(this.button36);
-            this.pnlFacturacion.Location = new System.Drawing.Point(9, 162);
-            this.pnlFacturacion.Name = "pnlFacturacion";
-            this.pnlFacturacion.Size = new System.Drawing.Size(947, 784);
-            this.pnlFacturacion.TabIndex = 16;
-            this.pnlFacturacion.Visible = false;
-            // 
-            // dgvFacturas
-            // 
-            this.dgvFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvFacturas.Location = new System.Drawing.Point(3, 3);
-            this.dgvFacturas.MainView = this.gridView5;
-            this.dgvFacturas.Name = "dgvFacturas";
-            this.dgvFacturas.Size = new System.Drawing.Size(945, 644);
-            this.dgvFacturas.TabIndex = 145;
-            this.dgvFacturas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView5});
-            // 
-            // gridView5
-            // 
-            this.gridView5.Appearance.HeaderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView5.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
-            this.gridView5.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView5.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.gridView5.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.gridView5.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView5.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView5.Appearance.Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView5.Appearance.Row.ForeColor = System.Drawing.Color.Black;
-            this.gridView5.Appearance.Row.Options.UseFont = true;
-            this.gridView5.Appearance.Row.Options.UseForeColor = true;
-            this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn42,
-            this.gridColumn43,
-            this.gridColumn44,
-            this.gridColumn45,
-            this.gridColumn46,
-            this.FechaInicioFactura,
-            this.FechaFinFactura,
-            this.gridColumn47,
-            this.gridColumn48,
-            this.gridColumn49,
-            this.DíasVencidos,
-            this.TotalSoles,
-            this.gridColumn50,
-            this.gridColumn51,
-            this.gridColumn52,
-            this.PendienteFacturarSoles,
-            this.PendienteFacturarDolares,
-            this.gridColumn53});
-            gridFormatRule1.Column = this.DíasVencidos;
-            gridFormatRule1.ColumnApplyTo = this.gridColumn45;
-            gridFormatRule1.Name = "Menor a 2 dias";
-            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue1.Expression = "[diasVencidos] < 2";
-            gridFormatRule1.Rule = formatConditionRuleValue1;
-            gridFormatRule2.Column = this.DíasVencidos;
-            gridFormatRule2.ColumnApplyTo = this.gridColumn45;
-            gridFormatRule2.Name = "De 2 a 7 dias";
-            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue2.Expression = "[diasVencidos] >= 2 And [diasVencidos] <= 7";
-            gridFormatRule2.Rule = formatConditionRuleValue2;
-            gridFormatRule3.Column = this.DíasVencidos;
-            gridFormatRule3.ColumnApplyTo = this.gridColumn45;
-            gridFormatRule3.Name = "Mas de 7";
-            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.Red;
-            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue3.Expression = "[diasVencidos] > 7";
-            gridFormatRule3.Rule = formatConditionRuleValue3;
-            this.gridView5.FormatRules.Add(gridFormatRule1);
-            this.gridView5.FormatRules.Add(gridFormatRule2);
-            this.gridView5.FormatRules.Add(gridFormatRule3);
-            this.gridView5.GridControl = this.dgvFacturas;
-            this.gridView5.GroupCount = 1;
-            this.gridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", null, ""),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", this.PendienteFacturarSoles, "TOTAL = {0:c2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarDolares", this.PendienteFacturarDolares, "TOTAL = {0:c2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "", null, "")});
-            this.gridView5.Name = "gridView5";
-            this.gridView5.OptionsBehavior.Editable = false;
-            this.gridView5.OptionsView.ColumnAutoWidth = false;
-            this.gridView5.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView5.OptionsView.ShowAutoFilterRow = true;
-            this.gridView5.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn42, DevExpress.Data.ColumnSortOrder.Ascending)});
-            // 
-            // gridColumn42
-            // 
-            this.gridColumn42.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn42.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn42.Caption = "Cliente";
-            this.gridColumn42.FieldName = "cliente";
-            this.gridColumn42.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-            this.gridColumn42.MinWidth = 40;
-            this.gridColumn42.Name = "gridColumn42";
-            this.gridColumn42.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn42.Visible = true;
-            this.gridColumn42.VisibleIndex = 0;
-            this.gridColumn42.Width = 200;
-            // 
-            // gridColumn43
-            // 
-            this.gridColumn43.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn43.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn43.Caption = "Ruc";
-            this.gridColumn43.FieldName = "ruc";
-            this.gridColumn43.Name = "gridColumn43";
-            this.gridColumn43.Visible = true;
-            this.gridColumn43.VisibleIndex = 0;
-            // 
-            // gridColumn44
-            // 
-            this.gridColumn44.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn44.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn44.Caption = "Inicio Plazo Alquiler";
-            this.gridColumn44.FieldName = "fecIniPlazoAlquiler";
-            this.gridColumn44.MinWidth = 40;
-            this.gridColumn44.Name = "gridColumn44";
-            this.gridColumn44.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
-            this.gridColumn44.Visible = true;
-            this.gridColumn44.VisibleIndex = 1;
-            this.gridColumn44.Width = 107;
-            // 
-            // gridColumn46
-            // 
-            this.gridColumn46.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn46.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn46.Caption = "Factura";
-            this.gridColumn46.FieldName = "factura";
-            this.gridColumn46.MinWidth = 40;
-            this.gridColumn46.Name = "gridColumn46";
-            this.gridColumn46.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn46.Visible = true;
-            this.gridColumn46.VisibleIndex = 3;
-            this.gridColumn46.Width = 140;
-            // 
-            // FechaInicioFactura
-            // 
-            this.FechaInicioFactura.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.FechaInicioFactura.AppearanceHeader.Options.UseBackColor = true;
-            this.FechaInicioFactura.Caption = "Fecha Inicio Factura";
-            this.FechaInicioFactura.FieldName = "fecInicioFactura";
-            this.FechaInicioFactura.MinWidth = 40;
-            this.FechaInicioFactura.Name = "FechaInicioFactura";
-            this.FechaInicioFactura.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
-            this.FechaInicioFactura.Visible = true;
-            this.FechaInicioFactura.VisibleIndex = 4;
-            this.FechaInicioFactura.Width = 140;
-            // 
-            // FechaFinFactura
-            // 
-            this.FechaFinFactura.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.FechaFinFactura.AppearanceHeader.Options.UseBackColor = true;
-            this.FechaFinFactura.Caption = "Fecha Fin Factura";
-            this.FechaFinFactura.FieldName = "fecFinFactura";
-            this.FechaFinFactura.MinWidth = 40;
-            this.FechaFinFactura.Name = "FechaFinFactura";
-            this.FechaFinFactura.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
-            this.FechaFinFactura.Visible = true;
-            this.FechaFinFactura.VisibleIndex = 5;
-            this.FechaFinFactura.Width = 140;
-            // 
-            // gridColumn47
-            // 
-            this.gridColumn47.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn47.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn47.Caption = "Código";
-            this.gridColumn47.FieldName = "codigoEquipo";
-            this.gridColumn47.MinWidth = 40;
-            this.gridColumn47.Name = "gridColumn47";
-            this.gridColumn47.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn47.Visible = true;
-            this.gridColumn47.VisibleIndex = 6;
-            this.gridColumn47.Width = 140;
-            // 
-            // gridColumn48
-            // 
-            this.gridColumn48.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn48.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn48.Caption = "Guía";
-            this.gridColumn48.FieldName = "guia";
-            this.gridColumn48.MinWidth = 40;
-            this.gridColumn48.Name = "gridColumn48";
-            this.gridColumn48.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn48.Visible = true;
-            this.gridColumn48.VisibleIndex = 7;
-            this.gridColumn48.Width = 140;
-            // 
-            // gridColumn49
-            // 
-            this.gridColumn49.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn49.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn49.Caption = "Código Antiguo";
-            this.gridColumn49.FieldName = "CodigoAntiguo";
-            this.gridColumn49.MinWidth = 40;
-            this.gridColumn49.Name = "gridColumn49";
-            this.gridColumn49.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn49.Visible = true;
-            this.gridColumn49.VisibleIndex = 8;
-            this.gridColumn49.Width = 140;
-            // 
-            // TotalSoles
-            // 
-            this.TotalSoles.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.TotalSoles.AppearanceHeader.Options.UseBackColor = true;
-            this.TotalSoles.Caption = "Total Soles";
-            this.TotalSoles.FieldName = "TotalSoles";
-            this.TotalSoles.MinWidth = 40;
-            this.TotalSoles.Name = "TotalSoles";
-            this.TotalSoles.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.TotalSoles.Visible = true;
-            this.TotalSoles.VisibleIndex = 10;
-            this.TotalSoles.Width = 100;
-            // 
-            // gridColumn50
-            // 
-            this.gridColumn50.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn50.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn50.Caption = "Total Dolares";
-            this.gridColumn50.FieldName = "TotalDolares";
-            this.gridColumn50.MinWidth = 40;
-            this.gridColumn50.Name = "gridColumn50";
-            this.gridColumn50.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.gridColumn50.Visible = true;
-            this.gridColumn50.VisibleIndex = 11;
-            this.gridColumn50.Width = 100;
-            // 
-            // gridColumn51
-            // 
-            this.gridColumn51.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn51.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn51.Caption = "Costo Soles";
-            this.gridColumn51.FieldName = "CostoSoles";
-            this.gridColumn51.MinWidth = 40;
-            this.gridColumn51.Name = "gridColumn51";
-            this.gridColumn51.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.gridColumn51.Visible = true;
-            this.gridColumn51.VisibleIndex = 12;
-            this.gridColumn51.Width = 100;
-            // 
-            // gridColumn52
-            // 
-            this.gridColumn52.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn52.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn52.Caption = "Costo Dolares";
-            this.gridColumn52.FieldName = "CostoDolares";
-            this.gridColumn52.MinWidth = 40;
-            this.gridColumn52.Name = "gridColumn52";
-            this.gridColumn52.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.gridColumn52.Visible = true;
-            this.gridColumn52.VisibleIndex = 13;
-            this.gridColumn52.Width = 100;
-            // 
-            // PendienteFacturarSoles
-            // 
-            this.PendienteFacturarSoles.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.PendienteFacturarSoles.AppearanceHeader.Options.UseBackColor = true;
-            this.PendienteFacturarSoles.Caption = "Pendiente Facturar Soles";
-            this.PendienteFacturarSoles.FieldName = "PendienteFacturarSoles";
-            this.PendienteFacturarSoles.MinWidth = 40;
-            this.PendienteFacturarSoles.Name = "PendienteFacturarSoles";
-            this.PendienteFacturarSoles.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", "Tot. ={0:#.##}")});
-            this.PendienteFacturarSoles.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.PendienteFacturarSoles.Visible = true;
-            this.PendienteFacturarSoles.VisibleIndex = 14;
-            this.PendienteFacturarSoles.Width = 100;
-            // 
-            // PendienteFacturarDolares
-            // 
-            this.PendienteFacturarDolares.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.PendienteFacturarDolares.AppearanceHeader.Options.UseBackColor = true;
-            this.PendienteFacturarDolares.Caption = "Pendiente Facturar Dolares";
-            this.PendienteFacturarDolares.FieldName = "PendienteFacturarDolares";
-            this.PendienteFacturarDolares.MinWidth = 40;
-            this.PendienteFacturarDolares.Name = "PendienteFacturarDolares";
-            this.PendienteFacturarDolares.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarDolares", "SUMA={0:#.##}")});
-            this.PendienteFacturarDolares.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.PendienteFacturarDolares.Visible = true;
-            this.PendienteFacturarDolares.VisibleIndex = 15;
-            this.PendienteFacturarDolares.Width = 100;
-            // 
-            // gridColumn53
-            // 
-            this.gridColumn53.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.gridColumn53.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn53.Caption = "KAM";
-            this.gridColumn53.FieldName = "KAM";
-            this.gridColumn53.MinWidth = 40;
-            this.gridColumn53.Name = "gridColumn53";
-            this.gridColumn53.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn53.Visible = true;
-            this.gridColumn53.VisibleIndex = 16;
-            this.gridColumn53.Width = 200;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(61, 742);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(430, 15);
-            this.label14.TabIndex = 144;
-            this.label14.Text = "EL CLIENTE TIENES MAS DE UNA SEMANA SIN SER FACTURADO";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(61, 714);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(394, 15);
-            this.label13.TabIndex = 143;
-            this.label13.Text = "EL CLIENTE TIENE ENTRE 2 Y 7 DIAS SIN SER FACTURADO";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(61, 689);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(397, 15);
-            this.label12.TabIndex = 142;
-            this.label12.Text = "EL CLIENTE TIENE MENOS DE 2 DIAS SIN SER FACTURADO";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(31, 667);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 15);
-            this.label11.TabIndex = 141;
-            this.label11.Text = "LEYENDA";
-            // 
-            // button38
-            // 
-            this.button38.BackColor = System.Drawing.Color.Red;
-            this.button38.Enabled = false;
-            this.button38.Location = new System.Drawing.Point(34, 738);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(21, 19);
-            this.button38.TabIndex = 140;
-            this.button38.UseVisualStyleBackColor = false;
-            // 
-            // button37
-            // 
-            this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button37.Enabled = false;
-            this.button37.Location = new System.Drawing.Point(34, 713);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(21, 19);
-            this.button37.TabIndex = 139;
-            this.button37.UseVisualStyleBackColor = false;
-            // 
-            // button36
-            // 
-            this.button36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button36.Enabled = false;
-            this.button36.Location = new System.Drawing.Point(34, 688);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(21, 19);
-            this.button36.TabIndex = 138;
-            this.button36.UseVisualStyleBackColor = false;
+            this.btnCargarResumenDispo.Location = new System.Drawing.Point(81, 142);
+            this.btnCargarResumenDispo.Name = "btnCargarResumenDispo";
+            this.btnCargarResumenDispo.Size = new System.Drawing.Size(250, 25);
+            this.btnCargarResumenDispo.TabIndex = 176;
+            this.btnCargarResumenDispo.Text = "VER RESUMEN";
+            this.btnCargarResumenDispo.UseVisualStyleBackColor = true;
+            this.btnCargarResumenDispo.Click += new System.EventHandler(this.button39_Click);
             // 
             // TEST_MENU_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoScrollMargin = new System.Drawing.Size(0, 40);
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1300, 1070);
+            this.ClientSize = new System.Drawing.Size(1366, 1070);
             this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
             this.Name = "TEST_MENU_PRINCIPAL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TEST_MENU_PRINCIPAL";
@@ -3421,12 +3211,14 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelDashboard.ResumeLayout(false);
+            this.pnlFacturacion.ResumeLayout(false);
+            this.pnlFacturacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             this.pnlPronosticador.ResumeLayout(false);
-            this.pnlPronosticador.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.pnlDispo.ResumeLayout(false);
-            this.pnlDispo.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
@@ -3440,10 +3232,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            this.pnlFacturacion.ResumeLayout(false);
-            this.pnlFacturacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3522,22 +3310,9 @@
         private System.Windows.Forms.Panel panelDashboard;
         private DevExpress.XtraGrid.GridControl dgvLaptops;
         private DevExpress.XtraGrid.Views.Grid.GridView vista;
-        private DevExpress.XtraGrid.Columns.GridColumn CodigoLC;
-        private DevExpress.XtraGrid.Columns.GridColumn Marca;
-        private DevExpress.XtraGrid.Columns.GridColumn Modelo;
-        private DevExpress.XtraGrid.Columns.GridColumn Procesador;
-        private DevExpress.XtraGrid.Columns.GridColumn Video;
-        private DevExpress.XtraGrid.Columns.GridColumn CapacidadVideo;
-        private DevExpress.XtraGrid.Columns.GridColumn Disco1;
-        private DevExpress.XtraGrid.Columns.GridColumn CapacidadDisco1;
-        private DevExpress.XtraGrid.Columns.GridColumn Disco2;
-        private DevExpress.XtraGrid.Columns.GridColumn CapacidadDisco2;
-        private DevExpress.XtraGrid.Columns.GridColumn MemoriaRam;
-        private DevExpress.XtraGrid.Columns.GridColumn Estado;
-        private DevExpress.XtraGrid.Columns.GridColumn Cliente;
-        private DevExpress.XtraGrid.Columns.GridColumn Ubicacion;
-        private DevExpress.XtraGrid.Columns.GridColumn SerieFabrica;
-        private DevExpress.XtraGrid.Columns.GridColumn IdSalida;
+        private DevExpress.XtraGrid.Columns.GridColumn PROCESADOR;
+        private DevExpress.XtraGrid.Columns.GridColumn LAPTOP;
+        private DevExpress.XtraGrid.Columns.GridColumn MACBOOK;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
@@ -3590,8 +3365,6 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel pnlDispo;
-        private System.Windows.Forms.TextBox txtCantidadFiltrada;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
@@ -3632,8 +3405,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
         private System.Windows.Forms.Panel pnlPronosticador;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtCantidadF2;
         private System.Windows.Forms.Button btnDash;
         private System.Windows.Forms.Button button35;
         private System.Windows.Forms.Panel pnlFacturacion;
@@ -3665,5 +3436,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn PendienteFacturarDolares;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
         private System.Windows.Forms.Button btnCorteAlquiler;
+        private System.Windows.Forms.Button btnCargarResumenDispo;
     }
 }
