@@ -74,7 +74,7 @@ namespace Apolo
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, 1300, 650, 20, 20));
             InitializeComponent();
             
-            //Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.White;
+            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.White;
             Inicializado();
             customizeDesign();
             MenuVertical.Width = 0;
@@ -1202,10 +1202,12 @@ namespace Apolo
         {
             if (MenuVertical.Width == 350)
             {
+                pictureBox1.Visible = true;
                 MenuVertical.Width = 0;
             }
             else
             {
+                pictureBox1.Visible = false;
                 MenuVertical.Width = 350;
             }
         }

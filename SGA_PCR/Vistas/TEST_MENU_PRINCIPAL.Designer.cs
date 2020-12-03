@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TEST_MENU_PRINCIPAL));
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule5 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue5 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule6 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue6 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.DíasVencidos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MenuVertical = new System.Windows.Forms.Panel();
@@ -1363,7 +1363,7 @@
             // 
             // VerDetallePronos
             // 
-            this.VerDetallePronos.Location = new System.Drawing.Point(483, 141);
+            this.VerDetallePronos.Location = new System.Drawing.Point(442, 142);
             this.VerDetallePronos.Name = "VerDetallePronos";
             this.VerDetallePronos.Size = new System.Drawing.Size(250, 26);
             this.VerDetallePronos.TabIndex = 13;
@@ -1377,7 +1377,7 @@
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.lblCantidadPronosticador);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(483, 9);
+            this.panel2.Location = new System.Drawing.Point(442, 9);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 130);
             this.panel2.TabIndex = 9;
@@ -1385,7 +1385,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(122, 41);
+            this.pictureBox5.Location = new System.Drawing.Point(125, 42);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(111, 76);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1416,13 +1416,14 @@
             // 
             // FechaPronosticador
             // 
-            this.FechaPronosticador.Location = new System.Drawing.Point(738, 9);
+            this.FechaPronosticador.Location = new System.Drawing.Point(690, 6);
             this.FechaPronosticador.Name = "FechaPronosticador";
             this.FechaPronosticador.TabIndex = 10;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.lblLaptopsDisponibles);
             this.panel1.Controls.Add(this.label5);
@@ -1477,7 +1478,7 @@
             this.panelDashboard.Controls.Add(this.panel2);
             this.panelDashboard.Location = new System.Drawing.Point(350, 53);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(943, 729);
+            this.panelDashboard.Size = new System.Drawing.Size(969, 729);
             this.panelDashboard.TabIndex = 14;
             this.panelDashboard.Visible = false;
             // 
@@ -2163,7 +2164,7 @@
             this.gridControl2.Location = new System.Drawing.Point(970, 233);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(406, 383);
+            this.gridControl2.Size = new System.Drawing.Size(432, 383);
             this.gridControl2.TabIndex = 136;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -2409,7 +2410,7 @@
             this.gridControl1.Location = new System.Drawing.Point(981, 191);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(380, 424);
+            this.gridControl1.Size = new System.Drawing.Size(406, 424);
             this.gridControl1.TabIndex = 135;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -2854,33 +2855,33 @@
             this.PendienteFacturarSoles,
             this.PendienteFacturarDolares,
             this.gridColumn53});
-            gridFormatRule4.Column = this.DíasVencidos;
-            gridFormatRule4.ColumnApplyTo = this.gridColumn45;
-            gridFormatRule4.Name = "Menor a 2 dias";
-            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue4.Expression = "[diasVencidos] < 2";
-            gridFormatRule4.Rule = formatConditionRuleValue4;
-            gridFormatRule5.Column = this.DíasVencidos;
-            gridFormatRule5.ColumnApplyTo = this.gridColumn45;
-            gridFormatRule5.Name = "De 2 a 7 dias";
-            formatConditionRuleValue5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue5.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue5.Expression = "[diasVencidos] >= 2 And [diasVencidos] <= 7";
-            gridFormatRule5.Rule = formatConditionRuleValue5;
-            gridFormatRule6.Column = this.DíasVencidos;
-            gridFormatRule6.ColumnApplyTo = this.gridColumn45;
-            gridFormatRule6.Name = "Mas de 7";
-            formatConditionRuleValue6.Appearance.BackColor = System.Drawing.Color.Red;
-            formatConditionRuleValue6.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue6.Expression = "[diasVencidos] > 7";
-            gridFormatRule6.Rule = formatConditionRuleValue6;
-            this.gridView5.FormatRules.Add(gridFormatRule4);
-            this.gridView5.FormatRules.Add(gridFormatRule5);
-            this.gridView5.FormatRules.Add(gridFormatRule6);
+            gridFormatRule1.Column = this.DíasVencidos;
+            gridFormatRule1.ColumnApplyTo = this.gridColumn45;
+            gridFormatRule1.Name = "Menor a 2 dias";
+            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue1.Expression = "[diasVencidos] < 2";
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            gridFormatRule2.Column = this.DíasVencidos;
+            gridFormatRule2.ColumnApplyTo = this.gridColumn45;
+            gridFormatRule2.Name = "De 2 a 7 dias";
+            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue2.Expression = "[diasVencidos] >= 2 And [diasVencidos] <= 7";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            gridFormatRule3.Column = this.DíasVencidos;
+            gridFormatRule3.ColumnApplyTo = this.gridColumn45;
+            gridFormatRule3.Name = "Mas de 7";
+            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.Red;
+            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue3.Expression = "[diasVencidos] > 7";
+            gridFormatRule3.Rule = formatConditionRuleValue3;
+            this.gridView5.FormatRules.Add(gridFormatRule1);
+            this.gridView5.FormatRules.Add(gridFormatRule2);
+            this.gridView5.FormatRules.Add(gridFormatRule3);
             this.gridView5.GridControl = this.dgvFacturas;
             this.gridView5.GroupCount = 1;
             this.gridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
