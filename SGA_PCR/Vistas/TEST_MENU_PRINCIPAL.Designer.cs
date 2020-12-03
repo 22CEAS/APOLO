@@ -1475,7 +1475,7 @@
             this.panelDashboard.Controls.Add(this.VerDetallePronos);
             this.panelDashboard.Controls.Add(this.FechaPronosticador);
             this.panelDashboard.Controls.Add(this.panel2);
-            this.panelDashboard.Location = new System.Drawing.Point(345, 56);
+            this.panelDashboard.Location = new System.Drawing.Point(350, 53);
             this.panelDashboard.Name = "panelDashboard";
             this.panelDashboard.Size = new System.Drawing.Size(943, 729);
             this.panelDashboard.TabIndex = 14;
@@ -2803,9 +2803,9 @@
             this.pnlFacturacion.Controls.Add(this.button38);
             this.pnlFacturacion.Controls.Add(this.button37);
             this.pnlFacturacion.Controls.Add(this.button36);
-            this.pnlFacturacion.Location = new System.Drawing.Point(362, 56);
+            this.pnlFacturacion.Location = new System.Drawing.Point(354, 53);
             this.pnlFacturacion.Name = "pnlFacturacion";
-            this.pnlFacturacion.Size = new System.Drawing.Size(934, 769);
+            this.pnlFacturacion.Size = new System.Drawing.Size(934, 770);
             this.pnlFacturacion.TabIndex = 16;
             this.pnlFacturacion.Visible = false;
             // 
@@ -2817,7 +2817,7 @@
             this.dgvFacturas.Location = new System.Drawing.Point(3, 3);
             this.dgvFacturas.MainView = this.gridView5;
             this.dgvFacturas.Name = "dgvFacturas";
-            this.dgvFacturas.Size = new System.Drawing.Size(932, 664);
+            this.dgvFacturas.Size = new System.Drawing.Size(932, 524);
             this.dgvFacturas.TabIndex = 145;
             this.dgvFacturas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -3110,7 +3110,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(61, 742);
+            this.label14.Location = new System.Drawing.Point(54, 630);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(430, 15);
             this.label14.TabIndex = 144;
@@ -3120,7 +3120,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(61, 714);
+            this.label13.Location = new System.Drawing.Point(54, 602);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(394, 15);
             this.label13.TabIndex = 143;
@@ -3130,7 +3130,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(61, 689);
+            this.label12.Location = new System.Drawing.Point(54, 577);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(397, 15);
             this.label12.TabIndex = 142;
@@ -3140,7 +3140,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(31, 667);
+            this.label11.Location = new System.Drawing.Point(24, 555);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 15);
             this.label11.TabIndex = 141;
@@ -3150,7 +3150,7 @@
             // 
             this.button38.BackColor = System.Drawing.Color.Red;
             this.button38.Enabled = false;
-            this.button38.Location = new System.Drawing.Point(34, 738);
+            this.button38.Location = new System.Drawing.Point(27, 626);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(21, 19);
             this.button38.TabIndex = 140;
@@ -3160,7 +3160,7 @@
             // 
             this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button37.Enabled = false;
-            this.button37.Location = new System.Drawing.Point(34, 713);
+            this.button37.Location = new System.Drawing.Point(27, 601);
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(21, 19);
             this.button37.TabIndex = 139;
@@ -3170,7 +3170,7 @@
             // 
             this.button36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button36.Enabled = false;
-            this.button36.Location = new System.Drawing.Point(34, 688);
+            this.button36.Location = new System.Drawing.Point(27, 576);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(21, 19);
             this.button36.TabIndex = 138;
