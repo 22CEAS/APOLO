@@ -30,6 +30,7 @@ namespace Apolo
         DataTable tablaDisco;
         DataTable tablaMemoria;
         DataTable tablaLicencia;
+        DataTable MontoFacturadoMes;
 
         private string licenciaCategoriaSO = "S.O";
         private string licenciaCategoriaOffice = "OFFICE";
@@ -1359,7 +1360,7 @@ namespace Apolo
 
             //PENDIENTE POR RECOGER
             reporteDA = new ReporteDA();
-            tablaLaptops = reporteDA.ListarLaptopsPorRecoger();
+            tablaLaptops = reporteDA.ListarLaptopsPorRecogerDASH();
 
             gridControl1.DataSource = tablaLaptops;
             gridView1.OptionsBehavior.AutoPopulateColumns = false;
@@ -1647,7 +1648,7 @@ namespace Apolo
 
         private void button35_Click_3(object sender, EventArgs e)
         {
-            
+
             if (pnlFacturacion.Visible == false)
             {
                 reporteDA = new ReporteDA();
@@ -1657,12 +1658,30 @@ namespace Apolo
                 gridView5.OptionsBehavior.AutoPopulateColumns = false;
                 gridView5.OptionsSelection.MultiSelect = true;
 
-                txtPendientePorFacturar.Text = gridView5.RowCount.ToString();
+                float MontoPendienteFacturar = 0;
+                for (int i = 0; i < gridView5.RowCount; i++)
+                {
+                    MontoPendienteFacturar = MontoPendienteFacturar + float.Parse(tablaLaptops.Rows[i]["PendienteFacturarSoles"].ToString());
+                }
+
+                gridView5.Columns["cliente"].GroupIndex = 1;
+
+                textBox2.Text = MontoPendienteFacturar.ToString();
+
+
+                MontoFacturadoMes = reporteDA.VerMontoFacturadoMes();
+
+                
+                txtMontoFacturadoMes.Text = MontoFacturadoMes.Rows[0]["total"].ToString(); //MONTO FACTURADO EN EL MES
+                lblFacturadoMes.Text = $"MONTO FACTURADO A LA FECHA:{DateTime.Now.ToShortDateString()} Y HORA: {DateTime.Now.ToLongTimeString()}";
 
                 pnlFacturacion.Visible = true;
             }
             else
+            {
                 pnlFacturacion.Visible = false;
+                gridView5.Columns["cliente"].GroupIndex = -1;
+            }
             
         }
 
@@ -1865,11 +1884,11 @@ namespace Apolo
 
 
             //-------------------------------------------------
-            DataTable resumen = new DataTable();
-        resumen.Columns.Add("PROCESADOR");
-        resumen.Columns.Add("LAP");
-        resumen.Columns.Add("MAC");
-        DataRow dr = null;
+                DataTable resumen = new DataTable();
+                resumen.Columns.Add("PROCESADOR");
+                resumen.Columns.Add("LAP");
+                resumen.Columns.Add("MAC");
+                DataRow dr = null;
 
 
                 //CANTIDAD DE LAPTOP POR PROCESADOR -> LAP Y MAC

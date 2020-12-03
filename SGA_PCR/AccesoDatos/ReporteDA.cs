@@ -44,6 +44,11 @@ namespace AccesoDatos
             return objManager.MostrarTablaDatos("SELECT * FROM vista_productos_por_facturar_dash ;");
         }
 
+        public DataTable VerMontoFacturadoMes()
+        {
+            return objManager.MostrarTablaDatos("SELECT * FROM vista_monto_facturado_total_mes ;");
+        }
+
         public DataTable ListarLaptopsFacturasPorVencer()
         {
             return objManager.MostrarTablaDatos("SELECT * FROM vista_facturas_por_vencer ;");
@@ -52,6 +57,11 @@ namespace AccesoDatos
         public DataTable ListarLaptopsPorRecoger()
         {
             return objManager.MostrarTablaDatos("SELECT * FROM vista_productos_por_recoger ;");
+        }
+
+        public DataTable ListarLaptopsPorRecogerDASH()
+        {
+            return objManager.MostrarTablaDatos("SELECT * FROM vista_pendiente_recoger_dash ;");
         }
 
         public DataTable ListarLaptopsInventario()
