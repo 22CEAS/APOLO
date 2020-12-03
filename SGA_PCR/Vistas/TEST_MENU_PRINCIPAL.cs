@@ -1367,7 +1367,8 @@ namespace Apolo
             }
 
             //LAPTOPS POR VENCER
-            tablaLaptops = reporteDA.ListarLaptopsPorVencer();
+            //tablaLaptops = reporteDA.ListarLaptopsPorVencer();
+            tablaLaptops = reporteDA.ListarLaptopsPorVencerPRONOSTICADOR();
 
             gridControl2.DataSource = tablaLaptops;
             gridView2.OptionsBehavior.AutoPopulateColumns = false;

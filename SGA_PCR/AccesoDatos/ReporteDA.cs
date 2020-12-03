@@ -29,6 +29,11 @@ namespace AccesoDatos
             return objManager.MostrarTablaDatos("SELECT * FROM vista_laptops_por_vencer ;");
         }
 
+        public DataTable ListarLaptopsPorVencerPRONOSTICADOR()
+        {
+            return objManager.MostrarTablaDatos("SELECT * FROM vista_pronosticador ;");
+        }
+
         public DataTable ListarLaptopsPorFacturar()
         {
             return objManager.MostrarTablaDatos("SELECT * FROM vista_productos_por_facturar ;");
