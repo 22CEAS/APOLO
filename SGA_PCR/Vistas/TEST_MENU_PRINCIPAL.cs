@@ -1354,6 +1354,9 @@ namespace Apolo
 
         private  void VerDetallePronos_Click(object sender, EventArgs e)
         {
+
+            laptops = new BindingList<LC>();
+
             List<String> codigosPronosticador = new List<String>();
             int canDisponibles = 0;
 
@@ -1362,53 +1365,154 @@ namespace Apolo
             reporteDA = new ReporteDA();
             tablaLaptops = reporteDA.ListarLaptopsPorRecogerDASH();
 
-            gridControl1.DataSource = tablaLaptops;
-            gridView1.OptionsBehavior.AutoPopulateColumns = false;
-            gridView1.OptionsSelection.MultiSelect = true;
 
-            //ALMACENANDO LOS CODIGOS DE LAS LAPTOPS POR RECOGER
-            for (int i = 0; i < gridView1.RowCount; i++)
+            int rec = 0;
+            while (rec < tablaLaptops.Rows.Count)
             {
-                codigosPronosticador.Add(gridView1.GetRowCellValue(i, "Codigo").ToString());
+                LC laptop = new LC();
+                laptop.IdLC = Convert.ToInt32(tablaLaptops.Rows[rec]["idLC"].ToString());
+                laptop.Codigo = tablaLaptops.Rows[rec]["codigo"].ToString();
+                laptop.IdMarca = int.Parse(tablaLaptops.Rows[rec]["idMarca"].ToString());
+                laptop.MarcaLC = tablaLaptops.Rows[rec]["marcaLC"].ToString();
+                laptop.NombreModeloLC = tablaLaptops.Rows[rec]["nombreModeloLC"].ToString();
+                laptop.TipoProcesador = tablaLaptops.Rows[rec]["tipoProcesador"].ToString();
+                laptop.IdGeneracionProcesador = int.Parse(tablaLaptops.Rows[rec]["idGeneracionProcesador"].ToString());
+                laptop.GeneracionProcesador = int.Parse(tablaLaptops.Rows[rec]["generacionProcesador"].ToString());
+                laptop.IdTipoProcesador = int.Parse(tablaLaptops.Rows[rec]["idTipoProcesador"].ToString());
+                laptop.EstadoNombre = tablaLaptops.Rows[rec]["estado"].ToString();
+                laptop.Estado = int.Parse(tablaLaptops.Rows[rec]["idEstado"].ToString());
+
+                laptops.Add(laptop);
+                rec++;
             }
+
+            //MessageBox.Show(laptops.Count.ToString());
 
             //LAPTOPS POR VENCER
-            //tablaLaptops = reporteDA.ListarLaptopsPorVencer();
             tablaLaptops = reporteDA.ListarLaptopsPorVencerPRONOSTICADOR();
 
-            gridControl2.DataSource = tablaLaptops;
-            gridView2.OptionsBehavior.AutoPopulateColumns = false;
-            gridView2.OptionsSelection.MultiSelect = true;
-            gridView2.ActiveFilterString = $"[fecFinContrato] < #{FechaPronosticador.SelectionRange.Start.ToString("yyyy-MM-dd")}#";
+            DataView aux = new DataView(tablaLaptops);
+            aux.RowFilter= $"fecFinContrato < #{FechaPronosticador.SelectionRange.Start.ToString("yyyy-MM-dd")}#";
 
-            //ALMACENANDO LOS CODIGOS DE LAS LAPTOPS POR VENCER
-            for (int i = 0; i < gridView2.RowCount; i++)
+            //MessageBox.Show(aux.Count.ToString());
+            /*
+            gridControl2.DataSource = tablaLaptops;
+            gridView2.ActiveFilterString = $"[fecFinContrato] < #{FechaPronosticador.SelectionRange.Start.ToString("yyyy-MM-dd")}#";
+            */
+
+            rec = 0;
+
+
+            foreach (DataRowView row in aux)
             {
-                codigosPronosticador.Add(gridView2.GetRowCellValue(i, "Codigo").ToString());
+                LC laptop = new LC();
+                laptop.IdLC = Convert.ToInt32(row["idLC"].ToString());
+                laptop.Codigo = row["Codigo"].ToString();
+                laptop.IdMarca = Convert.ToInt32(row["idMarca"].ToString());
+                laptop.MarcaLC = row["MarcaLC"].ToString();
+                laptop.NombreModeloLC = row["NombreModeloLC"].ToString();
+                laptop.TipoProcesador = row["TipoProcesador"].ToString();
+                laptop.IdGeneracionProcesador = Convert.ToInt32(row["idGeneracionProcesador"].ToString());
+                laptop.GeneracionProcesador = Convert.ToInt32(row["GeneracionProcesador"].ToString());
+                laptop.IdTipoProcesador = Convert.ToInt32(row["idTipoProcesador"].ToString());
+                laptop.EstadoNombre = row["estado"].ToString();
+                laptop.Estado = Convert.ToInt32(row["idEstado"].ToString());
+
+                laptops.Add(laptop);
+                rec++;
             }
 
 
-            canDisponibles = gridView1.RowCount + gridView2.RowCount;
+
+            //MessageBox.Show(laptops.Count.ToString());
+
+            canDisponibles = laptops.Count;
             pnlPronosticador.Visible = true;
             lblCantidadPronosticador.Text = canDisponibles.ToString();
 
             //!---------------------------------------------------------------------
             lblFechaPronosticador.Text = $"FECHA: {FechaPronosticador.SelectionRange.Start.ToShortDateString()}";
-            lblTotal.Text = (int.Parse(lblLaptopsDisponibles.Text) + int.Parse(lblCantidadPronosticador.Text)).ToString();
+            lblTotal.Text = canDisponibles.ToString();
 
-            //MOSTRAR LAS CARACTERISTICAS DE LOS ACTIVOS QUE VAN A VOLVER
 
-            //MessageBox.Show(codigosPronosticador.Count.ToString()); // SI TRAE LA CANTIDAD EXACTA
+            this.cantGeneraciones = tablaProcesadoresGeneracion.Rows.Count;
+            this.cantModeloProcesador = tablaProcesadoresModelos.Rows.Count;
 
-            //codigosPronosticador
-            CargarDataLaptopsDisponiblesPronosticador(); //AQUI SE DEMORA
+            this.arregloLCGeneral = new int[cantGeneraciones][];
+            this.arregloLCApple = new int[cantGeneraciones][];
+
+
+            for (int i = 0; i < this.cantGeneraciones; i++)
+            {
+                this.arregloLCGeneral[i] = new int[this.cantModeloProcesador];
+                this.arregloLCApple[i] = new int[this.cantModeloProcesador];
+
+                for (int j = 0; j < this.cantModeloProcesador; j++)
+                {
+                    int idGen = int.Parse(tablaProcesadoresGeneracion.Rows[i]["idAuxiliar"].ToString());
+                    int idModPro = int.Parse(tablaProcesadoresModelos.Rows[j]["idModelo"].ToString());
+                    var cantidad = new BindingList<LC>(laptops.Where(p => p.IdMarca != this.idMarcaAppleLC && p.IdGeneracionProcesador == idGen && p.IdTipoProcesador == idModPro && p.IdMarca != this.idMarcaApplePC ).ToList());
+                    this.arregloLCGeneral[i][j] = cantidad.Count;
+                    cantidad = new BindingList<LC>(laptops.Where(p => p.IdMarca == this.idMarcaAppleLC && p.IdGeneracionProcesador == idGen && p.IdTipoProcesador == idModPro && p.IdMarca != this.idMarcaApplePC ).ToList());
+                    this.arregloLCApple[i][j] = cantidad.Count;
+                }
+            }
+
+
+            dgvLaptops.DataSource = laptops;
+            vista.OptionsBehavior.AutoPopulateColumns = false;
+            vista.OptionsSelection.MultiSelect = true;
+
+
+            //-------------------------------------------------
+            DataTable resumen = new DataTable();
+            resumen.Columns.Add("PROCESADOR");
+            resumen.Columns.Add("LAP");
+            resumen.Columns.Add("MAC");
+            DataRow dr = null;
+
+
+            //CANTIDAD DE LAPTOP POR PROCESADOR -> LAP Y MAC
+            for (int j = 0; j < this.cantModeloProcesador; j++)
+            {
+                dr = resumen.NewRow();
+                dr["PROCESADOR"] = tablaProcesadoresModelos.Rows[j]["nombre"].ToString();
+                int cantProLCGeneral = 0;
+                int cantProLCApple = 0;
+                for (int i = 0; i < this.cantGeneraciones; i++)
+                {
+                    cantProLCGeneral += arregloLCGeneral[i][j];
+                    cantProLCApple += arregloLCApple[i][j];
+                }
+                dr["LAP"] = cantProLCGeneral.ToString();
+                dr["MAC"] = cantProLCApple.ToString();
+
+                resumen.Rows.Add(dr);
+
+                //MessageBox.Show($"{cantProLCGeneral} {cantProLCApple}");
+            }
+
+
+
+            lblTotal.Text = (int.Parse(lblLaptopsDisponibles.Text)+ int.Parse(lblCantidadPronosticador.Text)).ToString();
+
+            gridControl3.DataSource = laptops;
+                gridView3.OptionsBehavior.AutoPopulateColumns = false;
+                gridView3.OptionsSelection.MultiSelect = true;
+
+            
+
+          
+
+            /*
+
 
             DataTable dt = new DataTable();
             dt.Columns.Add("Codigo");
             dt.Columns.Add("MarcaLC");
             dt.Columns.Add("NombreModeloLC");
             dt.Columns.Add("TipoProcesador");
-            /*
+            
             dt.Columns.Add("NombreModeloVideo");
             dt.Columns.Add("CapacidadVideo");
             dt.Columns.Add("Disco1");
@@ -1421,7 +1525,7 @@ namespace Apolo
             dt.Columns.Add("Ubicacion");
             dt.Columns.Add("SerieFabrica");
             dt.Columns.Add("IdSalida");
-            */
+            
             DataRow dr = null;
 
 
@@ -1434,7 +1538,7 @@ namespace Apolo
                 dr["MarcaLC"] = gridView3.GetRowCellValue(0, "MarcaLC");
                 dr["NombreModeloLC"] = gridView3.GetRowCellValue(0, "NombreModeloLC");
                 dr["TipoProcesador"] = gridView3.GetRowCellValue(0, "TipoProcesador");
-                /*
+                
                 dr["NombreModeloVideo"] = gridView3.GetRowCellValue(0, "NombreModeloVideo");
                 dr["CapacidadVideo"] = gridView3.GetRowCellValue(0, "CapacidadVideo");                
                 dr["Disco1"] = gridView3.GetRowCellValue(0, "Disco1");
@@ -1447,11 +1551,13 @@ namespace Apolo
                 dr["Ubicacion"] = gridView3.GetRowCellValue(0, "Ubicacion");
                 dr["SerieFabrica"] = gridView3.GetRowCellValue(0, "SerieFabrica");
                 dr["IdSalida"] = gridView3.GetRowCellValue(0, "IdSalida");
-                */
+                
                 dt.Rows.Add(dr);
             }
+            */
 
-            gridControl4.DataSource = dt;
+
+            gridControl4.DataSource = resumen;
             gridView4.OptionsBehavior.AutoPopulateColumns = true;
             gridView4.OptionsSelection.MultiSelect = true;
             pnlPronosticador.Visible = true;
@@ -1636,6 +1742,10 @@ namespace Apolo
                 //pnlDispo.Visible = true;
                 pnlPronosticador.Visible = false;
                 lblLaptopsDisponibles.Text = vista.RowCount.ToString();
+                label10.Text = DateTime.Now.ToShortDateString();
+                label15.Text = DateTime.Now.ToShortDateString();
+                btnCargarResumenDispo.PerformClick();
+                VerDetallePronos.PerformClick();
 
 
             }
