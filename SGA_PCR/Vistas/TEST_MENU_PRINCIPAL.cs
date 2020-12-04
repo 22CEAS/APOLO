@@ -456,7 +456,8 @@ namespace Apolo
 
         private void TEST_MENU_PRINCIPAL_Load(object sender, EventArgs e)
         {
-
+            btnDash.PerformClick();
+            
         }
 
         private void BarraTitulo_Paint(object sender, PaintEventArgs e)
@@ -1562,7 +1563,9 @@ namespace Apolo
             gridView4.OptionsSelection.MultiSelect = true;
             pnlPronosticador.Visible = true;
 
-
+            
+            label15.Text = "FECHA: " + FechaPronosticador.SelectionRange.Start.ToShortDateString();
+            btnCargarResumenDispo.PerformClick();
         }
 
 
@@ -1742,10 +1745,13 @@ namespace Apolo
                 //pnlDispo.Visible = true;
                 pnlPronosticador.Visible = false;
                 lblLaptopsDisponibles.Text = vista.RowCount.ToString();
-                label10.Text = DateTime.Now.ToShortDateString();
-                label15.Text = DateTime.Now.ToShortDateString();
-                btnCargarResumenDispo.PerformClick();
+                label10.Text = "FECHA: "+DateTime.Now.ToShortDateString();
+                label15.Text = "FECHA: "+DateTime.Now.ToShortDateString();
+                
+
+                //VER LA INFO DE LAS TABLAS
                 VerDetallePronos.PerformClick();
+                btnCargarResumenDispo.PerformClick();
 
 
             }
@@ -2030,6 +2036,45 @@ namespace Apolo
 
         }
 
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_MouseHover(object sender, EventArgs e)
+        {
+            FechaPronosticador.Visible = true;
+        }
+
+        private void panel6_MouseLeave(object sender, EventArgs e)
+        {
+            FechaPronosticador.Visible = false;
+        }
+
+        private void btnVerCalendario_Click(object sender, EventArgs e)
+        {
+            if (FechaPronosticador.Visible == true)
+            {
+                FechaPronosticador.Visible = false;
+            }
+            else 
+            {
+                FechaPronosticador.Visible = true;
+            }
+            
+        }
+
+        private void btnPagFact_Click(object sender, EventArgs e)
+        {
+            panelDashboard.Visible = false;
+            button35.PerformClick();
+        }
+
+        private void button40_Click(object sender, EventArgs e)
+        {
+            pnlFacturacion.Visible = false;
+            btnDash.PerformClick();
+        }
     }
 }
 

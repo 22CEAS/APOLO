@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TEST_MENU_PRINCIPAL));
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule5 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue5 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule6 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue6 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.DíasVencidos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -102,6 +102,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.pnlFacturacion = new System.Windows.Forms.Panel();
+            this.button39 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
             this.txtMontoFacturadoMes = new System.Windows.Forms.TextBox();
             this.lblFacturadoMes = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -132,11 +134,13 @@
             this.button36 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblCantidadPronosticador = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.FechaPronosticador = new System.Windows.Forms.MonthCalendar();
             this.VerDetallePronos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblLaptopsDisponibles = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -167,8 +171,8 @@
             this.VersionOffice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.KAM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblFechaPronosticador = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.lblFechaPronosticador = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pnlDispo = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -206,8 +210,10 @@
             this.pnlPronosticador = new System.Windows.Forms.Panel();
             this.btnCargarResumenDispo = new System.Windows.Forms.Button();
             this.panelDashboard = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.btnPagFact = new System.Windows.Forms.Button();
+            this.btnPagProno = new System.Windows.Forms.Button();
+            this.btnVerCalendario = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
             this.panelConfiguracion.SuspendLayout();
             this.REPORTES.SuspendLayout();
@@ -1149,7 +1155,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(344, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(860, 50);
+            this.BarraTitulo.Size = new System.Drawing.Size(916, 50);
             this.BarraTitulo.TabIndex = 1;
             this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             // 
@@ -1181,7 +1187,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblUser.Location = new System.Drawing.Point(643, 9);
+            this.lblUser.Location = new System.Drawing.Point(699, 9);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(70, 25);
             this.lblUser.TabIndex = 13;
@@ -1194,7 +1200,7 @@
             this.usuarioConectado.Enabled = false;
             this.usuarioConectado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarioConectado.ForeColor = System.Drawing.Color.Transparent;
-            this.usuarioConectado.Location = new System.Drawing.Point(503, 23);
+            this.usuarioConectado.Location = new System.Drawing.Point(559, 23);
             this.usuarioConectado.Name = "usuarioConectado";
             this.usuarioConectado.Size = new System.Drawing.Size(37, 19);
             this.usuarioConectado.TabIndex = 7;
@@ -1218,7 +1224,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(508, 7);
+            this.label3.Location = new System.Drawing.Point(564, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 25);
             this.label3.TabIndex = 9;
@@ -1231,7 +1237,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblHora.Location = new System.Drawing.Point(468, 9);
+            this.lblHora.Location = new System.Drawing.Point(496, 9);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(72, 25);
             this.lblHora.TabIndex = 3;
@@ -1242,7 +1248,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(772, 9);
+            this.pictureBox3.Location = new System.Drawing.Point(828, 9);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1257,7 +1263,7 @@
             this.usuario.Enabled = false;
             this.usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.usuario.Location = new System.Drawing.Point(719, 24);
+            this.usuario.Location = new System.Drawing.Point(775, 24);
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(13, 19);
             this.usuario.TabIndex = 11;
@@ -1269,7 +1275,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(389, 9);
+            this.label2.Location = new System.Drawing.Point(417, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 25);
             this.label2.TabIndex = 6;
@@ -1281,7 +1287,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(567, 9);
+            this.label4.Location = new System.Drawing.Point(623, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 25);
             this.label4.TabIndex = 12;
@@ -1293,7 +1299,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(178, 9);
+            this.label1.Location = new System.Drawing.Point(206, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 25);
             this.label1.TabIndex = 5;
@@ -1305,7 +1311,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblFecha.Location = new System.Drawing.Point(261, 9);
+            this.lblFecha.Location = new System.Drawing.Point(289, 9);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(83, 25);
             this.lblFecha.TabIndex = 4;
@@ -1326,7 +1332,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(813, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(869, 9);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1341,6 +1347,8 @@
             // 
             // pnlFacturacion
             // 
+            this.pnlFacturacion.Controls.Add(this.button39);
+            this.pnlFacturacion.Controls.Add(this.button40);
             this.pnlFacturacion.Controls.Add(this.txtMontoFacturadoMes);
             this.pnlFacturacion.Controls.Add(this.lblFacturadoMes);
             this.pnlFacturacion.Controls.Add(this.textBox2);
@@ -1353,43 +1361,75 @@
             this.pnlFacturacion.Controls.Add(this.button38);
             this.pnlFacturacion.Controls.Add(this.button37);
             this.pnlFacturacion.Controls.Add(this.button36);
-            this.pnlFacturacion.Location = new System.Drawing.Point(382, 53);
+            this.pnlFacturacion.Location = new System.Drawing.Point(350, 56);
             this.pnlFacturacion.Name = "pnlFacturacion";
-            this.pnlFacturacion.Size = new System.Drawing.Size(934, 770);
+            this.pnlFacturacion.Size = new System.Drawing.Size(934, 699);
             this.pnlFacturacion.TabIndex = 16;
             this.pnlFacturacion.Visible = false;
+            // 
+            // button39
+            // 
+            this.button39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button39.Enabled = false;
+            this.button39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button39.ForeColor = System.Drawing.Color.White;
+            this.button39.Location = new System.Drawing.Point(528, 495);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(32, 32);
+            this.button39.TabIndex = 182;
+            this.button39.Text = ">";
+            this.button39.UseVisualStyleBackColor = false;
+            // 
+            // button40
+            // 
+            this.button40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button40.ForeColor = System.Drawing.Color.White;
+            this.button40.Location = new System.Drawing.Point(490, 495);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(32, 32);
+            this.button40.TabIndex = 181;
+            this.button40.Text = "<";
+            this.button40.UseVisualStyleBackColor = false;
+            this.button40.Click += new System.EventHandler(this.button40_Click);
             // 
             // txtMontoFacturadoMes
             // 
             this.txtMontoFacturadoMes.Enabled = false;
-            this.txtMontoFacturadoMes.Location = new System.Drawing.Point(388, 16);
+            this.txtMontoFacturadoMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMontoFacturadoMes.Location = new System.Drawing.Point(609, 16);
             this.txtMontoFacturadoMes.Name = "txtMontoFacturadoMes";
-            this.txtMontoFacturadoMes.Size = new System.Drawing.Size(110, 20);
+            this.txtMontoFacturadoMes.Size = new System.Drawing.Size(154, 26);
             this.txtMontoFacturadoMes.TabIndex = 149;
             // 
             // lblFacturadoMes
             // 
             this.lblFacturadoMes.AutoSize = true;
+            this.lblFacturadoMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFacturadoMes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblFacturadoMes.Location = new System.Drawing.Point(13, 19);
             this.lblFacturadoMes.Name = "lblFacturadoMes";
-            this.lblFacturadoMes.Size = new System.Drawing.Size(173, 13);
+            this.lblFacturadoMes.Size = new System.Drawing.Size(279, 20);
             this.lblFacturadoMes.TabIndex = 148;
             this.lblFacturadoMes.Text = "MONTO FACTURADO ESTE MES";
             // 
             // textBox2
             // 
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(388, 42);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(609, 42);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 20);
+            this.textBox2.Size = new System.Drawing.Size(154, 26);
             this.textBox2.TabIndex = 147;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label6.Location = new System.Drawing.Point(13, 44);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 13);
+            this.label6.Size = new System.Drawing.Size(252, 20);
             this.label6.TabIndex = 146;
             this.label6.Text = "PENDIENTE POR FACTURAR";
             // 
@@ -1401,7 +1441,7 @@
             this.dgvFacturas.Location = new System.Drawing.Point(3, 72);
             this.dgvFacturas.MainView = this.gridView5;
             this.dgvFacturas.Name = "dgvFacturas";
-            this.dgvFacturas.Size = new System.Drawing.Size(932, 455);
+            this.dgvFacturas.Size = new System.Drawing.Size(932, 384);
             this.dgvFacturas.TabIndex = 145;
             this.dgvFacturas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -1438,33 +1478,33 @@
             this.PendienteFacturarSoles,
             this.PendienteFacturarDolares,
             this.gridColumn53});
-            gridFormatRule1.Column = this.DíasVencidos;
-            gridFormatRule1.ColumnApplyTo = this.gridColumn47;
-            gridFormatRule1.Name = "Menor a 15 dias";
-            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue1.Expression = "[diasVencidos] < 15";
-            gridFormatRule1.Rule = formatConditionRuleValue1;
-            gridFormatRule2.Column = this.DíasVencidos;
-            gridFormatRule2.ColumnApplyTo = this.gridColumn47;
-            gridFormatRule2.Name = "De 15 a 45 dias";
-            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue2.Expression = "[diasVencidos] >= 15 And [diasVencidos] <= 45";
-            gridFormatRule2.Rule = formatConditionRuleValue2;
-            gridFormatRule3.Column = this.DíasVencidos;
-            gridFormatRule3.ColumnApplyTo = this.gridColumn47;
-            gridFormatRule3.Name = "Mas de 45";
-            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.Red;
-            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue3.Expression = "[diasVencidos] > 45";
-            gridFormatRule3.Rule = formatConditionRuleValue3;
-            this.gridView5.FormatRules.Add(gridFormatRule1);
-            this.gridView5.FormatRules.Add(gridFormatRule2);
-            this.gridView5.FormatRules.Add(gridFormatRule3);
+            gridFormatRule4.Column = this.DíasVencidos;
+            gridFormatRule4.ColumnApplyTo = this.gridColumn47;
+            gridFormatRule4.Name = "Menor a 15 dias";
+            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue4.Expression = "[diasVencidos] < 15";
+            gridFormatRule4.Rule = formatConditionRuleValue4;
+            gridFormatRule5.Column = this.DíasVencidos;
+            gridFormatRule5.ColumnApplyTo = this.gridColumn47;
+            gridFormatRule5.Name = "De 15 a 45 dias";
+            formatConditionRuleValue5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue5.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue5.Expression = "[diasVencidos] >= 15 And [diasVencidos] <= 45";
+            gridFormatRule5.Rule = formatConditionRuleValue5;
+            gridFormatRule6.Column = this.DíasVencidos;
+            gridFormatRule6.ColumnApplyTo = this.gridColumn47;
+            gridFormatRule6.Name = "Mas de 45";
+            formatConditionRuleValue6.Appearance.BackColor = System.Drawing.Color.Red;
+            formatConditionRuleValue6.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue6.Expression = "[diasVencidos] > 45";
+            gridFormatRule6.Rule = formatConditionRuleValue6;
+            this.gridView5.FormatRules.Add(gridFormatRule4);
+            this.gridView5.FormatRules.Add(gridFormatRule5);
+            this.gridView5.FormatRules.Add(gridFormatRule6);
             this.gridView5.GridControl = this.dgvFacturas;
             this.gridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", this.PendienteFacturarSoles, "TOTAL = {0:c2}"),
@@ -1654,37 +1694,37 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(54, 630);
+            this.label14.Location = new System.Drawing.Point(43, 548);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(430, 15);
+            this.label14.Size = new System.Drawing.Size(393, 15);
             this.label14.TabIndex = 144;
-            this.label14.Text = "EL CLIENTE TIENES MAS DE UNA SEMANA SIN SER FACTURADO";
+            this.label14.Text = "EL CLIENTE TIENES MAS DE 45 DIAS SIN SER FACTURADO";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(54, 602);
+            this.label13.Location = new System.Drawing.Point(43, 520);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(394, 15);
+            this.label13.Size = new System.Drawing.Size(410, 15);
             this.label13.TabIndex = 143;
-            this.label13.Text = "EL CLIENTE TIENE ENTRE 2 Y 7 DIAS SIN SER FACTURADO";
+            this.label13.Text = "EL CLIENTE TIENE ENTRE 15 Y 45 DIAS SIN SER FACTURADO";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(54, 577);
+            this.label12.Location = new System.Drawing.Point(43, 495);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(397, 15);
+            this.label12.Size = new System.Drawing.Size(405, 15);
             this.label12.TabIndex = 142;
-            this.label12.Text = "EL CLIENTE TIENE MENOS DE 2 DIAS SIN SER FACTURADO";
+            this.label12.Text = "EL CLIENTE TIENE MENOS DE 15 DIAS SIN SER FACTURADO";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(24, 555);
+            this.label11.Location = new System.Drawing.Point(13, 473);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 15);
             this.label11.TabIndex = 141;
@@ -1694,7 +1734,7 @@
             // 
             this.button38.BackColor = System.Drawing.Color.Red;
             this.button38.Enabled = false;
-            this.button38.Location = new System.Drawing.Point(27, 626);
+            this.button38.Location = new System.Drawing.Point(16, 544);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(21, 19);
             this.button38.TabIndex = 140;
@@ -1704,7 +1744,7 @@
             // 
             this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button37.Enabled = false;
-            this.button37.Location = new System.Drawing.Point(27, 601);
+            this.button37.Location = new System.Drawing.Point(16, 519);
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(21, 19);
             this.button37.TabIndex = 139;
@@ -1714,7 +1754,7 @@
             // 
             this.button36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button36.Enabled = false;
-            this.button36.Location = new System.Drawing.Point(27, 576);
+            this.button36.Location = new System.Drawing.Point(16, 494);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(21, 19);
             this.button36.TabIndex = 138;
@@ -1723,85 +1763,109 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.panel2.Controls.Add(this.label15);
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.lblCantidadPronosticador);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(442, 9);
+            this.panel2.Location = new System.Drawing.Point(347, 63);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 130);
+            this.panel2.Size = new System.Drawing.Size(162, 60);
             this.panel2.TabIndex = 9;
             // 
             // lblCantidadPronosticador
             // 
             this.lblCantidadPronosticador.AutoSize = true;
-            this.lblCantidadPronosticador.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadPronosticador.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadPronosticador.ForeColor = System.Drawing.Color.White;
-            this.lblCantidadPronosticador.Location = new System.Drawing.Point(117, 84);
+            this.lblCantidadPronosticador.Location = new System.Drawing.Point(2, 2);
             this.lblCantidadPronosticador.Name = "lblCantidadPronosticador";
-            this.lblCantidadPronosticador.Size = new System.Drawing.Size(36, 37);
+            this.lblCantidadPronosticador.Size = new System.Drawing.Size(52, 55);
             this.lblCantidadPronosticador.TabIndex = 1;
             this.lblCantidadPronosticador.Text = "0";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label15.Location = new System.Drawing.Point(306, 31);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(80, 24);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "FECHA";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(6, 14);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(304, 7);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(241, 24);
+            this.label8.Size = new System.Drawing.Size(269, 24);
             this.label8.TabIndex = 0;
-            this.label8.Text = "LAPTOPS A REGRESAR";
+            this.label8.Text = "LAPTOPS A REGRESAR A LA";
             // 
             // FechaPronosticador
             // 
-            this.FechaPronosticador.Location = new System.Drawing.Point(695, 9);
+            this.FechaPronosticador.Location = new System.Drawing.Point(539, 40);
             this.FechaPronosticador.Name = "FechaPronosticador";
             this.FechaPronosticador.TabIndex = 10;
+            this.FechaPronosticador.Visible = false;
             // 
             // VerDetallePronos
             // 
-            this.VerDetallePronos.Location = new System.Drawing.Point(442, 142);
+            this.VerDetallePronos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.VerDetallePronos.ForeColor = System.Drawing.Color.White;
+            this.VerDetallePronos.Location = new System.Drawing.Point(347, 125);
             this.VerDetallePronos.Name = "VerDetallePronos";
-            this.VerDetallePronos.Size = new System.Drawing.Size(250, 26);
+            this.VerDetallePronos.Size = new System.Drawing.Size(115, 34);
             this.VerDetallePronos.TabIndex = 13;
             this.VerDetallePronos.Text = "PRONOSTICAR";
-            this.VerDetallePronos.UseVisualStyleBackColor = true;
+            this.VerDetallePronos.UseVisualStyleBackColor = false;
             this.VerDetallePronos.Click += new System.EventHandler(this.VerDetallePronos_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lblLaptopsDisponibles);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(81, 9);
+            this.panel1.Location = new System.Drawing.Point(37, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 130);
+            this.panel1.Size = new System.Drawing.Size(162, 60);
             this.panel1.TabIndex = 8;
             // 
             // lblLaptopsDisponibles
             // 
             this.lblLaptopsDisponibles.AutoSize = true;
-            this.lblLaptopsDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLaptopsDisponibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLaptopsDisponibles.ForeColor = System.Drawing.Color.White;
-            this.lblLaptopsDisponibles.Location = new System.Drawing.Point(69, 82);
+            this.lblLaptopsDisponibles.Location = new System.Drawing.Point(3, 0);
             this.lblLaptopsDisponibles.Name = "lblLaptopsDisponibles";
-            this.lblLaptopsDisponibles.Size = new System.Drawing.Size(93, 37);
+            this.lblLaptopsDisponibles.Size = new System.Drawing.Size(136, 55);
             this.lblLaptopsDisponibles.TabIndex = 1;
             this.lblLaptopsDisponibles.Text = "2960";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label10.Location = new System.Drawing.Point(6, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 24);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "FECHA";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(6, 13);
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(3, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(241, 24);
+            this.label5.Size = new System.Drawing.Size(273, 24);
             this.label5.TabIndex = 0;
-            this.label5.Text = "LAPTOPS DISPONIBLES";
+            this.label5.Text = "LAPTOPS DISPONIBLES  A LA";
             // 
             // gridControl1
             // 
@@ -1811,7 +1875,7 @@
             this.gridControl1.Location = new System.Drawing.Point(981, 191);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(406, 424);
+            this.gridControl1.Size = new System.Drawing.Size(233, 264);
             this.gridControl1.TabIndex = 135;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -2198,44 +2262,43 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.panel3.Controls.Add(this.lblFechaPronosticador);
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.lblTotal);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(317, 475);
+            this.panel3.Location = new System.Drawing.Point(447, 468);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(278, 112);
+            this.panel3.Size = new System.Drawing.Size(148, 58);
             this.panel3.TabIndex = 10;
-            // 
-            // lblFechaPronosticador
-            // 
-            this.lblFechaPronosticador.AutoSize = true;
-            this.lblFechaPronosticador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaPronosticador.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblFechaPronosticador.Location = new System.Drawing.Point(6, 37);
-            this.lblFechaPronosticador.Name = "lblFechaPronosticador";
-            this.lblFechaPronosticador.Size = new System.Drawing.Size(116, 24);
-            this.lblFechaPronosticador.TabIndex = 3;
-            this.lblFechaPronosticador.Text = "FECHA: nn";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(190, 32);
+            this.lblTotal.Location = new System.Drawing.Point(3, 3);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(52, 55);
             this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "0";
             // 
+            // lblFechaPronosticador
+            // 
+            this.lblFechaPronosticador.AutoSize = true;
+            this.lblFechaPronosticador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaPronosticador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblFechaPronosticador.Location = new System.Drawing.Point(252, 485);
+            this.lblFechaPronosticador.Name = "lblFechaPronosticador";
+            this.lblFechaPronosticador.Size = new System.Drawing.Size(116, 24);
+            this.lblFechaPronosticador.TabIndex = 3;
+            this.lblFechaPronosticador.Text = "FECHA: nn";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(6, 7);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(6, 485);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(261, 24);
+            this.label7.Size = new System.Drawing.Size(240, 24);
             this.label7.TabIndex = 0;
             this.label7.Text = "TOTAL DE LAPTOPS A LA\r\n";
             // 
@@ -2243,9 +2306,9 @@
             // 
             this.pnlDispo.Controls.Add(this.panel4);
             this.pnlDispo.Controls.Add(this.dgvLaptops);
-            this.pnlDispo.Location = new System.Drawing.Point(6, 173);
+            this.pnlDispo.Location = new System.Drawing.Point(10, 169);
             this.pnlDispo.Name = "pnlDispo";
-            this.pnlDispo.Size = new System.Drawing.Size(458, 299);
+            this.pnlDispo.Size = new System.Drawing.Size(230, 299);
             this.pnlDispo.TabIndex = 137;
             this.pnlDispo.Visible = false;
             // 
@@ -2527,7 +2590,7 @@
             this.dgvLaptops.Location = new System.Drawing.Point(3, 3);
             this.dgvLaptops.MainView = this.vista;
             this.dgvLaptops.Name = "dgvLaptops";
-            this.dgvLaptops.Size = new System.Drawing.Size(452, 293);
+            this.dgvLaptops.Size = new System.Drawing.Size(224, 290);
             this.dgvLaptops.TabIndex = 134;
             this.dgvLaptops.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.vista});
@@ -2565,7 +2628,7 @@
             this.PROCESADOR.Name = "PROCESADOR";
             this.PROCESADOR.Visible = true;
             this.PROCESADOR.VisibleIndex = 0;
-            this.PROCESADOR.Width = 130;
+            this.PROCESADOR.Width = 80;
             // 
             // LAPTOP
             // 
@@ -2577,7 +2640,7 @@
             this.LAPTOP.Name = "LAPTOP";
             this.LAPTOP.Visible = true;
             this.LAPTOP.VisibleIndex = 1;
-            this.LAPTOP.Width = 100;
+            this.LAPTOP.Width = 60;
             // 
             // MACBOOK
             // 
@@ -2589,7 +2652,7 @@
             this.MACBOOK.Name = "MACBOOK";
             this.MACBOOK.Visible = true;
             this.MACBOOK.VisibleIndex = 2;
-            this.MACBOOK.Width = 200;
+            this.MACBOOK.Width = 60;
             // 
             // gridView4
             // 
@@ -2620,37 +2683,37 @@
             // 
             this.gridColumn26.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.gridColumn26.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn26.Caption = "PROCESADOR";
+            this.gridColumn26.Caption = "Procesador";
             this.gridColumn26.FieldName = "PROCESADOR";
             this.gridColumn26.MinWidth = 40;
             this.gridColumn26.Name = "gridColumn26";
             this.gridColumn26.Visible = true;
             this.gridColumn26.VisibleIndex = 0;
-            this.gridColumn26.Width = 130;
+            this.gridColumn26.Width = 80;
             // 
             // gridColumn27
             // 
             this.gridColumn27.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.gridColumn27.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn27.Caption = "LAP";
+            this.gridColumn27.Caption = "Laptop";
             this.gridColumn27.FieldName = "LAP";
             this.gridColumn27.MinWidth = 40;
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.Visible = true;
             this.gridColumn27.VisibleIndex = 1;
-            this.gridColumn27.Width = 100;
+            this.gridColumn27.Width = 60;
             // 
             // gridColumn28
             // 
             this.gridColumn28.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.gridColumn28.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn28.Caption = "MAC";
+            this.gridColumn28.Caption = "Macbook";
             this.gridColumn28.FieldName = "MAC";
             this.gridColumn28.MinWidth = 40;
             this.gridColumn28.Name = "gridColumn28";
             this.gridColumn28.Visible = true;
             this.gridColumn28.VisibleIndex = 2;
-            this.gridColumn28.Width = 200;
+            this.gridColumn28.Width = 60;
             // 
             // gridControl4
             // 
@@ -2660,7 +2723,7 @@
             this.gridControl4.Location = new System.Drawing.Point(3, 3);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(452, 290);
+            this.gridControl4.Size = new System.Drawing.Size(217, 290);
             this.gridControl4.TabIndex = 174;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4,
@@ -2676,60 +2739,95 @@
             // pnlPronosticador
             // 
             this.pnlPronosticador.Controls.Add(this.gridControl4);
-            this.pnlPronosticador.Location = new System.Drawing.Point(480, 173);
+            this.pnlPronosticador.Location = new System.Drawing.Point(308, 172);
             this.pnlPronosticador.Name = "pnlPronosticador";
-            this.pnlPronosticador.Size = new System.Drawing.Size(458, 296);
+            this.pnlPronosticador.Size = new System.Drawing.Size(223, 296);
             this.pnlPronosticador.TabIndex = 175;
             this.pnlPronosticador.Visible = false;
             // 
             // btnCargarResumenDispo
             // 
-            this.btnCargarResumenDispo.Location = new System.Drawing.Point(81, 142);
+            this.btnCargarResumenDispo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCargarResumenDispo.ForeColor = System.Drawing.Color.White;
+            this.btnCargarResumenDispo.Location = new System.Drawing.Point(37, 124);
             this.btnCargarResumenDispo.Name = "btnCargarResumenDispo";
-            this.btnCargarResumenDispo.Size = new System.Drawing.Size(250, 25);
+            this.btnCargarResumenDispo.Size = new System.Drawing.Size(162, 34);
             this.btnCargarResumenDispo.TabIndex = 176;
             this.btnCargarResumenDispo.Text = "VER RESUMEN";
-            this.btnCargarResumenDispo.UseVisualStyleBackColor = true;
+            this.btnCargarResumenDispo.UseVisualStyleBackColor = false;
             this.btnCargarResumenDispo.Click += new System.EventHandler(this.button39_Click);
             // 
             // panelDashboard
             // 
-            this.panelDashboard.Controls.Add(this.btnCargarResumenDispo);
-            this.panelDashboard.Controls.Add(this.pnlPronosticador);
-            this.panelDashboard.Controls.Add(this.pnlDispo);
+            this.panelDashboard.BackColor = System.Drawing.Color.White;
+            this.panelDashboard.Controls.Add(this.btnPagFact);
+            this.panelDashboard.Controls.Add(this.btnPagProno);
+            this.panelDashboard.Controls.Add(this.btnVerCalendario);
+            this.panelDashboard.Controls.Add(this.FechaPronosticador);
+            this.panelDashboard.Controls.Add(this.lblFechaPronosticador);
+            this.panelDashboard.Controls.Add(this.panel5);
             this.panelDashboard.Controls.Add(this.panel3);
+            this.panelDashboard.Controls.Add(this.label7);
+            this.panelDashboard.Controls.Add(this.label15);
+            this.panelDashboard.Controls.Add(this.label10);
+            this.panelDashboard.Controls.Add(this.btnCargarResumenDispo);
+            this.panelDashboard.Controls.Add(this.label8);
+            this.panelDashboard.Controls.Add(this.pnlPronosticador);
+            this.panelDashboard.Controls.Add(this.label5);
+            this.panelDashboard.Controls.Add(this.pnlDispo);
             this.panelDashboard.Controls.Add(this.gridControl1);
             this.panelDashboard.Controls.Add(this.panel1);
             this.panelDashboard.Controls.Add(this.VerDetallePronos);
-            this.panelDashboard.Controls.Add(this.FechaPronosticador);
             this.panelDashboard.Controls.Add(this.panel2);
-            this.panelDashboard.Location = new System.Drawing.Point(350, 60);
+            this.panelDashboard.Location = new System.Drawing.Point(380, 59);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(969, 729);
+            this.panelDashboard.Size = new System.Drawing.Size(796, 569);
             this.panelDashboard.TabIndex = 14;
             this.panelDashboard.Visible = false;
             // 
-            // label10
+            // btnPagFact
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(3, 44);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 24);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "FECHA";
+            this.btnPagFact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPagFact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagFact.ForeColor = System.Drawing.Color.White;
+            this.btnPagFact.Location = new System.Drawing.Point(296, 521);
+            this.btnPagFact.Name = "btnPagFact";
+            this.btnPagFact.Size = new System.Drawing.Size(32, 32);
+            this.btnPagFact.TabIndex = 180;
+            this.btnPagFact.Text = ">";
+            this.btnPagFact.UseVisualStyleBackColor = false;
+            this.btnPagFact.Click += new System.EventHandler(this.btnPagFact_Click);
             // 
-            // label15
+            // btnPagProno
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label15.Location = new System.Drawing.Point(6, 46);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(80, 24);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "FECHA";
+            this.btnPagProno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPagProno.Enabled = false;
+            this.btnPagProno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagProno.ForeColor = System.Drawing.Color.White;
+            this.btnPagProno.Location = new System.Drawing.Point(258, 521);
+            this.btnPagProno.Name = "btnPagProno";
+            this.btnPagProno.Size = new System.Drawing.Size(32, 32);
+            this.btnPagProno.TabIndex = 179;
+            this.btnPagProno.Text = "<";
+            this.btnPagProno.UseVisualStyleBackColor = false;
+            // 
+            // btnVerCalendario
+            // 
+            this.btnVerCalendario.Image = ((System.Drawing.Image)(resources.GetObject("btnVerCalendario.Image")));
+            this.btnVerCalendario.Location = new System.Drawing.Point(461, 125);
+            this.btnVerCalendario.Name = "btnVerCalendario";
+            this.btnVerCalendario.Size = new System.Drawing.Size(48, 34);
+            this.btnVerCalendario.TabIndex = 178;
+            this.btnVerCalendario.UseVisualStyleBackColor = true;
+            this.btnVerCalendario.Click += new System.EventHandler(this.btnVerCalendario_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel5.Location = new System.Drawing.Point(282, 4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(8, 456);
+            this.panel5.TabIndex = 177;
             // 
             // TEST_MENU_PRINCIPAL
             // 
@@ -2737,7 +2835,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScrollMargin = new System.Drawing.Size(0, 40);
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1204, 640);
+            this.ClientSize = new System.Drawing.Size(1260, 640);
             this.Controls.Add(this.pnlFacturacion);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.panelDashboard);
@@ -2784,6 +2882,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             this.pnlPronosticador.ResumeLayout(false);
             this.panelDashboard.ResumeLayout(false);
+            this.panelDashboard.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2962,5 +3061,11 @@
         private System.Windows.Forms.Label lblFacturadoMes;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnVerCalendario;
+        private System.Windows.Forms.Button btnPagProno;
+        private System.Windows.Forms.Button btnPagFact;
+        private System.Windows.Forms.Button button39;
+        private System.Windows.Forms.Button button40;
     }
 }
