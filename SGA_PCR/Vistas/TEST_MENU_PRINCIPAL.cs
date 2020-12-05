@@ -24,6 +24,7 @@ namespace Apolo
         int canDisponibles = 0;
 
         DataTable tablaLaptops;
+        DataTable tablaMontos;
         ReporteDA reporteDA;
         private int idUsuario;
         private string nombreUsuario = "CEAS";
@@ -1782,27 +1783,56 @@ namespace Apolo
                 for (int i = 0; i < gridView5.RowCount; i++)
                 {
                     MontoPendienteFacturar = MontoPendienteFacturar + float.Parse(tablaLaptops.Rows[i]["PendienteFacturarSoles"].ToString());
-                    
                 }
                 //MessageBox.Show(MontoPendienteFacturar.ToString());
                 //gridView5.Columns["cliente"].GroupIndex = 1;
                 
-                
-                
-
-
                 //gridView5.Columns["factura"].GroupIndex = 2;
-
                 textBox2.Text = string.Format("{0:C0}", MontoPendienteFacturar);
-
-
-
                 MontoFacturadoMes = reporteDA.VerMontoFacturadoMes();
 
                
                 txtMontoFacturadoMes.Text = string.Format("{0:C0}", MontoFacturadoMes.Rows[0]["total"]);//MONTO FACTURADO EN EL MES
 
-                lblFacturadoMes.Text = $"MONTO FACTURADO A LA FECHA:{DateTime.Now.ToShortDateString()} Y HORA: {DateTime.Now.ToLongTimeString()}";
+                lblFacturadoMes.Text = $"MONTO FACTURADO A LA ";
+                label18.Text=$"FECHA: { DateTime.Now.ToShortDateString()}. Y HORA: { DateTime.Now.ToLongTimeString()}";
+                label18.ForeColor = Color.Orange;
+
+                //TOTAL DE MONTOS
+
+
+                tablaMontos = reporteDA.ListarLaptopsPorFacturarDASH_segun_dias();
+
+                double menor_15 = 0;
+                double entre_15_45 = 0;
+                double mas_45 = 0;
+
+                for (int i = 0; i < tablaMontos.Rows.Count; i++)
+                {
+                    if (int.Parse(tablaMontos.Rows[i]["diasVencidos"].ToString()) < 15)
+                    {
+                        menor_15 = menor_15 + double.Parse(tablaMontos.Rows[i]["PendienteFacturarSoles"].ToString());
+                    }
+                    if (int.Parse(tablaMontos.Rows[i]["diasVencidos"].ToString())>=15 && int.Parse(tablaMontos.Rows[i]["diasVencidos"].ToString()) <= 45)
+                    {
+                        entre_15_45 = entre_15_45 + double.Parse(tablaMontos.Rows[i]["PendienteFacturarSoles"].ToString());
+                    }
+                    if (int.Parse(tablaMontos.Rows[i]["diasVencidos"].ToString()) > 45 )
+                    {
+                        mas_45 = mas_45 + double.Parse(tablaMontos.Rows[i]["PendienteFacturarSoles"].ToString());
+                    }
+                }
+
+                //RESUMEN DE MONTOS
+                txtMenos15.Text = string.Format("{0:C0}", menor_15);
+                txtEntre15y45.Text = string.Format("{0:C0}", entre_15_45);
+                txtMasde45.Text = string.Format("{0:C0}", mas_45);
+
+
+
+                
+
+
 
                 pnlFacturacion.Visible = true;
             }
@@ -2174,6 +2204,25 @@ namespace Apolo
         private void button41_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            if (panelDashboard.Visible == true || pnlFacturacion.Visible == true)
+            {
+                panelDashboard.Visible = false;
+                pnlFacturacion.Visible = false;
+                btnVer.Text = "ABRIR DASH";
+            }
+            else if (panelDashboard.Visible == false && pnlFacturacion.Visible == false)
+            {
+                btnVer.Text = "CERRAR DASH";
+                btnDash.PerformClick();
+            }
+            else
+            { 
+
+            }
         }
     }
 }

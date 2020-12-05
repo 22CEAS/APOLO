@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TEST_MENU_PRINCIPAL));
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule5 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue5 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule6 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue6 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.DíasVencidos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -220,9 +220,12 @@
             this.btnVerCalendario = new System.Windows.Forms.Button();
             this.Meses = new DevExpress.XtraGrid.Columns.GridColumn();
             this.maxDiasVencidos = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtMenos15 = new System.Windows.Forms.TextBox();
+            this.txtEntre15y45 = new System.Windows.Forms.TextBox();
+            this.txtMasde45 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnVer = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.panelConfiguracion.SuspendLayout();
             this.REPORTES.SuspendLayout();
@@ -253,6 +256,7 @@
             this.panelDashboard.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // DíasVencidos
@@ -304,7 +308,7 @@
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(344, 640);
+            this.MenuVertical.Size = new System.Drawing.Size(344, 716);
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
@@ -1146,6 +1150,7 @@
             // 
             // BarraTitulo
             // 
+            this.BarraTitulo.Controls.Add(this.panel8);
             this.BarraTitulo.Controls.Add(this.button35);
             this.BarraTitulo.Controls.Add(this.btnDash);
             this.BarraTitulo.Controls.Add(this.lblUser);
@@ -1356,9 +1361,10 @@
             // 
             // pnlFacturacion
             // 
-            this.pnlFacturacion.Controls.Add(this.textBox5);
-            this.pnlFacturacion.Controls.Add(this.textBox4);
-            this.pnlFacturacion.Controls.Add(this.textBox3);
+            this.pnlFacturacion.Controls.Add(this.label18);
+            this.pnlFacturacion.Controls.Add(this.txtMasde45);
+            this.pnlFacturacion.Controls.Add(this.txtEntre15y45);
+            this.pnlFacturacion.Controls.Add(this.txtMenos15);
             this.pnlFacturacion.Controls.Add(this.button39);
             this.pnlFacturacion.Controls.Add(this.button40);
             this.pnlFacturacion.Controls.Add(this.txtMontoFacturadoMes);
@@ -1385,21 +1391,22 @@
             this.button39.Enabled = false;
             this.button39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button39.ForeColor = System.Drawing.Color.White;
-            this.button39.Location = new System.Drawing.Point(476, 574);
+            this.button39.Location = new System.Drawing.Point(365, 624);
             this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(32, 32);
+            this.button39.Size = new System.Drawing.Size(32, 41);
             this.button39.TabIndex = 182;
             this.button39.Text = ">";
             this.button39.UseVisualStyleBackColor = false;
+            this.button39.Visible = false;
             // 
             // button40
             // 
             this.button40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button40.ForeColor = System.Drawing.Color.White;
-            this.button40.Location = new System.Drawing.Point(438, 574);
+            this.button40.Location = new System.Drawing.Point(327, 624);
             this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(32, 32);
+            this.button40.Size = new System.Drawing.Size(32, 41);
             this.button40.TabIndex = 181;
             this.button40.Text = "<";
             this.button40.UseVisualStyleBackColor = false;
@@ -1408,38 +1415,38 @@
             // txtMontoFacturadoMes
             // 
             this.txtMontoFacturadoMes.Enabled = false;
-            this.txtMontoFacturadoMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMontoFacturadoMes.Location = new System.Drawing.Point(609, 16);
+            this.txtMontoFacturadoMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMontoFacturadoMes.Location = new System.Drawing.Point(610, 2);
             this.txtMontoFacturadoMes.Name = "txtMontoFacturadoMes";
-            this.txtMontoFacturadoMes.Size = new System.Drawing.Size(154, 26);
+            this.txtMontoFacturadoMes.Size = new System.Drawing.Size(154, 38);
             this.txtMontoFacturadoMes.TabIndex = 149;
             // 
             // lblFacturadoMes
             // 
             this.lblFacturadoMes.AutoSize = true;
             this.lblFacturadoMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFacturadoMes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblFacturadoMes.Location = new System.Drawing.Point(13, 19);
+            this.lblFacturadoMes.ForeColor = System.Drawing.Color.Black;
+            this.lblFacturadoMes.Location = new System.Drawing.Point(3, 15);
             this.lblFacturadoMes.Name = "lblFacturadoMes";
-            this.lblFacturadoMes.Size = new System.Drawing.Size(279, 20);
+            this.lblFacturadoMes.Size = new System.Drawing.Size(229, 20);
             this.lblFacturadoMes.TabIndex = 148;
-            this.lblFacturadoMes.Text = "MONTO FACTURADO ESTE MES";
+            this.lblFacturadoMes.Text = "MONTO FACTURADO A LA";
             // 
             // textBox2
             // 
             this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(609, 42);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(610, 44);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 26);
+            this.textBox2.Size = new System.Drawing.Size(154, 38);
             this.textBox2.TabIndex = 147;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(13, 44);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(3, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(252, 20);
             this.label6.TabIndex = 146;
@@ -1450,10 +1457,11 @@
             this.dgvFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvFacturas.Location = new System.Drawing.Point(3, 72);
+            this.dgvFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvFacturas.Location = new System.Drawing.Point(3, 86);
             this.dgvFacturas.MainView = this.gridView5;
             this.dgvFacturas.Name = "dgvFacturas";
-            this.dgvFacturas.Size = new System.Drawing.Size(769, 384);
+            this.dgvFacturas.Size = new System.Drawing.Size(765, 398);
             this.dgvFacturas.TabIndex = 145;
             this.dgvFacturas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -1492,33 +1500,33 @@
             this.gridColumn53,
             this.Meses,
             this.maxDiasVencidos});
-            gridFormatRule4.Column = this.maxDiasVencidos;
-            gridFormatRule4.ColumnApplyTo = this.PendienteFacturarSoles;
-            gridFormatRule4.Name = "Menor a 15 dias";
-            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue4.Expression = "[maxDiasVencidos] < 15";
-            gridFormatRule4.Rule = formatConditionRuleValue4;
-            gridFormatRule5.Column = this.maxDiasVencidos;
-            gridFormatRule5.ColumnApplyTo = this.PendienteFacturarSoles;
-            gridFormatRule5.Name = "De 15 a 45 dias";
-            formatConditionRuleValue5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue5.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue5.Expression = "[maxDiasVencidos] >= 15 And [maxDiasVencidos] <= 45";
-            gridFormatRule5.Rule = formatConditionRuleValue5;
-            gridFormatRule6.Column = this.maxDiasVencidos;
-            gridFormatRule6.ColumnApplyTo = this.PendienteFacturarSoles;
-            gridFormatRule6.Name = "Mas de 45";
-            formatConditionRuleValue6.Appearance.BackColor = System.Drawing.Color.Red;
-            formatConditionRuleValue6.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue6.Expression = "[maxDiasVencidos] > 45";
-            gridFormatRule6.Rule = formatConditionRuleValue6;
-            this.gridView5.FormatRules.Add(gridFormatRule4);
-            this.gridView5.FormatRules.Add(gridFormatRule5);
-            this.gridView5.FormatRules.Add(gridFormatRule6);
+            gridFormatRule1.Column = this.maxDiasVencidos;
+            gridFormatRule1.ColumnApplyTo = this.PendienteFacturarSoles;
+            gridFormatRule1.Name = "Menor a 15 dias";
+            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue1.Expression = "[maxDiasVencidos] < 15";
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            gridFormatRule2.Column = this.maxDiasVencidos;
+            gridFormatRule2.ColumnApplyTo = this.PendienteFacturarSoles;
+            gridFormatRule2.Name = "De 15 a 45 dias";
+            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue2.Expression = "[maxDiasVencidos] >= 15 And [maxDiasVencidos] <= 45";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            gridFormatRule3.Column = this.maxDiasVencidos;
+            gridFormatRule3.ColumnApplyTo = this.PendienteFacturarSoles;
+            gridFormatRule3.Name = "Mas de 45";
+            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.Red;
+            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue3.Expression = "[maxDiasVencidos] > 45";
+            gridFormatRule3.Rule = formatConditionRuleValue3;
+            this.gridView5.FormatRules.Add(gridFormatRule1);
+            this.gridView5.FormatRules.Add(gridFormatRule2);
+            this.gridView5.FormatRules.Add(gridFormatRule3);
             this.gridView5.GridControl = this.dgvFacturas;
             this.gridView5.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PendienteFacturarSoles", null, "| Tot. Pendientes Soles = {0:c2}"),
@@ -1705,30 +1713,30 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(43, 548);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(43, 589);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(216, 15);
+            this.label14.Size = new System.Drawing.Size(286, 20);
             this.label14.TabIndex = 144;
             this.label14.Text = "MAS DE 45 DIAS SIN FACTURAR";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(43, 520);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(43, 551);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(242, 15);
+            this.label13.Size = new System.Drawing.Size(319, 20);
             this.label13.TabIndex = 143;
             this.label13.Text = "ENTRE 15 Y 45 DIAS SIN FACTURAR";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(43, 495);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(43, 512);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(237, 15);
+            this.label12.Size = new System.Drawing.Size(311, 20);
             this.label12.TabIndex = 142;
             this.label12.Text = "MENOS DE 15 DIAS SIN FACTURAR";
             // 
@@ -1736,7 +1744,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(13, 473);
+            this.label11.Location = new System.Drawing.Point(13, 494);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 15);
             this.label11.TabIndex = 141;
@@ -1746,7 +1754,7 @@
             // 
             this.button38.BackColor = System.Drawing.Color.Red;
             this.button38.Enabled = false;
-            this.button38.Location = new System.Drawing.Point(16, 544);
+            this.button38.Location = new System.Drawing.Point(16, 591);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(21, 19);
             this.button38.TabIndex = 140;
@@ -1756,7 +1764,7 @@
             // 
             this.button37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button37.Enabled = false;
-            this.button37.Location = new System.Drawing.Point(16, 519);
+            this.button37.Location = new System.Drawing.Point(16, 550);
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(21, 19);
             this.button37.TabIndex = 139;
@@ -1766,7 +1774,7 @@
             // 
             this.button36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button36.Enabled = false;
-            this.button36.Location = new System.Drawing.Point(16, 494);
+            this.button36.Location = new System.Drawing.Point(16, 511);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(21, 19);
             this.button36.TabIndex = 138;
@@ -2885,6 +2893,7 @@
             this.btnPagProno.TabIndex = 179;
             this.btnPagProno.Text = "<";
             this.btnPagProno.UseVisualStyleBackColor = false;
+            this.btnPagProno.Visible = false;
             this.btnPagProno.Click += new System.EventHandler(this.btnPagProno_Click);
             // 
             // btnVerCalendario
@@ -2914,36 +2923,73 @@
             this.maxDiasVencidos.Name = "maxDiasVencidos";
             this.maxDiasVencidos.Width = 200;
             // 
-            // textBox3
+            // txtMenos15
             // 
-            this.textBox3.Location = new System.Drawing.Point(300, 491);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(66, 20);
-            this.textBox3.TabIndex = 183;
+            this.txtMenos15.Enabled = false;
+            this.txtMenos15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMenos15.Location = new System.Drawing.Point(385, 500);
+            this.txtMenos15.Name = "txtMenos15";
+            this.txtMenos15.Size = new System.Drawing.Size(124, 38);
+            this.txtMenos15.TabIndex = 183;
             // 
-            // textBox4
+            // txtEntre15y45
             // 
-            this.textBox4.Location = new System.Drawing.Point(300, 517);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(66, 20);
-            this.textBox4.TabIndex = 184;
+            this.txtEntre15y45.Enabled = false;
+            this.txtEntre15y45.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEntre15y45.Location = new System.Drawing.Point(385, 541);
+            this.txtEntre15y45.Name = "txtEntre15y45";
+            this.txtEntre15y45.Size = new System.Drawing.Size(124, 38);
+            this.txtEntre15y45.TabIndex = 184;
             // 
-            // textBox5
+            // txtMasde45
             // 
-            this.textBox5.Location = new System.Drawing.Point(300, 546);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(66, 20);
-            this.textBox5.TabIndex = 185;
+            this.txtMasde45.Enabled = false;
+            this.txtMasde45.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMasde45.Location = new System.Drawing.Point(385, 580);
+            this.txtMasde45.Name = "txtMasde45";
+            this.txtMasde45.Size = new System.Drawing.Size(124, 38);
+            this.txtMasde45.TabIndex = 185;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label18.Location = new System.Drawing.Point(238, 15);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(251, 20);
+            this.label18.TabIndex = 186;
+            this.label18.Text = "FECHA X/X/X Y HORA XX:XX";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btnVer);
+            this.panel8.Location = new System.Drawing.Point(63, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(137, 49);
+            this.panel8.TabIndex = 178;
+            // 
+            // btnVer
+            // 
+            this.btnVer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVer.Location = new System.Drawing.Point(28, 1);
+            this.btnVer.Name = "btnVer";
+            this.btnVer.Size = new System.Drawing.Size(79, 46);
+            this.btnVer.TabIndex = 179;
+            this.btnVer.Text = "CERRAR DASH";
+            this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
             // 
             // TEST_MENU_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScrollMargin = new System.Drawing.Size(0, 40);
+            this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1260, 640);
-            this.Controls.Add(this.pnlFacturacion);
+            this.ClientSize = new System.Drawing.Size(1260, 716);
             this.Controls.Add(this.panelDashboard);
+            this.Controls.Add(this.pnlFacturacion);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -2993,6 +3039,7 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3183,8 +3230,11 @@
         private System.Windows.Forms.Panel panel7;
         private DevExpress.XtraGrid.Columns.GridColumn Meses;
         private DevExpress.XtraGrid.Columns.GridColumn maxDiasVencidos;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMasde45;
+        private System.Windows.Forms.TextBox txtEntre15y45;
+        private System.Windows.Forms.TextBox txtMenos15;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnVer;
     }
 }
