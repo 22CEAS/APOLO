@@ -1776,6 +1776,7 @@ namespace Apolo
                 gridView5.OptionsSelection.MultiSelect = true;
 
                 gridView5.Columns["cliente"].GroupIndex = -1;
+                //gridView5.Columns["factura"].GroupIndex = -1;
 
                 float MontoPendienteFacturar = 0;
                 for (int i = 0; i < gridView5.RowCount; i++)
@@ -1784,16 +1785,22 @@ namespace Apolo
                     
                 }
                 //MessageBox.Show(MontoPendienteFacturar.ToString());
-                gridView5.Columns["cliente"].GroupIndex = 1;
+                //gridView5.Columns["cliente"].GroupIndex = 1;
+                
+                
+                
 
-                textBox2.Text = string.Format("{0:C1}",MontoPendienteFacturar);
+
+                //gridView5.Columns["factura"].GroupIndex = 2;
+
+                textBox2.Text = string.Format("{0:C0}", MontoPendienteFacturar);
 
 
 
                 MontoFacturadoMes = reporteDA.VerMontoFacturadoMes();
 
                
-                txtMontoFacturadoMes.Text = string.Format("{0:C1}", MontoFacturadoMes.Rows[0]["total"]);//MONTO FACTURADO EN EL MES
+                txtMontoFacturadoMes.Text = string.Format("{0:C0}", MontoFacturadoMes.Rows[0]["total"]);//MONTO FACTURADO EN EL MES
 
                 lblFacturadoMes.Text = $"MONTO FACTURADO A LA FECHA:{DateTime.Now.ToShortDateString()} Y HORA: {DateTime.Now.ToLongTimeString()}";
 
@@ -2162,6 +2169,11 @@ namespace Apolo
         private void label17_Click(object sender, EventArgs e)
         {
             VerDetallePronos.PerformClick();
+        }
+
+        private void button41_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

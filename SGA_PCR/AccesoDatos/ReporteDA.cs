@@ -41,7 +41,8 @@ namespace AccesoDatos
 
         public DataTable ListarLaptopsPorFacturarDASH()
         {
-            return objManager.MostrarTablaDatos("SELECT * FROM vista_productos_por_facturar_dash ;");
+            //return objManager.MostrarTablaDatos("SELECT * FROM vista_productos_por_facturar_dash ;");
+            return objManager.MostrarTablaDatos("select cliente as cliente,max(diasVencidos) as maxDiasVencidos,round(sum(PendienteFacturarSoles),2) as PendienteFacturarSoles from vista_productos_por_facturar_dash group by cliente; ");
         }
 
         public DataTable VerMontoFacturadoMes()
