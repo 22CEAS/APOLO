@@ -1355,7 +1355,8 @@ namespace Apolo
 
         private  void VerDetallePronos_Click(object sender, EventArgs e)
         {
-
+            VerDetallePronos.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, VerDetallePronos.Width,
+                VerDetallePronos.Height, 30, 30));
             laptops = new BindingList<LC>();
 
             List<String> codigosPronosticador = new List<String>();
@@ -1774,21 +1775,26 @@ namespace Apolo
                 gridView5.OptionsBehavior.AutoPopulateColumns = false;
                 gridView5.OptionsSelection.MultiSelect = true;
 
+                gridView5.Columns["cliente"].GroupIndex = -1;
+
                 float MontoPendienteFacturar = 0;
                 for (int i = 0; i < gridView5.RowCount; i++)
                 {
                     MontoPendienteFacturar = MontoPendienteFacturar + float.Parse(tablaLaptops.Rows[i]["PendienteFacturarSoles"].ToString());
+                    
                 }
-
+                //MessageBox.Show(MontoPendienteFacturar.ToString());
                 gridView5.Columns["cliente"].GroupIndex = 1;
 
-                textBox2.Text = MontoPendienteFacturar.ToString();
+                textBox2.Text = string.Format("{0:C1}",MontoPendienteFacturar);
+
 
 
                 MontoFacturadoMes = reporteDA.VerMontoFacturadoMes();
 
-                
-                txtMontoFacturadoMes.Text = MontoFacturadoMes.Rows[0]["total"].ToString(); //MONTO FACTURADO EN EL MES
+               
+                txtMontoFacturadoMes.Text = string.Format("{0:C1}", MontoFacturadoMes.Rows[0]["total"]);//MONTO FACTURADO EN EL MES
+
                 lblFacturadoMes.Text = $"MONTO FACTURADO A LA FECHA:{DateTime.Now.ToShortDateString()} Y HORA: {DateTime.Now.ToLongTimeString()}";
 
                 pnlFacturacion.Visible = true;
@@ -1796,7 +1802,6 @@ namespace Apolo
             else
             {
                 pnlFacturacion.Visible = false;
-                gridView5.Columns["cliente"].GroupIndex = -1;
             }
             
         }
@@ -1823,6 +1828,12 @@ namespace Apolo
         
         private void button39_Click(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
+            btnCargarResumenDispo.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnCargarResumenDispo.Width, 
+                btnCargarResumenDispo.Height, 50, 50));
+
+
+
             /*
             reporteDA = new ReporteDA();
             tablaLaptops = reporteDA.ListarLaptopsInventario();
@@ -2053,6 +2064,8 @@ namespace Apolo
 
         private void btnVerCalendario_Click(object sender, EventArgs e)
         {
+            btnVerCalendario.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnVerCalendario.Width,
+                btnVerCalendario.Height, 30, 30));
             if (FechaPronosticador.Visible == true)
             {
                 FechaPronosticador.Visible = false;
@@ -2066,6 +2079,8 @@ namespace Apolo
 
         private void btnPagFact_Click(object sender, EventArgs e)
         {
+            btnPagFact.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnPagFact.Width,
+                btnPagFact.Height, 30, 30));
             panelDashboard.Visible = false;
             button35.PerformClick();
         }
@@ -2074,6 +2089,79 @@ namespace Apolo
         {
             pnlFacturacion.Visible = false;
             btnDash.PerformClick();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width,
+                panel1.Height, 30, 30));
+        }
+
+        private void lblLaptopsDisponibles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            //this.FormBorderStyle = FormBorderStyle.None;
+            panel3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width,
+                panel3.Height, 30, 30));
+        }
+
+        private void btnPagProno_Click(object sender, EventArgs e)
+        {
+            btnPagProno.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnPagProno.Width,
+                btnPagProno.Height, 30, 30));
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            panel2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width,
+                panel2.Height, 30, 30));
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("aa");
+        }
+
+        private void panel5_Paint_1(object sender, PaintEventArgs e)
+        {
+            panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width,
+                 panel5.Height, 30, 30));
+
+        }
+
+        private void panel5_Click_1(object sender, EventArgs e)
+        {
+            btnCargarResumenDispo.PerformClick();
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            btnCargarResumenDispo.PerformClick();
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+            panel6.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel6.Width,
+             panel6.Height, 30, 30));
+        }
+
+        private void panel6_Click(object sender, EventArgs e)
+        {
+            VerDetallePronos.PerformClick();
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            VerDetallePronos.PerformClick();
         }
     }
 }
