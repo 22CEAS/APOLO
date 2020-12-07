@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule5 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue5 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule6 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue6 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportePendienteFacturar));
             this.DíasVencidos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CódigoLC = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,6 +55,7 @@
             this.PendienteFacturarSoles = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PendienteFacturarDolares = new DevExpress.XtraGrid.Columns.GridColumn();
             this.KAM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PendienteFacturarUtilidadSoles = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnExportar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.verResumen = new System.Windows.Forms.Button();
@@ -67,7 +68,6 @@
             this.button38 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
-            this.PendienteFacturarUtilidadSoles = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giftCarga)).BeginInit();
@@ -145,35 +145,35 @@
             this.CostoDolares,
             this.PendienteFacturarSoles,
             this.PendienteFacturarDolares,
-            this.KAM,
-            this.PendienteFacturarUtilidadSoles});
-            gridFormatRule4.Column = this.DíasVencidos;
-            gridFormatRule4.ColumnApplyTo = this.CódigoLC;
-            gridFormatRule4.Name = "Mas de 7";
-            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.Red;
-            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue4.Expression = "[diasVencidos] > 45";
-            gridFormatRule4.Rule = formatConditionRuleValue4;
-            gridFormatRule5.Column = this.DíasVencidos;
-            gridFormatRule5.ColumnApplyTo = this.CódigoLC;
-            gridFormatRule5.Name = "2 a 7";
-            formatConditionRuleValue5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue5.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue5.Expression = "[diasVencidos] >= 15 And [diasVencidos] <=45";
-            gridFormatRule5.Rule = formatConditionRuleValue5;
-            gridFormatRule6.Column = this.DíasVencidos;
-            gridFormatRule6.ColumnApplyTo = this.CódigoLC;
-            gridFormatRule6.Name = "Menos de 2 ";
-            formatConditionRuleValue6.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            formatConditionRuleValue6.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue6.Expression = "[diasVencidos] < 15";
-            gridFormatRule6.Rule = formatConditionRuleValue6;
-            this.vista.FormatRules.Add(gridFormatRule4);
-            this.vista.FormatRules.Add(gridFormatRule5);
-            this.vista.FormatRules.Add(gridFormatRule6);
+            this.PendienteFacturarUtilidadSoles,
+            this.KAM});
+            gridFormatRule1.Column = this.DíasVencidos;
+            gridFormatRule1.ColumnApplyTo = this.CódigoLC;
+            gridFormatRule1.Name = "Mas de 7";
+            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.Red;
+            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue1.Expression = "[diasVencidos] > 45";
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            gridFormatRule2.Column = this.DíasVencidos;
+            gridFormatRule2.ColumnApplyTo = this.CódigoLC;
+            gridFormatRule2.Name = "2 a 7";
+            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue2.Expression = "[diasVencidos] >= 15 And [diasVencidos] <=45";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            gridFormatRule3.Column = this.DíasVencidos;
+            gridFormatRule3.ColumnApplyTo = this.CódigoLC;
+            gridFormatRule3.Name = "Menos de 2 ";
+            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue3.Expression = "[diasVencidos] < 15";
+            gridFormatRule3.Rule = formatConditionRuleValue3;
+            this.vista.FormatRules.Add(gridFormatRule1);
+            this.vista.FormatRules.Add(gridFormatRule2);
+            this.vista.FormatRules.Add(gridFormatRule3);
             this.vista.GridControl = this.dgvFacturas;
             this.vista.Name = "vista";
             this.vista.OptionsBehavior.Editable = false;
@@ -380,8 +380,20 @@
             this.KAM.Name = "KAM";
             this.KAM.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.KAM.Visible = true;
-            this.KAM.VisibleIndex = 15;
+            this.KAM.VisibleIndex = 16;
             this.KAM.Width = 200;
+            // 
+            // PendienteFacturarUtilidadSoles
+            // 
+            this.PendienteFacturarUtilidadSoles.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.PendienteFacturarUtilidadSoles.AppearanceHeader.Options.UseBackColor = true;
+            this.PendienteFacturarUtilidadSoles.Caption = "Pendiente Facturar Utilidad Soles";
+            this.PendienteFacturarUtilidadSoles.FieldName = "PendienteFacturarUtilidadSoles";
+            this.PendienteFacturarUtilidadSoles.MinWidth = 40;
+            this.PendienteFacturarUtilidadSoles.Name = "PendienteFacturarUtilidadSoles";
+            this.PendienteFacturarUtilidadSoles.Visible = true;
+            this.PendienteFacturarUtilidadSoles.VisibleIndex = 15;
+            this.PendienteFacturarUtilidadSoles.Width = 140;
             // 
             // btnExportar
             // 
@@ -513,14 +525,6 @@
             this.button36.Size = new System.Drawing.Size(21, 19);
             this.button36.TabIndex = 156;
             this.button36.UseVisualStyleBackColor = false;
-            // 
-            // PendienteFacturarUtilidadSoles
-            // 
-            this.PendienteFacturarUtilidadSoles.Caption = "Pendiente Facturar Utilidad Soles";
-            this.PendienteFacturarUtilidadSoles.FieldName = "PendienteFacturarUtilidadSoles";
-            this.PendienteFacturarUtilidadSoles.Name = "PendienteFacturarUtilidadSoles";
-            this.PendienteFacturarUtilidadSoles.Visible = true;
-            this.PendienteFacturarUtilidadSoles.VisibleIndex = 16;
             // 
             // frmReportePendienteFacturar
             // 

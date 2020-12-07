@@ -62,6 +62,7 @@
             this.giftCarga = new System.Windows.Forms.PictureBox();
             this.verResumen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.KAM = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLaptops)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giftCarga)).BeginInit();
@@ -146,7 +147,8 @@
             this.TotalDolares,
             this.CostoSoles,
             this.CostoDolares,
-            this.VersionOffice});
+            this.VersionOffice,
+            this.KAM});
             this.vista.GridControl = this.dgvLaptops;
             this.vista.Name = "vista";
             this.vista.OptionsBehavior.Editable = false;
@@ -518,6 +520,17 @@
             this.label1.Text = "CANTIDAD REGISTROS:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // KAM
+            // 
+            this.KAM.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.KAM.AppearanceHeader.Options.UseBackColor = true;
+            this.KAM.Caption = "KAM";
+            this.KAM.FieldName = "KAM";
+            this.KAM.Name = "KAM";
+            this.KAM.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.KAM.Visible = true;
+            this.KAM.VisibleIndex = 23;
+            // 
             // frmReporteCV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -581,5 +594,6 @@
         private System.Windows.Forms.Button verResumen;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraGrid.Columns.GridColumn ruc;
+        private DevExpress.XtraGrid.Columns.GridColumn KAM;
     }
 }

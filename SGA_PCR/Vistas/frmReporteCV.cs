@@ -75,7 +75,7 @@ namespace Apolo
             // Add an empty row to the output document.
             e.ExportContext.AddRow();
             // Merge cells of two new rows. 
-            e.ExportContext.MergeCells(new DevExpress.Export.Xl.XlCellRange(new DevExpress.Export.Xl.XlCellPosition(0, 0), new DevExpress.Export.Xl.XlCellPosition(22, 1))); //EL 18 SON LAS COLUMNAS QUE TIENE EL REPORTE
+            e.ExportContext.MergeCells(new DevExpress.Export.Xl.XlCellRange(new DevExpress.Export.Xl.XlCellPosition(0, 0), new DevExpress.Export.Xl.XlCellPosition(23, 1))); //EL 18 SON LAS COLUMNAS QUE TIENE EL REPORTE
         }
 
         private void btnExportar_Click(object sender, EventArgs e)

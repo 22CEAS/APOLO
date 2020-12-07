@@ -19,3 +19,9 @@ D:\LEASEIN\APOLO\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.csprojAssemblyReference.c
 D:\LEASEIN\APOLO\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 D:\LEASEIN\APOLO\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.dll
 D:\LEASEIN\APOLO\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Usuario\Documents\APOLO\APOLO\SGA_PCR\Modelo\bin\Debug\Modelo.dll
+C:\Users\Usuario\Documents\APOLO\APOLO\SGA_PCR\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Usuario\Documents\APOLO\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\APOLO\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\APOLO\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.dll
+C:\Users\Usuario\Documents\APOLO\APOLO\SGA_PCR\Modelo\obj\Debug\Modelo.pdb
