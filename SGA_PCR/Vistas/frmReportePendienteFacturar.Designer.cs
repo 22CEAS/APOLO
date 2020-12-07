@@ -67,6 +67,7 @@
             this.button38 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
+            this.PendienteFacturarUtilidadSoles = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giftCarga)).BeginInit();
@@ -144,14 +145,15 @@
             this.CostoDolares,
             this.PendienteFacturarSoles,
             this.PendienteFacturarDolares,
-            this.KAM});
+            this.KAM,
+            this.PendienteFacturarUtilidadSoles});
             gridFormatRule4.Column = this.DíasVencidos;
             gridFormatRule4.ColumnApplyTo = this.CódigoLC;
             gridFormatRule4.Name = "Mas de 7";
             formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.Red;
             formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
             formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue4.Expression = "[diasVencidos] > 7";
+            formatConditionRuleValue4.Expression = "[diasVencidos] > 45";
             gridFormatRule4.Rule = formatConditionRuleValue4;
             gridFormatRule5.Column = this.DíasVencidos;
             gridFormatRule5.ColumnApplyTo = this.CódigoLC;
@@ -159,7 +161,7 @@
             formatConditionRuleValue5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             formatConditionRuleValue5.Appearance.Options.UseBackColor = true;
             formatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue5.Expression = "[diasVencidos] >= 2 And [diasVencidos] <= 7";
+            formatConditionRuleValue5.Expression = "[diasVencidos] >= 15 And [diasVencidos] <=45";
             gridFormatRule5.Rule = formatConditionRuleValue5;
             gridFormatRule6.Column = this.DíasVencidos;
             gridFormatRule6.ColumnApplyTo = this.CódigoLC;
@@ -167,7 +169,7 @@
             formatConditionRuleValue6.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             formatConditionRuleValue6.Appearance.Options.UseBackColor = true;
             formatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue6.Expression = "[diasVencidos] < 2";
+            formatConditionRuleValue6.Expression = "[diasVencidos] < 15";
             gridFormatRule6.Rule = formatConditionRuleValue6;
             this.vista.FormatRules.Add(gridFormatRule4);
             this.vista.FormatRules.Add(gridFormatRule5);
@@ -355,8 +357,6 @@
             this.PendienteFacturarSoles.MinWidth = 40;
             this.PendienteFacturarSoles.Name = "PendienteFacturarSoles";
             this.PendienteFacturarSoles.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.PendienteFacturarSoles.Visible = true;
-            this.PendienteFacturarSoles.VisibleIndex = 15;
             this.PendienteFacturarSoles.Width = 100;
             // 
             // PendienteFacturarDolares
@@ -368,8 +368,6 @@
             this.PendienteFacturarDolares.MinWidth = 40;
             this.PendienteFacturarDolares.Name = "PendienteFacturarDolares";
             this.PendienteFacturarDolares.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            this.PendienteFacturarDolares.Visible = true;
-            this.PendienteFacturarDolares.VisibleIndex = 16;
             this.PendienteFacturarDolares.Width = 100;
             // 
             // KAM
@@ -382,7 +380,7 @@
             this.KAM.Name = "KAM";
             this.KAM.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.KAM.Visible = true;
-            this.KAM.VisibleIndex = 17;
+            this.KAM.VisibleIndex = 15;
             this.KAM.Width = 200;
             // 
             // btnExportar
@@ -452,9 +450,9 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(54, 661);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(430, 15);
+            this.label14.Size = new System.Drawing.Size(393, 15);
             this.label14.TabIndex = 162;
-            this.label14.Text = "EL CLIENTE TIENES MAS DE UNA SEMANA SIN SER FACTURADO";
+            this.label14.Text = "EL CLIENTE TIENES MAS DE 45 DIAS SIN SER FACTURADO";
             // 
             // label13
             // 
@@ -462,9 +460,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(54, 633);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(394, 15);
+            this.label13.Size = new System.Drawing.Size(410, 15);
             this.label13.TabIndex = 161;
-            this.label13.Text = "EL CLIENTE TIENE ENTRE 2 Y 7 DIAS SIN SER FACTURADO";
+            this.label13.Text = "EL CLIENTE TIENE ENTRE 15 Y 45 DIAS SIN SER FACTURADO";
             // 
             // label12
             // 
@@ -472,9 +470,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(54, 608);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(397, 15);
+            this.label12.Size = new System.Drawing.Size(405, 15);
             this.label12.TabIndex = 160;
-            this.label12.Text = "EL CLIENTE TIENE MENOS DE 2 DIAS SIN SER FACTURADO";
+            this.label12.Text = "EL CLIENTE TIENE MENOS DE 15 DIAS SIN SER FACTURADO";
             // 
             // label11
             // 
@@ -515,6 +513,14 @@
             this.button36.Size = new System.Drawing.Size(21, 19);
             this.button36.TabIndex = 156;
             this.button36.UseVisualStyleBackColor = false;
+            // 
+            // PendienteFacturarUtilidadSoles
+            // 
+            this.PendienteFacturarUtilidadSoles.Caption = "Pendiente Facturar Utilidad Soles";
+            this.PendienteFacturarUtilidadSoles.FieldName = "PendienteFacturarUtilidadSoles";
+            this.PendienteFacturarUtilidadSoles.Name = "PendienteFacturarUtilidadSoles";
+            this.PendienteFacturarUtilidadSoles.Visible = true;
+            this.PendienteFacturarUtilidadSoles.VisibleIndex = 16;
             // 
             // frmReportePendienteFacturar
             // 
@@ -584,5 +590,6 @@
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button button37;
         private System.Windows.Forms.Button button36;
+        private DevExpress.XtraGrid.Columns.GridColumn PendienteFacturarUtilidadSoles;
     }
 }
